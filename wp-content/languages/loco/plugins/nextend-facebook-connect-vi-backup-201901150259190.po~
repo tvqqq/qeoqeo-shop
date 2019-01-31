@@ -1,0 +1,1820 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Nextend Social Login\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-15 02:54+0000\n"
+"PO-Revision-Date: 2019-01-15 02:58+0000\n"
+"Last-Translator: qeoqeo <admin@qeoqeo.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-5.0.3"
+
+#: providers/facebook/admin/getting-started.php:11
+#: providers/facebook/admin/settings.php:13
+#, php-format
+msgid ""
+"%1$s allows HTTPS OAuth Redirects only. You must move your site to HTTPS in "
+"order to allow login with %1$s."
+msgstr ""
+
+#: admin/admin.php:617
+#, php-format
+msgid ""
+"%1$s detected that %2$s installed on your site. You must set \"<b>Page for "
+"register flow</b>\" and \"<b>OAuth redirect uri proxy page</b>\" in %1$s to "
+"work properly."
+msgstr ""
+
+#: admin/admin.php:610
+#, php-format
+msgid ""
+"%1$s detected that %2$s installed on your site. You need the Pro Addon to "
+"display Social Login buttons in %2$s login form!"
+msgstr ""
+
+#. %2$s: PHP version
+#: nextend-facebook-connect.php:34
+#, php-format
+msgid "%1$s requires PHP version %2$s+, plugin is currently NOT ACTIVE."
+msgstr ""
+
+#. %2$s: WordPress version
+#: nextend-facebook-connect.php:41
+#, php-format
+msgid ""
+"%1$s requires WordPress version %2$s+. Because you are using an earlier "
+"version, the plugin is currently NOT ACTIVE."
+msgstr ""
+
+#: admin/admin.php:598
+#, php-format
+msgid ""
+"%2$s detected that you have saved configurations related to %1$s, which is "
+"discontinued and the backwards compatibility will be removed in the next "
+"release of %2$s. Please import the current settings of %1$s  and replace "
+"your old social buttons with NSL!"
+msgstr ""
+
+#: admin/admin.php:574 admin/admin.php:586
+#, php-format
+msgid ""
+"%2$s detected that you have saved configurations related to %1$s, which is "
+"discontinued and the backwards compatibility will be removed in the next "
+"release of %2$s. Please import the current settings of %1$s and replace your "
+"old social buttons with NSL!"
+msgstr ""
+
+#: widget.php:10
+#, php-format
+msgid "%s Buttons"
+msgstr ""
+
+#: admin/admin.php:561 admin/templates/fix-redirect-uri.php:21
+#, php-format
+msgid ""
+"%s detected that your login url changed. You must update the Oauth redirect "
+"URIs in the related social applications."
+msgstr ""
+
+#: admin/admin.php:203
+#, php-format
+msgid "%s needs json_decode function."
+msgstr ""
+
+#: nextend-social-login.php:488
+#, php-format
+msgid ""
+"%s took the place of Nextend Google Connect. You can delete Nextend Google "
+"Connect as it is not needed anymore."
+msgstr ""
+
+#: nextend-social-login.php:499
+#, php-format
+msgid ""
+"%s took the place of Nextend Twitter Connect. You can delete Nextend Twitter "
+"Connect as it is not needed anymore."
+msgstr ""
+
+#: admin/templates/domain-changed.php:15
+msgid ""
+"<b>You must authorize your new domain</b> to receive <b>updates and "
+"support</b> in the future."
+msgstr ""
+
+#: providers/google/admin/getting-started.php:32
+msgid ""
+"A modal should pop up with your credentials. If that doesn't happen, go to "
+"the Credentials in the left hand menu and select your app by clicking on its "
+"name and you'll be able to copy-paste the Client ID and Client Secret from "
+"there."
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:82
+#: admin/templates/settings/woocommerce.php:140
+#: admin/templates/settings/woocommerce.php:198
+#: admin/templates/settings/ultimate-member.php:70
+#: admin/templates/settings/ultimate-member.php:136
+#: admin/templates/settings/userpro.php:82
+#: admin/templates/settings/userpro.php:133
+#: admin/templates/settings/memberpress.php:55
+#: admin/templates/settings/memberpress.php:121
+#: admin/templates/settings/login-form-pro.php:70
+#: admin/templates/settings/login-form-pro.php:120
+msgid "Above"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:88
+#: admin/templates/settings/woocommerce.php:146
+#: admin/templates/settings/woocommerce.php:204
+#: admin/templates/settings/ultimate-member.php:76
+#: admin/templates/settings/ultimate-member.php:142
+#: admin/templates/settings/userpro.php:88
+#: admin/templates/settings/userpro.php:139
+#: admin/templates/settings/memberpress.php:61
+#: admin/templates/settings/memberpress.php:127
+#: admin/templates/settings/login-form-pro.php:76
+#: admin/templates/settings/login-form-pro.php:126
+msgid "Above with separator"
+msgstr ""
+
+#: admin/templates/settings/privacy.php:102
+msgid "Access token"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:212
+#: admin/templates/settings/ultimate-member.php:150
+#: admin/templates/settings/memberpress.php:135
+msgid "Account details"
+msgstr ""
+
+#: admin/admin.php:648
+msgid "Activate"
+msgstr ""
+
+#: admin/templates/pro-addon.php:22 admin/templates/pro-addon.php:32
+#: admin/templates/pro.php:34
+msgid "Activate Pro Addon"
+msgstr ""
+
+#: admin/admin.php:642
+msgid "Activate your Pro Addon"
+msgstr ""
+
+#: admin/templates/pro-addon.php:94
+msgid "Activating..."
+msgstr ""
+
+#: providers/google/admin/fix-redirect-uri.php:12
+#: providers/google/admin/getting-started.php:30
+#, php-format
+msgid ""
+"Add the following URL to the \"Authorised redirect URIs\" field: <b>%s</b>"
+msgstr ""
+
+#: providers/twitter/admin/fix-redirect-uri.php:12
+#: providers/twitter/admin/getting-started.php:22
+#, php-format
+msgid "Add the following URL to the \"Callback URLs\" field: <b>%s</b>"
+msgstr ""
+
+#: providers/facebook/admin/fix-redirect-uri.php:12
+#: providers/facebook/admin/getting-started.php:32
+#, php-format
+msgid ""
+"Add the following URL to the \"Valid OAuth redirect URIs\" field: <b>%s</b>"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:68
+msgid "Admin"
+msgstr ""
+
+#: providers/facebook/admin/import.php:37 providers/google/admin/import.php:37
+#: providers/twitter/admin/import.php:37
+msgid ""
+"After the importing process finishes, you will need to <b>test</b> your app "
+"and <b>enable</b> the provider. You can do both in the next screen."
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:49
+msgid "Allow registration with Social login"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:41
+#: admin/templates-provider/settings-pro.php:59
+#: admin/templates-provider/settings-pro.php:72
+msgid "Always"
+msgstr ""
+
+#: providers/twitter/admin/settings.php:27
+msgid "API Key"
+msgstr ""
+
+#: providers/twitter/admin/settings.php:38
+msgid "API secret key"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:19
+#: providers/google/admin/getting-started.php:13
+#: providers/twitter/admin/getting-started.php:13
+#, php-format
+msgctxt "App creation"
+msgid "Create %s"
+msgstr ""
+
+#: providers/facebook/admin/settings.php:33
+msgid "App ID"
+msgstr ""
+
+#: providers/facebook/admin/settings.php:45
+msgid "App Secret"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:28
+#: admin/templates-provider/settings-pro.php:32
+msgid "Ask E-mail on registration"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:64
+msgid "Ask Password on registration"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:46
+#: admin/templates-provider/settings-pro.php:50
+msgid "Ask Username on registration"
+msgstr ""
+
+#: includes/user.php:109 includes/provider.php:587
+msgid "Authentication error"
+msgstr ""
+
+#: includes/provider.php:852
+msgid "Authentication failed"
+msgstr ""
+
+#: includes/provider.php:347 includes/provider.php:643
+#: includes/provider.php:648
+msgid "Authentication successful"
+msgstr ""
+
+#: admin/templates/pro.php:16
+msgid "Authorize Pro Addon"
+msgstr ""
+
+#: admin/templates/domain-changed.php:29
+#, php-format
+msgid "Authorize your %1$s by clicking on the following button."
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:88
+msgid "Automatic, based on email address"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:77
+#: admin/templates-provider/settings-pro.php:81
+msgid "Automatically connect the existing account upon registration"
+msgstr ""
+
+#: includes/avatar.php:46 admin/templates/settings/privacy.php:91
+msgid "Avatar"
+msgstr ""
+
+#: includes/avatar.php:48
+#, php-format
+msgid "Avatar <span class=\"count\">(%s)</span>"
+msgid_plural "Avatar <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: providers/facebook/admin/import.php:10 providers/google/admin/import.php:10
+#: providers/twitter/admin/import.php:10
+msgid "Be sure to read the following notices before you proceed."
+msgstr ""
+
+#: includes/provider-admin.php:197
+msgid ""
+"Before you can start letting your users register with your app it needs to "
+"be tested. This test makes sure that no users will have troubles with the "
+"login and registration process. <br> If you see error message in the popup "
+"check the copied ID and secret or the app itself. Otherwise your settings "
+"are fine."
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:70
+#: admin/templates/settings/woocommerce.php:128
+#: admin/templates/settings/woocommerce.php:186
+#: admin/templates/settings/ultimate-member.php:58
+#: admin/templates/settings/ultimate-member.php:124
+#: admin/templates/settings/userpro.php:70
+#: admin/templates/settings/userpro.php:121
+#: admin/templates/settings/memberpress.php:43
+#: admin/templates/settings/memberpress.php:109
+#: admin/templates/settings/login-form-pro.php:52
+#: admin/templates/settings/login-form-pro.php:108
+msgid "Below"
+msgstr ""
+
+#: admin/templates/settings/login-form-pro.php:64
+msgid "Below and floating"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:76
+#: admin/templates/settings/woocommerce.php:134
+#: admin/templates/settings/woocommerce.php:192
+#: admin/templates/settings/ultimate-member.php:64
+#: admin/templates/settings/ultimate-member.php:130
+#: admin/templates/settings/userpro.php:76
+#: admin/templates/settings/userpro.php:127
+#: admin/templates/settings/memberpress.php:49
+#: admin/templates/settings/memberpress.php:115
+#: admin/templates/settings/login-form-pro.php:58
+#: admin/templates/settings/login-form-pro.php:114
+msgid "Below with separator"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:154
+msgid "Billing form"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:174
+msgid "Billing layout"
+msgstr ""
+
+#: admin/templates/settings/general.php:173
+msgid "Blacklisted redirects"
+msgstr ""
+
+#: providers/google/admin/buttons.php:2
+msgid "Button skin"
+msgstr ""
+
+#: admin/templates/settings/comment.php:32
+#: admin/templates/settings/woocommerce.php:18
+msgid "Button style"
+msgstr ""
+
+#: widget.php:36
+msgid "Button style:"
+msgstr ""
+
+#: admin/templates-provider/menu.php:17
+msgid "Buttons"
+msgstr ""
+
+#: admin/templates/pro.php:14
+msgid "Buy Pro Addon"
+msgstr ""
+
+#: nextend-social-login.php:158 admin/templates/settings/privacy.php:6
+msgid ""
+"By clicking Register, you accept our <a href=\"#privacy_policy_url\" "
+"target=\"_blank\">Privacy Policy</a>"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:28
+msgid "Choose Web"
+msgstr ""
+
+#: admin/templates-provider/usage.php:28
+msgid "Click here to login or register"
+msgstr ""
+
+#: providers/facebook/admin/fix-redirect-uri.php:13
+#: providers/facebook/admin/getting-started.php:33
+msgid "Click on \"Save Changes\""
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:30
+#: providers/google/admin/fix-redirect-uri.php:13
+#: providers/twitter/admin/fix-redirect-uri.php:13
+msgid "Click on \"Save\""
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:26
+msgid "Click on blue \"Create App ID\" button"
+msgstr ""
+
+#: providers/google/admin/import.php:17
+msgid "Click on Credentials at the left-hand menu then select your app."
+msgstr ""
+
+#: providers/google/admin/fix-redirect-uri.php:11
+#, php-format
+msgid "Click on OAuth 2.0 client ID: %s"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:24
+msgid "Click on the \"Add a New App\" button"
+msgstr ""
+
+#: providers/google/admin/fix-redirect-uri.php:10
+msgid "Click on the \"Credentials\" in the left hand menu"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:22
+msgid ""
+"Click on the \"Credentials\" in the left hand menu to create new API "
+"credentials"
+msgstr ""
+
+#: admin/templates/domain-changed.php:28
+#, php-format
+msgid "Click on the %1$s next to your domain name."
+msgstr ""
+
+#: providers/facebook/admin/fix-redirect-uri.php:10
+#, php-format
+msgid "Click on the App with App ID: %s"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:31
+msgid "Click on the Create button"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:19
+#: providers/twitter/admin/getting-started.php:24
+msgid "Click the Create button."
+msgstr ""
+
+#: providers/google/admin/getting-started.php:27
+msgid ""
+"Click the Create credentials button and select \"OAuth client ID\" from the "
+"dropdown."
+msgstr ""
+
+#: providers/google/admin/settings.php:27
+msgid "Client ID"
+msgstr ""
+
+#: providers/google/admin/settings.php:40
+msgid "Client Secret"
+msgstr ""
+
+#: admin/templates/global-settings.php:39
+msgid "Comment"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:36
+msgid "Connect button after register"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:31
+msgid "Connect button before account details"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:26
+msgid "Connect button before register"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:46
+#: admin/templates/settings/woocommerce.php:51
+#: admin/templates/settings/woocommerce.php:104
+#: admin/templates/settings/woocommerce.php:109
+#: admin/templates/settings/woocommerce.php:162
+#: admin/templates/settings/woocommerce.php:167
+#: admin/templates/settings/ultimate-member.php:26
+#: admin/templates/settings/ultimate-member.php:92
+#: admin/templates/settings/memberpress.php:77
+msgid "Connect button on"
+msgstr ""
+
+#: providers/facebook/facebook.php:91
+msgid "Continue with <b>Facebook</b>"
+msgstr ""
+
+#: providers/google/google.php:89
+msgid "Continue with <b>Google</b>"
+msgstr ""
+
+#: providers/twitter/twitter.php:72
+msgid "Continue with <b>Twitter</b>"
+msgstr ""
+
+#: providers/facebook/admin/import.php:28 providers/google/admin/import.php:28
+#: providers/twitter/admin/import.php:28
+msgid "Create a backup of the old settings"
+msgstr ""
+
+#: providers/google/admin/buttons.php:20
+msgid "Dark"
+msgstr ""
+
+#: admin/admin.php:255
+msgid "Deactivate completed."
+msgstr ""
+
+#: admin/templates/pro-addon.php:37 admin/templates/pro-addon.php:127
+msgid "Deactivate Pro Addon"
+msgstr ""
+
+#: admin/templates/debug.php:7 admin/templates/header.php:20
+msgid "Debug"
+msgstr ""
+
+#: admin/templates/settings/general.php:48
+msgid "Debug mode"
+msgstr ""
+
+#: widget.php:40 admin/templates-provider/settings-pro.php:121
+#: admin/templates/settings/buddypress.php:49
+#: admin/templates/settings/comment.php:38
+#: admin/templates/settings/woocommerce.php:24
+#: admin/templates/settings/woocommerce.php:64
+#: admin/templates/settings/woocommerce.php:122
+#: admin/templates/settings/woocommerce.php:180
+#: admin/templates/settings/ultimate-member.php:39
+#: admin/templates/settings/ultimate-member.php:105
+#: admin/templates/settings/userpro.php:51
+#: admin/templates/settings/userpro.php:102
+#: admin/templates/settings/memberpress.php:24
+#: admin/templates/settings/memberpress.php:90
+#: admin/templates/settings/login-form-pro.php:33
+#: admin/templates/settings/login-form-pro.php:89
+msgid "Default"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:114
+msgid "Default button"
+msgstr ""
+
+#: admin/templates/settings/general.php:98
+msgid "Default redirect url"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:113
+msgid "Default roles for user who registered with this provider"
+msgstr ""
+
+#: includes/provider-admin.php:255 admin/templates/providers.php:92
+msgid "Disable"
+msgstr ""
+
+#: admin/templates/settings/general.php:91
+msgid "Disable external redirects"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:93
+msgid "Disable login for the selected roles"
+msgstr ""
+
+#: includes/provider-admin.php:215 admin/templates/providers.php:39
+#: admin/templates-provider/settings-pro.php:85
+#: admin/templates/settings/general.php:53
+#: admin/templates/settings/general.php:189
+msgid "Disabled"
+msgstr ""
+
+#: admin/templates/review.php:16
+msgid "Disliked it"
+msgstr ""
+
+#: admin/admin.php:611
+msgid "Dismiss"
+msgstr ""
+
+#: admin/admin.php:611
+msgid "Dismiss and check Pro Addon"
+msgstr ""
+
+#: admin/templates/header.php:14
+msgid "Docs"
+msgstr ""
+
+#: admin/templates/settings/privacy.php:78
+msgid "Email"
+msgstr ""
+
+#: admin/templates/settings/login-form.php:36
+msgid "Embedded login form"
+msgstr ""
+
+#: admin/templates/settings/login-form-pro.php:83
+msgid "Embedded Login form button style"
+msgstr ""
+
+#: admin/templates/settings/login-form-pro.php:102
+msgid "Embedded Login layout"
+msgstr ""
+
+#: includes/provider-admin.php:247 admin/templates/providers.php:80
+msgid "Enable"
+msgstr ""
+
+#: includes/provider-admin.php:218 admin/templates/providers.php:42
+#: admin/templates/settings/general.php:56
+#: admin/templates/settings/general.php:192
+msgid "Enabled"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:24
+msgid ""
+"Enter a name for your App under the \"Application name\" field, which will "
+"appear as the name of the app asking for consent."
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:36
+msgid "Enter your domain name to the App Domains"
+msgstr ""
+
+#: admin/templates/providers.php:126
+msgid "Enter your email address"
+msgstr ""
+
+#: admin/templates/pro-addon.php:13
+msgid "Error"
+msgstr ""
+
+#: admin/templates/fix-redirect-uri.php:13
+msgid "Every Oauth Redirect URI seems fine"
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:22
+msgid "Fallback username prefix on register"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:25
+msgid "Fill \"Display Name\" and \"Contact Email\""
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:29
+#, php-format
+msgid "Fill \"Site URL\" with the url of your homepage, probably: <b>%s</b>"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:25
+#, php-format
+msgid ""
+"Fill the \"Authorized domains\" field with your domain name probably: <b>"
+"%s</b> without subdomains!"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:20
+#, php-format
+msgid ""
+"Fill the App name, Application description fields. Then enter your site's "
+"URL to the Website URL field: <b>%s</b>"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:23
+msgid ""
+"Fill the “Terms of Service URL\", \"Privacy policy URL\" and \"Tell us how "
+"this app will be used” fields!"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:37
+msgid ""
+"Fill up the \"Privacy Policy URL\". Provide a publicly available and easily "
+"accessible privacy policy that explains what data you are collecting and how "
+"you will use that data."
+msgstr ""
+
+#: providers/twitter/admin/fix-redirect-uri.php:10
+msgid "Find your App and click on the Details button"
+msgstr ""
+
+#: admin/templates/domain-changed.php:27
+#, php-format
+msgid "Find your old domain name: <b>%s</b>"
+msgstr ""
+
+#: admin/templates/settings/privacy.php:65
+msgid "First and last name"
+msgstr ""
+
+#: admin/templates/settings/general.php:68
+#, php-format
+msgid ""
+"First create a new page for register flow and insert the following shortcode:"
+" %1$s then select this page above"
+msgstr ""
+
+#: admin/admin.php:562
+msgid "Fix Error"
+msgstr ""
+
+#: admin/admin.php:618
+msgid "Fix now"
+msgstr ""
+
+#: admin/templates/fix-redirect-uri.php:2
+msgid "Fix Oauth Redirect URIs"
+msgstr ""
+
+#: admin/templates/settings/general.php:136
+msgid "Fixed redirect url"
+msgstr ""
+
+#: admin/templates/settings/general.php:111
+#: admin/templates/settings/general.php:149
+msgid "for Login"
+msgstr ""
+
+#: admin/templates/settings/general.php:126
+#: admin/templates/settings/general.php:164
+msgid "for Register"
+msgstr ""
+
+#: admin/templates/global-settings.php:31
+msgid "General"
+msgstr ""
+
+#: admin/templates/pro.php:8
+msgid "Get Pro Addon to unlock more features"
+msgstr ""
+
+#: admin/templates/providers.php:64 admin/templates-provider/menu.php:13
+#: providers/facebook/admin/getting-started.php:15
+#: providers/google/admin/getting-started.php:9
+#: providers/twitter/admin/getting-started.php:9
+msgid "Getting Started"
+msgstr ""
+
+#: admin/templates/global-settings.php:28 admin/templates/menu.php:8
+msgid "Global Settings"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:28
+msgid "Go to the Keys and tokens tab and find the API key and API secret key"
+msgstr ""
+
+#: providers/facebook/admin/import.php:17
+msgid ""
+"Go to the Settings menu which you can find below the Facebook Login in the "
+"left menu."
+msgstr ""
+
+#: providers/twitter/admin/import.php:17
+msgid "Go to the Settings tab."
+msgstr ""
+
+#: admin/templates/fix-redirect-uri.php:32
+msgid "Got it"
+msgstr ""
+
+#: admin/templates/review.php:15
+msgid "Hated it"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:35
+msgid ""
+"Here you can see your \"APP ID\" and you can see your \"App secret\" if you "
+"click on the \"Show\" button. These will be needed in plugin's settings."
+msgstr ""
+
+#: admin/templates/settings/comment.php:26
+msgid "Hide"
+msgstr ""
+
+#: admin/templates/settings/login-form.php:17
+#: admin/templates/settings/login-form.php:30
+#: admin/templates/settings/login-form.php:47
+#: admin/templates/settings/userpro.php:26
+#: admin/templates/settings/userpro.php:39
+msgid "Hide login buttons"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:12
+#: providers/facebook/admin/settings.php:14
+msgid "How to get SSL for my WordPress site?"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://nextendweb.com/"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:43
+#: providers/google/admin/getting-started.php:36
+#: providers/twitter/admin/getting-started.php:32
+#, php-format
+msgid "I am done setting up my %s"
+msgstr ""
+
+#: widget.php:45 admin/templates/settings/buddypress.php:55
+#: admin/templates/settings/comment.php:44
+#: admin/templates/settings/woocommerce.php:30
+#: admin/templates/settings/ultimate-member.php:45
+#: admin/templates/settings/ultimate-member.php:111
+#: admin/templates/settings/userpro.php:57
+#: admin/templates/settings/userpro.php:108
+#: admin/templates/settings/memberpress.php:30
+#: admin/templates/settings/memberpress.php:96
+#: admin/templates/settings/login-form-pro.php:39
+#: admin/templates/settings/login-form-pro.php:95
+msgid "Icon"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:145
+msgid "Icon button"
+msgstr ""
+
+#: admin/templates/pro.php:10
+msgid ""
+"If you already have a license, you can Authorize your Pro Addon. Otherwise "
+"you can purchase it using the button below."
+msgstr ""
+
+#: admin/templates/review.php:32
+msgid ""
+"If you are happy with <b>Nextend Social Login</b> and can take a minute "
+"please leave us a review. It will be a tremendous help for us!"
+msgstr ""
+
+#: providers/facebook/admin/settings.php:39
+#: providers/google/admin/settings.php:35
+#: providers/twitter/admin/settings.php:33
+#, php-format
+msgid ""
+"If you are not sure what is your %1$s, please head over to <a href=\"%2$s\">"
+"Getting Started</a>"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:18
+msgid ""
+"If you don't have a developer account yet, please apply one by filling all "
+"the required details! This is required for the next steps!"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:18
+msgid ""
+"If you don't have a project yet, you'll need to create one. You can do this "
+"by clicking on the blue \"Create project\" button on the right side!  ( If "
+"you already have a project, click on the name of your project in the "
+"dashboard instead, which will bring up a modal and click New Project. )"
+msgstr ""
+
+#: providers/google/admin/import.php:16
+msgid "If you have more projects, select the one where your app is."
+msgstr ""
+
+#: admin/templates/settings/general.php:179
+msgid "If you want to blacklist redirect url params. One pattern per line."
+msgstr ""
+
+#: admin/templates/settings/general.php:79
+msgid ""
+"If your wp-login.php is not available to handle the OAuth flow create a new "
+"page and select it here. Otherwise don't select any page."
+msgstr ""
+
+#: admin/templates-provider/usage.php:33
+msgid "Image button"
+msgstr ""
+
+#: admin/templates-provider/usage.php:36
+msgid "Image url"
+msgstr ""
+
+#: admin/admin.php:577 admin/admin.php:589 admin/admin.php:601
+#: admin/templates/providers.php:103
+msgid "Import"
+msgstr ""
+
+#: providers/facebook/admin/import.php:44 providers/google/admin/import.php:44
+#: providers/twitter/admin/import.php:45
+msgid "Import Configuration"
+msgstr ""
+
+#: providers/facebook/admin/import.php:9
+msgid "Import Facebook configuration"
+msgstr ""
+
+#: providers/google/admin/import.php:9
+msgid "Import Google configuration"
+msgstr ""
+
+#: providers/twitter/admin/import.php:9
+msgid "Import Twitter configuration"
+msgstr ""
+
+#: providers/facebook/admin/import.php:12 providers/google/admin/import.php:12
+#: providers/twitter/admin/import.php:12
+msgid "Important steps before the import"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:31
+msgid "In the left sidebar, click on \"Facebook Login\""
+msgstr ""
+
+#: providers/facebook/admin/fix-redirect-uri.php:11
+msgid "In the left sidebar, click on \"Facebook Login/Settings\""
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:34
+msgid "In the top of the left sidebar, click on \"Settings\""
+msgstr ""
+
+#: admin/templates/pro-addon.php:60 admin/templates/pro.php:47
+msgid "Install Pro Addon"
+msgstr ""
+
+#: admin/templates/review.php:17
+msgid "It was ok"
+msgstr ""
+
+#: admin/templates/providers.php:45
+msgid "Legacy"
+msgstr ""
+
+#: admin/admin.php:577 admin/admin.php:589 admin/admin.php:601
+msgid "Legacy Settings"
+msgstr ""
+
+#: admin/admin.php:705
+msgid "License key"
+msgstr ""
+
+#: providers/google/admin/buttons.php:14
+msgid "Light"
+msgstr ""
+
+#: admin/templates/review.php:18
+msgid "Liked it"
+msgstr ""
+
+#: admin/templates-provider/sync-data.php:55
+msgid "Link"
+msgstr ""
+
+#: providers/facebook/facebook.php:92
+msgid "Link account with <b>Facebook</b>"
+msgstr "Liên kết với tài khoản <b>Facebook</b>"
+
+#: providers/google/google.php:90
+msgid "Link account with <b>Google</b>"
+msgstr "Liên kết với tài khoản <b>Google</b>"
+
+#: providers/twitter/twitter.php:73
+msgid "Link account with <b>Twitter</b>"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:158
+#: admin/templates/settings/memberpress.php:143
+msgid "Link buttons after account details"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:217
+#: admin/templates/settings/woocommerce.php:222
+msgid "Link buttons on"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:91
+msgid "Link label"
+msgstr ""
+
+#: providers/facebook/admin/fix-redirect-uri.php:9
+#: providers/facebook/admin/getting-started.php:23
+#: providers/google/admin/fix-redirect-uri.php:9
+#: providers/google/admin/getting-started.php:17
+#: providers/twitter/admin/fix-redirect-uri.php:9
+#, php-format
+msgid "Log in with your %s credentials if you are not logged in"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:17
+#, php-format
+msgid "Log in with your %s credentials if you are not logged in yet"
+msgstr ""
+
+#: admin/templates/domain-changed.php:26
+msgid "Log in with your credentials if you are not logged in"
+msgstr ""
+
+#: admin/templates-provider/sync-data.php:47
+msgid "Login"
+msgstr ""
+
+#: admin/templates/settings/comment.php:18
+msgid "Login button"
+msgstr ""
+
+#: admin/templates/global-settings.php:35
+#: admin/templates/settings/login-form.php:9
+#: admin/templates/settings/userpro.php:18
+msgid "Login Form"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:38
+#: admin/templates/settings/ultimate-member.php:18
+msgid "Login form"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:33
+#: admin/templates/settings/userpro.php:45
+#: admin/templates/settings/memberpress.php:18
+#: admin/templates/settings/login-form-pro.php:27
+msgid "Login form button style"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:81
+msgid "Login label"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:58
+#: admin/templates/settings/ultimate-member.php:52
+#: admin/templates/settings/userpro.php:64
+#: admin/templates/settings/memberpress.php:37
+#: admin/templates/settings/login-form-pro.php:46
+msgid "Login layout"
+msgstr ""
+
+#: admin/templates/review.php:19
+msgid "Loved it"
+msgstr ""
+
+#: providers/facebook/admin/import.php:18 providers/google/admin/import.php:18
+#: providers/twitter/admin/import.php:18
+#, php-format
+msgid "Make sure that the \"%1$s\" field contains %2$s"
+msgstr ""
+
+#: providers/facebook/admin/import.php:13 providers/google/admin/import.php:13
+#: providers/twitter/admin/import.php:13
+msgid ""
+"Make sure that the redirect URI for your app is correct before proceeding."
+msgstr ""
+
+#: includes/avatar.php:47
+msgid "Manage Avatar"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:43
+msgid "Membership"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:27
+msgid ""
+"Move your mouse over Facebook Login and click on the appearing \"Set Up\" "
+"button"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:29
+msgid "Name your application"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:20
+msgid "Name your project and then click on the Create button again"
+msgstr ""
+
+#: admin/templates/domain-changed.php:25
+#: providers/facebook/admin/fix-redirect-uri.php:8
+#: providers/facebook/admin/getting-started.php:22
+#: providers/google/admin/fix-redirect-uri.php:8
+#: providers/google/admin/getting-started.php:16
+#: providers/twitter/admin/fix-redirect-uri.php:8
+#: providers/twitter/admin/getting-started.php:16
+#, php-format
+msgid "Navigate to %s"
+msgstr ""
+
+#: admin/templates/test-connection.php:47
+#, php-format
+msgid "Network connection failed: %1$s"
+msgstr ""
+
+#: admin/templates/test-connection.php:41
+#, php-format
+msgid "Network connection successful: %1$s"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:35
+#: admin/templates-provider/settings-pro.php:69
+msgid "Never"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:53
+msgid "Never, generate automatically"
+msgstr ""
+
+#. Name of the plugin
+msgid "Nextend Social Login"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Nextend Social Login displays social login buttons for Facebook, Google and "
+"Twitter."
+msgstr ""
+
+#. Author of the plugin
+msgid "Nextendweb"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:23
+msgid "No Connect button"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:159
+msgid "No Connect button in billing form"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:23
+msgid "No Connect button in Login form"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:43
+msgid "No Connect button in login form"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:89
+msgid "No Connect button in Register form"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:101
+msgid "No Connect button in register form"
+msgstr ""
+
+#: admin/templates/settings/memberpress.php:74
+msgid "No Connect button in Sign Up form"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:155
+#: admin/templates/settings/memberpress.php:140
+msgid "No link buttons"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:62
+msgid "Nobody"
+msgstr ""
+
+#: admin/templates/providers.php:30
+msgid "Not Available"
+msgstr ""
+
+#: admin/templates/providers.php:33
+msgid "Not Configured"
+msgstr ""
+
+#: admin/templates/providers.php:36
+msgid "Not Verified"
+msgstr ""
+
+#: admin/admin.php:562
+msgid "Oauth Redirect URI"
+msgstr ""
+
+#: admin/templates/settings/general.php:72
+msgid "OAuth redirect uri proxy page"
+msgstr ""
+
+#: admin/templates/review.php:34
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:21
+msgid "Once you have a project, you'll end up in the dashboard."
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:19
+#, php-format
+msgid ""
+"Once your developer account is complete, navigate back to %s if you aren't "
+"already there!"
+msgstr ""
+
+#: admin/templates/providers.php:148
+msgid "Order Saved"
+msgstr ""
+
+#: providers/twitter/admin/settings.php:71
+msgid "Original"
+msgstr ""
+
+#: providers/facebook/admin/import.php:31 providers/google/admin/import.php:31
+#: providers/twitter/admin/import.php:31
+msgid "Other changes"
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:11
+msgid "Other settings"
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:40
+#, php-format
+msgid "Override global \"%1$s\""
+msgstr ""
+
+#: admin/templates/settings/general.php:61
+msgid "Page for register flow"
+msgstr ""
+
+#: admin/templates/test-connection.php:50
+msgid ""
+"Please contact with your hosting provider to resolve the network issue "
+"between your server and the provider."
+msgstr ""
+
+#: admin/admin.php:203
+msgid "Please contact your server administrator and ask for solution!"
+msgstr ""
+
+#: admin/templates/review.php:31
+msgid "Please Leave a Review"
+msgstr ""
+
+#: includes/provider-admin.php:240
+msgid "Please save your changes before verifying settings."
+msgstr ""
+
+#: includes/provider-admin.php:203
+msgid "Please save your changes to verify settings."
+msgstr ""
+
+#: nextend-social-login.php:80 nextend-social-login.php:87
+#, php-format
+msgid "Please update %1$s to version %2$s or newer."
+msgstr ""
+
+#: admin/templates/settings/general.php:194
+#, php-format
+msgid "Please visit to our %1$s to check what plugins are supported!"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:35
+msgid "Prefer new tab"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:32
+msgid "Prefer popup"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:38
+msgid "Prefer same window"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:26
+msgid "Press \"Save\" and you will be redirected back to Credentials screen."
+msgstr ""
+
+#: admin/templates/settings/general.php:85
+msgid "Prevent external redirect overrides"
+msgstr ""
+
+#: admin/templates/global-settings.php:33
+msgid "Privacy"
+msgstr ""
+
+#: admin/templates/menu.php:12 admin/templates/header.php:23
+msgid "Pro Addon"
+msgstr ""
+
+#: admin/templates/domain-changed.php:7
+msgid "Pro Addon - Authorized domain has been changed"
+msgstr ""
+
+#: admin/templates/pro-addon.php:118
+msgid "Pro Addon is installed and activated"
+msgstr ""
+
+#: admin/templates/pro-addon.php:23
+msgid ""
+"Pro Addon is installed but not activated. To be able to use the Pro features,"
+" you need to activate it."
+msgstr ""
+
+#: admin/templates/pro.php:25
+msgid "Pro Addon is not activated"
+msgstr ""
+
+#: admin/templates/pro-addon.php:48 admin/templates/pro.php:43
+msgid "Pro Addon is not installed"
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:18
+#: admin/templates/settings/general-pro.php:10
+#: admin/templates/settings/login-form-pro.php:10
+msgid "PRO settings"
+msgstr ""
+
+#: providers/twitter/admin/settings.php:57
+msgid "Profile image size"
+msgstr ""
+
+#: admin/templates/menu.php:6
+msgid "Providers"
+msgstr ""
+
+#: admin/templates/review.php:14
+msgid "Rate your experience!"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:25
+msgid "Read the Developer Terms and click the Create button again!"
+msgstr ""
+
+#: admin/templates/providers.php:125
+msgid ""
+"Receive info on the latest plugin updates and social provider related "
+"changes."
+msgstr ""
+
+#: admin/templates-provider/sync-data.php:39
+msgid "Register"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:43
+msgid "Register button style"
+msgstr ""
+
+#: admin/templates/settings/userpro.php:31
+msgid "Register Form"
+msgstr ""
+
+#: admin/templates/settings/buddypress.php:18
+#: admin/templates/settings/woocommerce.php:96
+#: admin/templates/settings/ultimate-member.php:84
+msgid "Register form"
+msgstr ""
+
+#: admin/templates/settings/ultimate-member.php:99
+#: admin/templates/settings/userpro.php:96
+msgid "Register form button style"
+msgstr ""
+
+#: admin/templates/settings/woocommerce.php:116
+#: admin/templates/settings/ultimate-member.php:118
+#: admin/templates/settings/userpro.php:115
+msgid "Register layout"
+msgstr ""
+
+#: admin/templates/settings/login-form.php:22
+msgid "Registration Form"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:54
+msgid "Registration notification sent to"
+msgstr ""
+
+#: providers/facebook/admin/settings.php:34
+#: providers/facebook/admin/settings.php:46
+#: providers/google/admin/settings.php:28
+#: providers/google/admin/settings.php:41
+#: providers/twitter/admin/settings.php:28
+msgid "Required"
+msgstr ""
+
+#: providers/google/google.php:330
+#, php-format
+msgid "Required API: %1$s"
+msgstr ""
+
+#: providers/facebook/facebook.php:334
+#, php-format
+msgid "Required scope: %1$s"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:86
+#: admin/templates-provider/buttons.php:97
+#: admin/templates-provider/buttons.php:108
+#: admin/templates-provider/buttons.php:137
+#: admin/templates-provider/buttons.php:167
+#: admin/templates/settings/privacy.php:53
+msgid "Reset to default"
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:38
+#: providers/facebook/admin/import.php:19 providers/google/admin/import.php:19
+#: providers/twitter/admin/import.php:19
+msgid "Save your changes."
+msgstr ""
+
+#: admin/templates/providers.php:147
+msgid "Saving failed"
+msgstr ""
+
+#: admin/templates/providers.php:146
+msgid "Saving..."
+msgstr ""
+
+#: providers/google/admin/getting-started.php:23
+msgid "Select the OAuth consent screen!"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:26
+msgid "Select the Permissions tab and click Edit."
+msgstr ""
+
+#: providers/facebook/admin/import.php:16 providers/twitter/admin/import.php:16
+msgid "Select your app."
+msgstr ""
+
+#: admin/templates/providers.php:84 admin/templates/providers.php:96
+#: admin/templates-provider/menu.php:15
+msgid "Settings"
+msgstr ""
+
+#: admin/templates-provider/usage.php:9
+msgid "Shortcode"
+msgstr ""
+
+#: admin/templates/settings/comment.php:23
+#: admin/templates/settings/privacy.php:42
+msgid "Show"
+msgstr ""
+
+#: widget.php:64
+msgid "Show link buttons"
+msgstr ""
+
+#: widget.php:55 admin/templates/settings/login-form.php:14
+#: admin/templates/settings/login-form.php:27
+#: admin/templates/settings/login-form.php:44
+#: admin/templates/settings/userpro.php:23
+#: admin/templates/settings/userpro.php:36
+msgid "Show login buttons"
+msgstr ""
+
+#: widget.php:73
+msgid "Show unlink buttons"
+msgstr ""
+
+#: admin/templates/settings/memberpress.php:69
+msgid "Sign Up form"
+msgstr ""
+
+#: admin/templates/settings/memberpress.php:84
+msgid "Sign Up form button style"
+msgstr ""
+
+#: admin/templates/settings/memberpress.php:103
+msgid "Sign Up layout"
+msgstr ""
+
+#: admin/templates-provider/usage.php:25
+msgid "Simple link"
+msgstr ""
+
+#: nextend-social-login.php:1090
+msgid "Social Accounts"
+msgstr ""
+
+#: nextend-social-login.php:763 nextend-social-login.php:1109
+msgid "Social Login"
+msgstr ""
+
+#: admin/templates/providers.php:124
+msgid "Stay Updated"
+msgstr ""
+
+#: admin/templates/settings/privacy.php:59
+msgid "Store"
+msgstr ""
+
+#: admin/templates-provider/sync-data.php:73
+msgid "Store in meta key"
+msgstr ""
+
+#: admin/templates/providers.php:130
+msgid "Subscribe"
+msgstr ""
+
+#: admin/templates/providers.php:217
+msgid "Successfully subscribed!"
+msgstr ""
+
+#: admin/templates/header.php:17
+msgid "Support"
+msgstr ""
+
+#: admin/templates/settings/general.php:184
+msgid "Support login restrictions"
+msgstr ""
+
+#: admin/templates-provider/menu.php:21
+msgid "Sync data"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:27
+msgid "Target window"
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:29
+#: admin/templates-provider/settings-other.php:40
+#: admin/templates/settings/privacy.php:35
+msgid "Terms and conditions"
+msgstr ""
+
+#: admin/templates/debug.php:57
+#, php-format
+msgid "Test %1$s connection"
+msgstr ""
+
+#: admin/templates/debug.php:40
+msgid "Test network connection with providers"
+msgstr ""
+
+#: providers/facebook/facebook.php:154 providers/google/google.php:144
+#: providers/twitter/twitter.php:105
+#, php-format
+msgid ""
+"The %1$s entered did not appear to be a valid. Please enter a valid %2$s."
+msgstr ""
+
+#: admin/admin.php:244
+msgid "The activation was successful"
+msgstr ""
+
+#: admin/templates/domain-changed.php:34
+msgid "The authorized domain name of your site is fine!"
+msgstr ""
+
+#: providers/facebook/admin/import.php:33 providers/google/admin/import.php:33
+#: providers/twitter/admin/import.php:33
+msgid ""
+"The custom redirect URI is now handled globally for all providers, so it "
+"won't be imported from the previous version. Visit \"Nextend Social Login > "
+"Global settings\" to set the new redirect URIs."
+msgstr ""
+
+#: providers/twitter/admin/fix-redirect-uri.php:11
+msgid ""
+"The Edit button can be found on the App details tab. Click on it and select "
+"Edit details"
+msgstr ""
+
+#: admin/templates/providers.php:224
+msgid "The entered email address is invalid!"
+msgstr ""
+
+#: admin/templates/pro.php:9
+#, php-format
+msgid ""
+"The features below are available in %s Pro Addon. Get it today and tweak the "
+"awesome settings."
+msgstr ""
+
+#: providers/facebook/admin/import.php:22 providers/google/admin/import.php:22
+#: providers/twitter/admin/import.php:22
+msgid "The following settings will be imported:"
+msgstr ""
+
+#: providers/facebook/admin/import.php:34 providers/google/admin/import.php:34
+#: providers/twitter/admin/import.php:34
+msgid ""
+"The login button's layout will be changed to a new, more modern look. If you "
+"used any custom buttons that won't be imported."
+msgstr ""
+
+#: providers/facebook/admin/import.php:35 providers/google/admin/import.php:35
+#: providers/twitter/admin/import.php:35
+msgid ""
+"The old version's PHP functions are not available anymore. This means if you "
+"used any custom codes where you used these old functions, you need to remove "
+"them."
+msgstr ""
+
+#: includes/provider.php:799 includes/provider.php:806
+msgid "The test was successful"
+msgstr ""
+
+#: providers/facebook/admin/import.php:25 providers/google/admin/import.php:25
+#: providers/twitter/admin/import.php:25
+msgid "The user prefix you set"
+msgstr ""
+
+#: includes/user.php:77
+#, php-format
+msgid "This %s account is already linked to other user."
+msgstr "Tài khoản %s đã được liên kết với tài khoản khác."
+
+#: includes/provider-admin.php:225
+#, php-format
+msgid ""
+"This provider is currently disabled, which means that users can’t register "
+"or login via their %s account."
+msgstr ""
+
+#: includes/provider-admin.php:231
+#, php-format
+msgid ""
+"This provider is currently enabled, which means that users can register or "
+"login via their %s account."
+msgstr ""
+
+#: includes/provider-admin.php:228
+#, php-format
+msgid ""
+"This provider works fine, but you can test it again. If you don’t want to "
+"let users register or login with %s anymore you can disable it."
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:21
+msgid "Tick the checkbox next to Enable Sign in with Twitter!"
+msgstr ""
+
+#: providers/twitter/admin/getting-started.php:27
+msgid ""
+"Tick the Request email address from users under the Additional permissions "
+"section and click Save."
+msgstr ""
+
+#: admin/templates/pro-addon.php:50
+msgid ""
+"To access the Pro features, you need to install and activate the Pro Addon."
+msgstr ""
+
+#: providers/facebook/admin/getting-started.php:17
+#: providers/google/admin/getting-started.php:11
+#: providers/twitter/admin/getting-started.php:11
+#, php-format
+msgid ""
+"To allow your visitors to log in with their %1$s account, first you must "
+"create a %1$s App. The following guide will help you through the %1$s App "
+"creation process. After you have created your %1$s App, head over to "
+"\"Settings\" and configure the given \"%2$s\" and \"%3$s\" according to your "
+"%1$s App."
+msgstr ""
+
+#: admin/admin.php:643
+msgid ""
+"To be able to use the Pro features, you need to activate Nextend Social "
+"Connect Pro Addon. You can do this by clicking on the Activate button below "
+"then select the related purchase."
+msgstr ""
+
+#: admin/templates/pro.php:26 admin/templates/pro.php:44
+msgid ""
+"To be able to use the Pro features, you need to install and activate the "
+"Nextend Social Connect Pro Addon."
+msgstr ""
+
+#: admin/admin.php:503 includes/oauth2.php:139 includes/oauth2.php:284
+#: providers/facebook/facebook-client.php:84
+#: providers/twitter/twitter-client.php:163
+#, php-format
+msgid "Unexpected response: %s"
+msgstr ""
+
+#: providers/google/admin/buttons.php:8
+msgid "Uniform"
+msgstr ""
+
+#: providers/facebook/facebook.php:93
+msgid "Unlink account from <b>Facebook</b>"
+msgstr "Hủy liên kết tài khoản <b>Facebook</b>"
+
+#: providers/google/google.php:91
+msgid "Unlink account from <b>Google</b>"
+msgstr "Hủy liên kết tài khoản <b>Google</b>"
+
+#: providers/twitter/twitter.php:74
+msgid "Unlink account from <b>Twitter</b>"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:103
+msgid "Unlink label"
+msgstr ""
+
+#: includes/provider.php:602
+msgid "Unlink successful."
+msgstr "Hủy liên kết thành công"
+
+#: nextend-social-login.php:80 nextend-social-login.php:87
+msgid "Update now!"
+msgstr ""
+
+#: admin/templates/providers.php:57
+msgid "Upgrade Now"
+msgstr ""
+
+#: admin/templates-provider/menu.php:24
+msgid "Usage"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:130
+#: admin/templates-provider/buttons.php:160
+msgid "Use custom button"
+msgstr ""
+
+#: admin/templates-provider/buttons.php:137
+#, php-format
+msgid "Use the %s in your custom button's code to make the label show up."
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:25
+msgid "Used when username is invalid or not stored"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:65
+msgid "User"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:71
+msgid "User and Admin"
+msgstr ""
+
+#: admin/templates-provider/settings-other.php:16
+msgid "Username prefix on register"
+msgstr ""
+
+#: includes/provider-admin.php:202 admin/templates/providers.php:72
+msgid "Verify Settings"
+msgstr ""
+
+#: includes/provider-admin.php:239
+msgid "Verify Settings Again"
+msgstr ""
+
+#: providers/facebook/admin/import.php:15 providers/google/admin/import.php:15
+#: providers/twitter/admin/import.php:15
+#, php-format
+msgid "Visit %s."
+msgstr ""
+
+#: admin/templates/providers.php:217
+msgid ""
+"We'll be bringing you all the latest news and updates about Social Login - "
+"right to your inbox."
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:38
+msgid "When email is not provided or empty"
+msgstr ""
+
+#: admin/templates/settings/privacy.php:81
+msgid "When not enabled, email will be empty."
+msgstr ""
+
+#: admin/templates/settings/privacy.php:68
+msgid "When not enabled, username will be randomly generated."
+msgstr ""
+
+#: admin/templates-provider/settings-pro.php:56
+msgid "When username is empty or invalid"
+msgstr ""
+
+#: admin/templates/settings/general-pro.php:59
+msgid "WordPress default"
+msgstr ""
+
+#: includes/provider-admin.php:211
+msgid "Works Fine"
+msgstr ""
+
+#: admin/templates/domain-changed.php:21
+msgid "You can authorize your new domain by completing the following steps:"
+msgstr ""
+
+#: admin/templates/debug.php:47
+msgid "You don't have cURL support, please enable it in php.ini!"
+msgstr ""
+
+#: admin/templates/pro-addon.php:14
+msgid ""
+"You don’t have sufficient permissions to install and activate plugins. "
+"Please contact your site’s administrator!"
+msgstr ""
+
+#: includes/user.php:72
+#, php-format
+msgid ""
+"You have already linked a(n) %s account. Please unlink the current and then "
+"you can link other %s account."
+msgstr "Bạn đã liên kết tài khoản %s. Vui lòng hủy liên kết và thử lại."
+
+#: admin/templates/pro-addon.php:120
+msgid ""
+"You installed and activated the Pro Addon. If you don’t want to use it "
+"anymore, you can deactivate using the button below."
+msgstr ""
+
+#: admin/templates/settings/comment.php:28
+#, php-format
+msgid "You need to turn on the ' %1$s > %2$s > %3$s ' for this feature to work"
+msgstr ""
+
+#: includes/user.php:69
+#, php-format
+msgid ""
+"Your %1$s account is successfully linked with your account. Now you can sign "
+"in with %2$s easily."
+msgstr ""
+"Tài khoản của bạn đã liên kết thành công với %1$s. Bạn đã có thể đăng nhập "
+"hệ thống với tài khoản %2$s."
+
+#: providers/facebook/admin/getting-started.php:39
+msgid ""
+"Your application is currently private, which means that only you can log in "
+"with it. In the left sidebar choose \"App Review\" and make your App public"
+msgstr ""
+
+#: providers/google/admin/getting-started.php:28
+msgid "Your application type should be \"Web application\""
+msgstr ""
+
+#: includes/provider-admin.php:196
+msgid "Your configuration needs to be verified"
+msgstr ""
+
+#: nextend-social-login.php:94
+#, php-format
+msgid "Your domain name changed so you must authorize %1$s again."
+msgstr ""
+
+#: providers/facebook/admin/import.php:24 providers/google/admin/import.php:24
+#: providers/twitter/admin/import.php:24
+msgid "Your old API configurations"
+msgstr ""
