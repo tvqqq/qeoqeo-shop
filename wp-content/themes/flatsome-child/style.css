@@ -145,7 +145,6 @@ ul.product_list_widget li dl dd {
 }
 
 /* Header banner */
-/* Ky Hoi 2019 */
 h3.uppercase.text-ky-hoi {
     background: #ff888847;
     padding: 5px 10px;
@@ -154,15 +153,8 @@ h3.uppercase.text-ky-hoi {
     box-shadow: 1px 1px 50px #ff88885e;
 }
 
-/* Ao thun IT */
-.uppercase.ao-thun-it {
-    line-height: 22pt;
-    letter-spacing: 1.2pt;
-}
-
-.btn-ao-thun-it:hover {
-    background: #ffffff!important;
-    color: #2f3154!important;
+.countdown {
+    width: 100%!important;
 }
 
 /* === Mobile version === */
