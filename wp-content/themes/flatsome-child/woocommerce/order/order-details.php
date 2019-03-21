@@ -82,7 +82,7 @@ if ( $show_downloads ) {
 					<tr>
 						<th scope="row"><?php echo $total['label']; ?></th>
 						<td><?php echo ( 'payment_method' === $key ) ?
-                                '<a href="#" class="tooltip link-payment" title="Xem hướng dẫn">' . $total['value'] . '</a>' :
+                                '<a href="/huong-dan-mua-hang/#huong-dan-thanh-toan" class="tooltip link-payment" title="Xem hướng dẫn" target="_blank">' . $total['value'] . '</a>' :
                                 $total['value']; ?>
                         </td>
 					</tr>

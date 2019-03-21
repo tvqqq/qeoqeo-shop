@@ -33,7 +33,6 @@ Version: 1.0
 }
 
 .table-payment-info {
-    margin: 0;
     font-size: 18px;
     margin-bottom: 20px;
     margin-top: -10px;
@@ -155,6 +154,11 @@ h3.uppercase.text-ky-hoi {
 
 .countdown {
     width: 100%!important;
+}
+
+p.woocommerce-invalid-required-field label,
+p.woocommerce-invalid-required-field a {
+    color: #c90000!important;
 }
 
 /* === Mobile version === */

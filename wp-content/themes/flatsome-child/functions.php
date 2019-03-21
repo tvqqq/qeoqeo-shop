@@ -26,10 +26,11 @@ function qeoqeo_send_smtp_email($phpmailer)
 
 // Format free shipping on order detail items
 add_filter('woocommerce_order_shipping_to_display', 'qeoqeo_format_free_shipping');
+add_filter('woocommerce_cart_shipping_method_full_label', 'qeoqeo_format_free_shipping');
 function qeoqeo_format_free_shipping($shipping)
 {
     if ($shipping === 'Phí ship') {
-        return __('Free ship 🌠', 'woocommerce');
+        return __('Free ship 🤩', 'woocommerce');
     }
     return $shipping;
 }
@@ -180,4 +181,15 @@ function qeoqeo_my_new_wc_order_statuses($order_statuses)
 {
     $order_statuses['wc-shipping'] = _x('Shipping', 'Order status', 'flatsome');
     return $order_statuses;
+}
+
+// Apply coupon to all cart by coupon code
+// see https://businessbloomer.com/woocommerce-apply-coupon-programmatically-product-cart/
+add_action('woocommerce_before_cart', 'qeoqeo_apply_coupon');
+function qeoqeo_apply_coupon()
+{
+    $coupon_code = 'OPENINGWEEK';
+    if (WC()->cart->has_discount($coupon_code)) return;
+    WC()->cart->add_discount($coupon_code);
+    wc_print_notices();
 }
