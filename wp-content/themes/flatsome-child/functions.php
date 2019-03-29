@@ -7,6 +7,9 @@ function flatsome_qeoqeo_scripts()
 {
     // FontAwesome
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+    // Script
+    wp_enqueue_script( 'myscript', get_stylesheet_directory_uri() . '/script.js');
 }
 
 // Mail configuration
@@ -181,6 +184,19 @@ function qeoqeo_my_new_wc_order_statuses($order_statuses)
 {
     $order_statuses['wc-shipping'] = _x('Shipping', 'Order status', 'flatsome');
     return $order_statuses;
+}
+
+// Description on single-product
+add_action('woocommerce_product_meta_start', 'qeoqeo_woocommerce_product_meta_start');
+function qeoqeo_woocommerce_product_meta_start()
+{
+    if (!is_front_page()) {
+        echo '<strong>✂ Bảng size áo:</strong> <a href="bang-size-ao">Tham khảo tại đây!</a><hr/>';
+        echo '<strong>🕒 Thời gian dự kiến:</strong><br/>';
+        echo 'Xác nhận và xử lý đơn: 24 - 48 giờ<br/>';
+        echo 'Thời gian sản xuất: 1 - 3 ngày<br/>';
+        echo 'Thời gian gửi hàng: 1 - 3 ngày<br/><br/>';
+    }
 }
 
 // Apply coupon to all cart by coupon code

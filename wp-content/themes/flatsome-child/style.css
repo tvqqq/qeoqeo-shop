@@ -161,6 +161,10 @@ p.woocommerce-invalid-required-field a {
     color: #c90000!important;
 }
 
+.has-hover .bg, .has-hover [class*="image-"] img {
+    transition: filter .6s, opacity .6s, box-shadow .3s!important;
+}
+
 /* === Mobile version === */
 @media only screen and (max-width: 850px) {
     .login-social-button {
