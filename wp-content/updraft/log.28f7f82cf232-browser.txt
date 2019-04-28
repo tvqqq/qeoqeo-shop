@@ -1,0 +1,98 @@
+0000.055 (R) [notice] Looking for db archive: file name: backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-db.gz
+0000.055 (R) [notice] Archive is expected to be size: 355.4 KB: OK
+0000.058 (R) [notice] Looking for plugins archive: file name: backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-plugins.zip
+0000.058 (R) [notice] Archive is expected to be size: 25036.3 KB: OK
+0000.059 (R) [notice] Looking for themes archive: file name: backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-themes.zip
+0000.059 (R) [notice] Archive is expected to be size: 7421.6 KB: OK
+0000.059 (R) [notice] Looking for uploads archive: file name: backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-uploads.zip
+0000.060 (R) [notice] Archive is expected to be size: 52964.9 KB: OK
+0000.060 (R) [notice] Looking for others archive: file name: backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-others.zip
+0000.061 (R) [notice] Archive is expected to be size: 1376.9 KB: OK
+0000.061 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.076 (R) [notice] Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-db.gz, 0.3 Mb)
+0000.083 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.165 (R) [notice] Enabling Maintenance mode&#8230;
+0000.169 (R) [notice] Backup of: https://qeoqeo.com
+0000.189 (R) [notice] Content URL: https://qeoqeo.com/wp-content
+0000.189 (R) [notice] Uploads URL: https://qeoqeo.com/wp-content/uploads
+0000.189 (R) [notice] Old table prefix: qqs19_
+0000.190 (R) [notice] Site information: multisite = 0
+0000.191 (R) [notice] New table prefix: qqs19_
+0000.212 (R) [notice] Processing table (InnoDB):  qqs19_options
+0001.119 (R) [notice] Processing table (InnoDB):  qqs19_users
+0001.194 (R) [notice] Processing table (InnoDB):  qqs19_usermeta
+0001.278 (R) [notice] Processing table (InnoDB):  qqs19_commentmeta
+0001.340 (R) [notice] Processing table (InnoDB):  qqs19_comments
+0001.420 (R) [notice] Processing table (InnoDB):  qqs19_links
+0001.487 (R) [notice] Processing table (InnoDB):  qqs19_postmeta
+0002.056 (R) [notice] Processing table (InnoDB):  qqs19_posts
+0002.207 (R) [notice] Processing table (InnoDB):  qqs19_term_relationships
+0002.296 (R) [notice] Database queries processed: 50 in 2.21 seconds
+0002.297 (R) [notice] Processing table (InnoDB):  qqs19_term_taxonomy
+0002.361 (R) [notice] Processing table (InnoDB):  qqs19_termmeta
+0002.431 (R) [notice] Processing table (InnoDB):  qqs19_terms
+0002.506 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_order_itemmeta
+0002.578 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_payment_tokenmeta
+0002.676 (R) [notice] Processing table (InnoDB):  qqs19_yoast_seo_links
+0002.789 (R) [notice] Processing table (InnoDB):  qqs19_yoast_seo_meta
+0002.845 (R) [notice] Processing table (MyISAM):  qqs19_ac_abandoned_cart_history_lite
+0002.861 (R) [notice] Processing table (MyISAM):  qqs19_ac_email_templates_lite
+0002.878 (R) [notice] Processing table (MyISAM):  qqs19_ac_guest_abandoned_cart_history_lite
+0002.898 (R) [notice] Processing table (MyISAM):  qqs19_ac_sent_history_lite
+0002.917 (R) [notice] Processing table (MyISAM):  qqs19_failed_jobs
+0002.935 (R) [notice] Processing table (MyISAM):  qqs19_itsec_distributed_storage
+0002.954 (R) [notice] Processing table (MyISAM):  qqs19_itsec_fingerprints
+0002.972 (R) [notice] Processing table (MyISAM):  qqs19_itsec_geolocation_cache
+0002.987 (R) [notice] Processing table (MyISAM):  qqs19_itsec_lockouts
+0003.013 (R) [notice] Processing table (MyISAM):  qqs19_itsec_logs
+0003.039 (R) [notice] Processing table (MyISAM):  qqs19_itsec_temp
+0003.060 (R) [notice] Processing table (MyISAM):  qqs19_litespeed_img_optm
+0003.080 (R) [notice] Processing table (MyISAM):  qqs19_litespeed_optimizer
+0003.102 (R) [notice] Database queries processed: 100 in 3.02 seconds
+0003.102 (R) [notice] Processing table (MyISAM):  qqs19_mailchimp_carts
+0003.121 (R) [notice] Processing table (MyISAM):  qqs19_queue
+0003.154 (R) [notice] Processing table (InnoDB):  qqs19_social_users
+0003.247 (R) [notice] Processing table (InnoDB):  qqs19_wc_download_log
+0003.320 (R) [notice] Processing table (InnoDB):  qqs19_wc_webhooks
+0003.390 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_api_keys
+0003.456 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_attribute_taxonomies
+0003.530 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_downloadable_product_permissions
+0003.592 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_log
+0003.704 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_order_items
+0003.788 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_payment_tokens
+0003.850 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_sessions
+0003.915 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_shipping_zone_locations
+0003.969 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_shipping_zone_methods
+0004.028 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_shipping_zones
+0004.098 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_tax_rate_locations
+0004.165 (R) [notice] Processing table (InnoDB):  qqs19_woocommerce_tax_rates
+0004.222 (R) [notice] Disabling Maintenance mode&#8230;
+0004.223 (R) [notice] Finished: lines processed: 143 in 4.14 seconds
+0004.223 (R) [notice] Cleaning up rubbish...
+0004.266 (R) [notice] Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-plugins.zip, 24.4 MB)
+0006.861 (R) [notice] Unzip progress: 1002 out of 6392 files (441.8 KB, plugins/loco-translate/tpl/admin/errors/file-isdir.php)
+0018.355 (R) [notice] Unzip progress: 2003 out of 6392 files (8.4 MB, plugins/updraftplus/vendor/rackspace/php-opencloud/lib/OpenCloud/Common/Exceptions/InvalidIpTypeError.php)
+0030.036 (R) [notice] Unzip progress: 3004 out of 6392 files (29.1 MB, plugins/better-wp-security/core/modules/file-change/js/filetree/images/script.png)
+0042.156 (R) [notice] Unzip progress: 4005 out of 6392 files (42.4 MB, plugins/woocommerce/includes/class-wc-product-attribute.php)
+0058.179 (R) [notice] Unzip progress: 4922 out of 6392 files (56 MB, plugins/litespeed-cache/admin/tpl/manage/manage_purge.php)
+0073.660 (R) [notice] Unzip progress: 5923 out of 6392 files (73.9 MB, plugins/wordpress-seo/admin/roles/class-role-manager-vip.php)
+0078.992 (R) [notice] Unzip progress: 6392 out of 6392 files (75.9 MB, plugins/wordpress-seo/admin/notifiers/interface-notification-handler.php)
+0078.997 (R) [notice] Moving old data out of the way...
+0080.686 (R) [notice] Moving unpacked backup into place...
+0081.881 (R) [notice] Cleaning up rubbish...
+0081.892 (R) [notice] Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-themes.zip, 7.2 MB)
+0090.223 (R) [notice] Unzip progress: 1002 out of 1858 files (7.2 MB, themes/flatsome/inc/shortcodes/elements.php)
+0099.555 (R) [notice] Unzip progress: 1858 out of 1858 files (14.1 MB, themes/flatsome/woocommerce/layouts/headers/category-title-featured.php)
+0099.558 (R) [notice] Moving old data out of the way...
+0100.059 (R) [notice] Moving unpacked backup into place...
+0100.400 (R) [notice] Cleaning up rubbish...
+0100.412 (R) [notice] Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-uploads.zip, 51.7 MB)
+0105.157 (R) [notice] Unzip progress: 1002 out of 1073 files (51.7 MB, uploads/2019/03/a0241-510x612.jpg)
+0105.433 (R) [notice] Unzip progress: 1073 out of 1073 files (53.3 MB, uploads/2019/01/cropped-icon-qeoqeoshop-100x100.png)
+0105.436 (R) [notice] Moving old data out of the way...
+0105.509 (R) [notice] Moving unpacked backup into place...
+0105.737 (R) [notice] Cleaning up rubbish...
+0105.747 (R) [notice] Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-others.zip, 1.3 MB)
+0106.043 (R) [notice] Unzip progress: 45 out of 45 files (5.3 MB, advanced-cache.php)
+0106.050 (R) [notice] Cleaning up rubbish...
+0106.094 (R) [notice] Restore successful!

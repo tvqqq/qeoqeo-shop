@@ -11,6 +11,12 @@ class Loco_error_Exception extends Exception implements JsonSerializable {
 
 
     /**
+     * Links to help docs etc.. to show along side error message
+     * @var array
+     */
+    private $links = array();
+
+    /**
      * Override file in which exception was thrown
      * @var string
      */
@@ -23,36 +29,66 @@ class Loco_error_Exception extends Exception implements JsonSerializable {
     private $_line;
 
     /**
-     * Links to help docs etc.. to show along side error message
-     * @var array
+     * {@inheritdoc}
      */
-    private $links = array();
+    public function __construct( $message = '', $code = 0, $previous = null ) {
+        parent::__construct( $message, $code, $previous );
+    }
 
 
     /**
-     * {@inheritdoc}
+     * @return Throwable
+     */
+    private function getRootException(){
+        $current = $this;
+        // note that getPrevious is absent in PHP < 5.3
+        while( method_exists($current,'getPrevious') && ( $next = $current->getPrevious() ) ){
+            $current = $next;
+        }
+        return $current;
+    }
+
+
+    /**
+     * @return string
      */
     public function getRealFile(){
-        $file = $this->_file or $file = parent::getFile();
-        return $file;
+        if( $this->_file ){
+            return $this->_file;
+        }
+        return $this->getRootException()->getFile();
     }
 
 
     /**
-     * {@inheritdoc}
+     * @return int
      */
     public function getRealLine(){
-        $line = $this->_line or $line = parent::getLine();
-        return $line;
+        if( $this->_line ){
+            return $this->getLine();
+        }
+        return $this->getRootException()->getLine();
     }
 
 
     /**
+     * @return array
+     */
+    public function getRealTrace(){
+        return $this->getRootException()->getTrace();
+    }
+
+
+    /**
+     * @param int number of levels up from callee
      * @return Loco_error_Exception
      */
-    public function setCallee( array $callee ){
+    public function setCallee( $depth = 0 ){
+        $stack = debug_backtrace(0);
+        $callee = $stack[$depth];
         $this->_file = $callee['file'];
         $this->_line = $callee['line'];
+        // TODO could also log the stack trace from $depth upwards, but not required unless being logged or thrown
         return $this;
     }
 
@@ -103,14 +139,16 @@ class Loco_error_Exception extends Exception implements JsonSerializable {
             'class' => get_class($this),
             'title' => $this->getTitle(),
             'message' => $this->getMessage(),
-            //'file' => str_replace( ABSPATH, '', $this->getFile() ),
-            //'line' => $this->getLine(),
+            //'file' => str_replace( ABSPATH, '', $this->getRealFile() ),
+            //'line' => $this->getRealLine()
         );
     }
 
 
     /**
      * Push navigation links into error. Use for help pages etc..
+     * @param string
+     * @param string
      * @return Loco_error_Exception
      */
     public function addLink( $href, $text ){
@@ -119,27 +157,24 @@ class Loco_error_Exception extends Exception implements JsonSerializable {
     }
 
 
-    /**
-     * @return array
-     */
-     public function getLinks(){
-         return $this->links;
-     }
-
+   /**
+    * @return array
+    */
+    public function getLinks(){
+        return $this->links;
+    }
 
 
     /**
      * Convert generic exception to one of ours
+     * @param Exception original error
      * @return Loco_error_Exception
      */
     public static function convert( Exception $e ){
         if( $e instanceof Loco_error_Exception ){
             return $e;
         }
-        $me = new Loco_error_Exception( $e->getMessage(), $e->getCode(), $e );
-        $me->_file = $e->getFile();
-        $me->_line = $e->getLine();
-        return $me;
+        return new Loco_error_Exception( $e->getMessage(), $e->getCode(), $e );
     }    
     
 }

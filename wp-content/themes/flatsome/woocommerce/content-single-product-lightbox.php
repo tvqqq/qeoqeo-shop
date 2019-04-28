@@ -65,7 +65,7 @@ do_action('wc_quick_view_before_single_product');
 
   <div class="product-info summary large-6  col entry-summary" style="font-size:90%;">
     <div class="product-lightbox-inner" style="padding: 30px;">
-    <a class="plain" href="<?php echo the_permalink();?>"><h1><?php the_title(); ?></h1></a>
+    <a class="plain" href="<?php the_permalink();?>"><h1><?php the_title(); ?></h1></a>
     <div class="is-divider small"></div>
 
     <?php

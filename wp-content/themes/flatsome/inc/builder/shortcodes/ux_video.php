@@ -57,5 +57,6 @@ add_ux_builder_shortcode( 'ux_video', array(
                 'class' => 'box-shadow-{{ value }}-hover'
             )
         ),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

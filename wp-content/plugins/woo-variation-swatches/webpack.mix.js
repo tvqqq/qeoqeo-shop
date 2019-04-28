@@ -61,7 +61,7 @@ if (Mix.inProduction()) {
 }
 
 mix.banner({
-    banner : "WooCommerce Variation Swatches v1.0.53 \n\nAuthor: Emran Ahmed ( emran.bd.08@gmail.com ) \nDate: " + new Date().toLocaleString() + "\nReleased under the GPLv3 license."
+    banner : "WooCommerce Variation Swatches v1.0.55 \n\nAuthor: Emran Ahmed ( emran.bd.08@gmail.com ) \nDate: " + new Date().toLocaleString() + "\nReleased under the GPLv3 license."
 });
 
 mix.notification({
@@ -77,17 +77,20 @@ mix.js(`src/js/backend.js`, `assets/js/admin${min}.js`);
 mix.js(`src/js/frontend.js`, `assets/js/frontend${min}.js`);
 mix.js(`src/js/gwp-admin.js`, `assets/js/gwp-admin${min}.js`);
 
+mix.copy(`src/js/bluebird.js`, `assets/js/bluebird${min}.js`);
+
 // Woo Layout Injector
 mix.babel(`src/js/divi_woo_layout_injector.js`, `assets/js/divi_woo_layout_injector${min}.js`);
 
 mix.babel(`src/js/FormFieldDependency.js`, `assets/js/form-field-dependency${min}.js`);
 mix.babel(`src/js/wp-color-picker-alpha.js`, `assets/js/wp-color-picker-alpha${min}.js`);
-mix.babel(`src/js/wvs-customize-alpha-color-control.js`, `assets/js/wvs-customize-alpha-color-control${min}.js`);
+// mix.babel(`src/js/wvs-customize-alpha-color-control.js`, `assets/js/wvs-customize-alpha-color-control${min}.js`);
 mix.sass(`src/scss/backend.scss`, `assets/css/admin${min}.css`);
 
 mix.sass(`src/scss/gwp-admin.scss`, `assets/css/gwp-admin${min}.css`);
+mix.sass(`src/scss/gwp-admin-notice.scss`, `assets/css/gwp-admin-notice${min}.css`);
 
 mix.sass(`src/scss/frontend.scss`, `assets/css/frontend${min}.css`);
 mix.sass(`src/scss/tooltip.scss`, `assets/css/frontend-tooltip${min}.css`);
 mix.sass(`src/scss/theme-override.scss`, `assets/css/wvs-theme-override${min}.css`);
-mix.sass(`src/scss/customize-heading-control.scss`, `assets/css/wvs-customize-heading-control${min}.css`);
+// mix.sass(`src/scss/customize-heading-control.scss`, `assets/css/wvs-customize-heading-control${min}.css`);

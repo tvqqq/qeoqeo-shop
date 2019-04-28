@@ -71,11 +71,11 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                     $time_to_send_template_after = $value->frequency * $hour_seconds;
                 }
                 
-                $carts               = $this->wcal_get_carts( $time_to_send_template_after, $cart_abandon_cut_off_time );
+                $carts               = $this->wcal_get_carts( $time_to_send_template_after, $cart_abandon_cut_off_time, $value->id );
                 $email_frequency     = $value->frequency;
                 $email_body_template = $value->body;
-                $email_subject       = stripslashes  ( $value->subject );
-                $email_subject       = convert_smilies ( $email_subject );
+                $template_email_subject       = stripslashes  ( $value->subject );
+                $template_email_subject       = convert_smilies ( $template_email_subject );
                 $wcal_from_name      = get_option ( 'wcal_from_name' );
                 $wcal_from_email     = get_option ( 'wcal_from_email' );
                 $wcal_reply_email    = get_option ( 'wcal_reply_email' );
@@ -151,7 +151,7 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                                 $wcal_check_if_cart_is_present_in_post_meta   = "SELECT wpm.post_id, wpost.post_date, wpost.post_status  FROM `" . $wpdb->prefix . "postmeta` AS wpm
                                     LEFT JOIN `" . $wpdb->prefix . "posts` AS wpost
                                     ON wpm.post_id = wpost.ID
-                                    WHERE wpm.meta_key = 'wcap_recover_order_placed' AND
+                                    WHERE wpm.meta_key = 'wcal_recover_order_placed' AND
                                     wpm.meta_value = %s AND wpm.post_id = wpost.ID AND
                                     wpost.post_type = 'shop_order'
                                     ORDER BY wpm.post_id   DESC LIMIT 1";
@@ -172,6 +172,7 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                                      false == $wcap_check_cart_staus_need_to_update ) {
 
                                     $cart_info_db = $value->abandoned_cart_info;
+                                    $email_subject = $template_email_subject;
                                     $email_body   = $email_body_template;
                                     $wcal_check_cart_total = $this->wcal_check_cart_total( $cart );
                                     if( true == $wcal_check_cart_total ) {
@@ -296,32 +297,37 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                                                 foreach ( $cart_details as $k => $v ) {
                                                     $quantity_total     = $v->quantity;
                                                     $product_id         = $v->product_id;
-                                                    $prod_name          = get_post( $product_id );
-                                                    $product_link_track = get_permalink( $product_id );
-                                                    $product_name = $prod_name->post_title;
-                                                    if( $sub_line_prod_name == '' ) {
-                                                        $sub_line_prod_name = $product_name;
-                                                    }
-                                                    // Item subtotal is calculated as product total including taxes
-                                                    if( $v->line_tax != 0 && $v->line_tax > 0 ) {
-                                                        $item_subtotal = $item_subtotal + $v->line_total + $v->line_tax;
-                                                    } else {
-                                                        $item_subtotal = $item_subtotal + $v->line_total;
-                                                    }
-                                                    //  Line total
-                                                    $item_total         = $item_subtotal;
-                                                    $item_subtotal      = $item_subtotal / $quantity_total;
-                                                    $item_total_display = wc_price( $item_total );
-                                                    $item_subtotal      = wc_price( $item_subtotal );
                                                     $product            = wc_get_product( $product_id );
-                                                    $prod_image         = $product->get_image();
-                                                    $image_url          = wp_get_attachment_url( get_post_thumbnail_id( $product_id ) );
-                                                    if ( isset( $v->variation_id ) && '' != $v->variation_id ) {
-                                                        $variation_id               = $v->variation_id;
-                                                        $variation                  = wc_get_product( $variation_id );
-                                                        $name                       = $variation->get_formatted_name() ;
-                                                        $explode_all                = explode ( "&ndash;", $name );
-                                                        if( version_compare( $woocommerce->version, '3.0.0', ">=" ) ) {
+                                                    if ( $product ) {
+                                                        $prod_name          = get_post( $product_id );
+                                                        $product_link_track = get_permalink( $product_id );
+                                                        $product_name = $prod_name->post_title;
+                                                        if( $sub_line_prod_name == '' ) {
+                                                            $sub_line_prod_name = $product_name;
+                                                        }
+                                                        // Item subtotal is calculated as product total including taxes
+                                                        if( $v->line_tax != 0 && $v->line_tax > 0 ) {
+                                                            $item_subtotal = $item_subtotal + $v->line_total + $v->line_tax;
+                                                        } else {
+                                                            $item_subtotal = $item_subtotal + $v->line_total;
+                                                        }
+                                                        //  Line total
+                                                        $item_total         = $item_subtotal;
+                                                        $item_subtotal      = $item_subtotal / $quantity_total;
+                                                        $item_total_display = wc_price( $item_total );
+                                                        $item_subtotal      = wc_price( $item_subtotal );
+                                                        //$product            = wc_get_product( $product_id );
+                                                        $prod_image         = $product->get_image();
+                                                        $image_url          = wp_get_attachment_url( get_post_thumbnail_id( $product_id ) );
+                                                        if ( strpos( $image_url, '/' ) === 0 ) {
+                                                            $image_url = get_option('siteurl') . $image_url;
+                                                        }
+                                                        if ( isset( $v->variation_id ) && '' != $v->variation_id ) {
+                                                            $variation_id               = $v->variation_id;
+                                                            $variation                  = wc_get_product( $variation_id );
+                                                            $name                       = $variation->get_formatted_name() ;
+                                                            $explode_all                = explode ( "&ndash;", $name );
+                                                            if( version_compare( $woocommerce->version, '3.0.0', ">=" ) ) {
                                                                 $wcap_sku = '';
                                                                 if ( $variation->get_sku() ) {
                                                                     $wcap_sku = "SKU: " . $variation->get_sku() . "<br>";
@@ -357,7 +363,16 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                                                             </tr>';
                                                         $cart_total += $item_total;
                                                         $item_subtotal = $item_total = 0;
+                                                        $p_exists = true;
+                                                    }else {
+                                                        $cart_total = 0;
+                                                        $item_subtotal = $item_total = 0;
+
+                                                        $p_exists = false;
                                                     }
+                                                }
+
+                                                if ( $p_exists ) {
                                                     $cart_total = wc_price( $cart_total );
                                                     $var .= '<tr align="center">
                                                             <td> </td>
@@ -370,7 +385,11 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                                                                             ';
                                                     $email_body    = str_replace( "{{products.cart}}", $var, $email_body );
                                                     $email_subject = str_replace( "{{product.name}}", __( $sub_line_prod_name, 'woocommerce-abandoned-cart' ), $email_subject );
+                                                }else {
+                                                    $email_body    = str_replace( "{{products.cart}}", 'Product no longer exists', $email_body );
+                                                    $email_subject = str_replace( "{{product.name}}", __( $sub_line_prod_name, 'woocommerce-abandoned-cart' ), $email_subject );
                                                 }
+                                            }
 
                                                 $user_email       = $value->user_email;
                                                 $email_body_final = stripslashes( $email_body );
@@ -453,15 +472,23 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
          * @return array | object $results
          * @since 1.3
          */
-        function wcal_get_carts( $template_to_send_after_time, $cart_abandon_cut_off_time ) {
+        function wcal_get_carts( $template_to_send_after_time, $cart_abandon_cut_off_time, $template_id ) {
             global $wpdb;
             $cart_time = current_time( 'timestamp' ) - $template_to_send_after_time - $cart_abandon_cut_off_time;
+
+            $wcal_template_time = get_option( 'wcal_template_' . $template_id . '_time' );
+            $wcal_add_template_condition = '';
+            if ( $wcal_template_time > 0 ) {
+                $wcal_add_template_condition = ' AND abandoned_cart_time > ' . $wcal_template_time;
+            }
             $cart_ignored = 0;
             $unsubscribe  = 0;
-            $query = "SELECT wpac . * , wpu.user_login, wpu.user_email FROM `".$wpdb->prefix."ac_abandoned_cart_history_lite` AS wpac
-                      LEFT JOIN ".$wpdb->base_prefix."users AS wpu ON wpac.user_id = wpu.id
-                      WHERE cart_ignored = %s AND unsubscribe_link = %s AND abandoned_cart_time < $cart_time
-                      ORDER BY `id` ASC ";
+            $query = "SELECT wpac . * , wpu.user_login, wpu.user_email 
+                FROM `".$wpdb->prefix."ac_abandoned_cart_history_lite` AS wpac
+                LEFT JOIN ".$wpdb->base_prefix."users AS wpu ON wpac.user_id = wpu.id
+                WHERE cart_ignored = %s AND unsubscribe_link = %s AND abandoned_cart_time < $cart_time
+                $wcal_add_template_condition
+                ORDER BY `id` ASC ";
 
             $results = $wpdb->get_results( $wpdb->prepare( $query, $cart_ignored, $unsubscribe ) );
             return $results;
@@ -541,10 +568,10 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
 
                             $order_id = $wcal_results[0]->post_id;
 
-                            $order    = new WC_Order( $order_id );
+                            $order    = wc_get_order( $order_id );
 
-                            $query_order = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET recovered_cart= '" . $order_id . "', cart_ignored = '1' WHERE id = '".$cart_id."' ";
-                            $wpdb->query( $query_order );
+                            $query_order = "UPDATE `" . $wpdb->prefix . "ac_abandoned_cart_history_lite` SET recovered_cart= %s, cart_ignored = '1' WHERE id = %s";
+                            $wpdb->query( $wpdb->prepare( $query_order, $order_id, $cart_id ) );
 
                             $order->add_order_note( __( 'This order was abandoned & subsequently recovered.', 'woocommerce-abandoned-cart' ) );
 
@@ -553,13 +580,13 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
                         }
                     }else{
 
-                        $query_ignored = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET cart_ignored = '1' WHERE id ='" . $cart_id . "'";
-                        $wpdb->query( $query_ignored );
+                        $query_ignored = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET cart_ignored = '1' WHERE id = %s";
+                        $wpdb->query( $wpdb->prepare( $query_ignored, $cart_id ) );
                     }
                     return 1;
                 }else if ( strtotime( $order_date_with_time ) > $abandoned_cart_time ) {
-                    $query_ignored = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET cart_ignored = '1' WHERE id ='" . $cart_id . "'";
-                    $wpdb->query( $query_ignored );
+                    $query_ignored = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET cart_ignored = '1' WHERE id = %s ";
+                    $wpdb->query( $wpdb->prepare( $query_ignored, $cart_id ) );
                     return 1;
                 } else if( "wc-pending" == $results_query_email[0]->post_status || "wc-failed" == $results_query_email[0]->post_status ) {
 
@@ -608,15 +635,15 @@ if ( !class_exists( 'woocommerce_abandon_cart_cron' ) ) {
 
                             $order_id = $wcal_results[0]->post_id;
 
-                            $order    = new WC_Order( $order_id );
+                            $order    = wc_get_order( $order_id );
 
                             $query_order = "UPDATE `" . $wpdb->prefix."ac_abandoned_cart_history_lite` SET recovered_cart= '" . $order_id . "', cart_ignored = '1' WHERE id = '".$cart_id."' ";
                             $wpdb->query( $query_order );
 
                             $order->add_order_note( __( 'This order was abandoned & subsequently recovered.', 'woocommerce-abandoned-cart' ) );
 
-                            delete_post_meta( $order_id,  'wcap_recover_order_placed',         $cart_id );
-                            delete_post_meta( $order_id , 'wcap_recover_order_placed_sent_id', $wcal_check_email_sent_to_cart );
+                            delete_post_meta( $order_id,  'wcal_recover_order_placed',         $cart_id );
+                            delete_post_meta( $order_id , 'wcal_recover_order_placed_sent_id', $wcal_check_email_sent_to_cart );
                         }
                     }else {
 

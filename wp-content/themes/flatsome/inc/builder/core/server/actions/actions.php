@@ -1,27 +1,6 @@
 <?php
 
 /**
- * Add custom page to render UX Builder on.
- */
-add_action( 'admin_menu', function () {
-		add_submenu_page(
-			null,
-			'UX Builder',
-			'UX Builder',
-			'edit_posts',
-			'uxbuilder',
-			'ux_builder_edit_page_callback'
-		);
-} );
-
-/**
- *  UX Builder edit page callback
- */
-function ux_builder_edit_page_callback() {
-	echo 'uxbuilder';
-}
-
-/**
  * Register breakpoints.
  */
 function ux_builder_register_breakpoints() {

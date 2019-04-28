@@ -204,7 +204,7 @@ function flatsome_refresh_portfolio_partials( WP_Customize_Manager $wp_customize
 		'selector' => '.portfolio-single-page',
 		'settings' => array('portfolio_style','portfolio_layout','portfolio_title'),
 		'render_callback' => function() {
-		    return get_template_part('template-parts/portfolio/single-portfolio', flatsome_option('portfolio_layout'));
+		    get_template_part('template-parts/portfolio/single-portfolio', flatsome_option('portfolio_layout'));
 		},
 	) );
 
@@ -212,7 +212,7 @@ function flatsome_refresh_portfolio_partials( WP_Customize_Manager $wp_customize
 		'selector' => '.portfolio-archive',
 		'settings' => array('portfolio_archive_title','portfolio_archive_filter','portfolio_style','portfolio_archive_filter_style'),
 		'render_callback' => function() {
-		    return  get_template_part('template-parts/portfolio/archive-portfolio', flatsome_option('portfolio_archive_layout'));
+		    get_template_part('template-parts/portfolio/archive-portfolio', flatsome_option('portfolio_archive_layout'));
 		},
 	) );
 

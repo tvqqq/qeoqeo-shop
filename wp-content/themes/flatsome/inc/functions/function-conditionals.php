@@ -9,30 +9,39 @@
 if ( ! function_exists( 'is_nextend_facebook_login' ) ) {
 	/**
 	 * Returns true if Nextend facebook provider is enabled for v3
-	 * or fallback return for Nextend facebook v2.
 	 *
 	 * @return bool
 	 */
 	function is_nextend_facebook_login() {
-		if ( class_exists( 'NextendSocialLogin', false ) ) {
+		if ( class_exists( 'NextendSocialLogin', false ) && ! class_exists( 'NextendSocialLoginPRO', false ) ) {
 			return NextendSocialLogin::isProviderEnabled( 'facebook' );
 		}
-		return defined( 'NEW_FB_LOGIN' );
+		return false;
 	}
 }
 
 if ( ! function_exists( 'is_nextend_google_login' ) ) {
 	/**
 	 * Returns true if Nextend google provider is enabled for v3
-	 * or fallback return for Nextend google v1.
 	 *
 	 * @return bool
 	 */
 	function is_nextend_google_login() {
-		if ( class_exists( 'NextendSocialLogin', false ) ) {
+		if ( class_exists( 'NextendSocialLogin', false ) && ! class_exists( 'NextendSocialLoginPRO', false ) ) {
 			return NextendSocialLogin::isProviderEnabled( 'google' );
 		}
-		return defined( 'NEW_GOOGLE_LOGIN' );
+		return false;
+	}
+}
+
+if ( ! function_exists( 'is_yith_wishlist_premium' ) ) {
+	/**
+	 * Returns true if YITH Wishlist Premium is installed and free version is not activated.
+	 *
+	 * @return bool
+	 */
+	function is_yith_wishlist_premium() {
+		return ! class_exists( 'YITH_WCWL_Privacy' ) && file_exists( WP_PLUGIN_DIR . '/yith-woocommerce-wishlist-premium/init.php' );
 	}
 }
 

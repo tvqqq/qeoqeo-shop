@@ -10,13 +10,25 @@
  */
 class WPSEO_Option_Tabs {
 
-	/** @var string Tabs base */
+	/**
+	 * Tabs base.
+	 *
+	 * @var string
+	 */
 	private $base;
 
-	/** @var array The tabs in this group */
+	/**
+	 * The tabs in this group.
+	 *
+	 * @var array
+	 */
 	private $tabs = array();
 
-	/** @var string Name of the active tab */
+	/**
+	 * Name of the active tab.
+	 *
+	 * @var string
+	 */
 	private $active_tab = '';
 
 	/**
@@ -100,7 +112,7 @@ class WPSEO_Option_Tabs {
 	/**
 	 * Display the tabs
 	 *
-	 * @param Yoast_Form $yform   Yoast Form needed in the views.
+	 * @param Yoast_Form $yform Yoast Form needed in the views.
 	 */
 	public function display( Yoast_Form $yform ) {
 		$formatter = new WPSEO_Option_Tabs_Formatter();

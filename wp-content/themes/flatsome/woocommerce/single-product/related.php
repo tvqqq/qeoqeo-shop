@@ -22,7 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Fallback to old
 if(!fl_woocommerce_version_check('3.0.0')){
-  return wc_get_template_part( 'single-product/related-old');
+	wc_get_template_part( 'single-product/related-old');
+	return;
 }
 
 // Get Type
@@ -44,7 +45,7 @@ if ( $related_products ) : ?>
       <?php esc_html_e( 'Related products', 'woocommerce' ); ?>
     </h3>
 
-      <?php echo get_flatsome_repeater_start($repater); ?>
+      <?php get_flatsome_repeater_start($repater); ?>
 
       <?php foreach ( $related_products as $related_product ) : ?>
 
@@ -57,7 +58,7 @@ if ( $related_products ) : ?>
 
       <?php endforeach; ?>
 
-      <?php echo get_flatsome_repeater_end($repater); ?>
+      <?php get_flatsome_repeater_end($repater); ?>
 
   </div>
 

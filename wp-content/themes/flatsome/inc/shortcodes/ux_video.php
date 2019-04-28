@@ -2,6 +2,8 @@
 function flatsome_video($atts) {
 
     extract( shortcode_atts( array(
+        'class' => '',
+        'visibility' => '',
         'url' => 'https://www.youtube.com/watch?v=AoPiLg8DZ3A',
         'height' => '56.25%',
         'depth' => '',
@@ -10,6 +12,8 @@ function flatsome_video($atts) {
 
 
     $classes = array('video','video-fit','mb');
+    if ( $class ) $classes[] = $class;
+    if ( $visibility ) $classes[] = $visibility;
 
     $video = apply_filters('the_content', $url);
 

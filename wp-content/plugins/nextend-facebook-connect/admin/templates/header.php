@@ -13,7 +13,7 @@ defined('ABSPATH') || die();
         <a href="<?php echo NextendSocialLoginAdmin::trackUrl('https://nextendweb.com/nextend-social-login-docs/documentation/', 'header-menu-docs'); ?>"
            class="nsl-admin-header-nav" target="_blank"><?php _e('Docs', 'nextend-facebook-connect'); ?></a>
 
-        <a href="<?php echo NextendSocialLoginAdmin::trackUrl('https://nextendweb.com/contact-us/', 'header-menu-support'); ?>"
+        <a href="<?php echo NextendSocialLoginAdmin::trackUrl('https://nextendweb.com/contact-us/nextend-social-login-support/', 'header-menu-support'); ?>"
            class="nsl-admin-header-nav" target="_blank"><?php _e('Support', 'nextend-facebook-connect'); ?></a>
 
         <a href="<?php echo NextendSocialLoginAdmin::getAdminUrl('debug'); ?>"

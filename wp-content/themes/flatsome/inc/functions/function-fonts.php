@@ -54,7 +54,7 @@ function flatsome_google_fonts_lazy(){
   ?>
     <script type="text/javascript">
     WebFontConfig = {
-      google: { families: [ <?php echo flatsome_get_google_fonts_link_lazy(); ?> ] }
+      google: { families: [ <?php flatsome_get_google_fonts_link_lazy(); ?> ] }
     };
     (function() {
       var wf = document.createElement('script');

@@ -6,6 +6,7 @@ function shortcode_latest_from_blog($atts, $content = null, $tag) {
 		"_id" => 'row-'.rand(),
 		'style' => '',
 		'class' => '',
+		'visibility' => '',
 
 		// Layout
 		"columns" => '4',
@@ -75,6 +76,9 @@ function shortcode_latest_from_blog($atts, $content = null, $tag) {
 
 	), $atts));
 
+	// Stop if visibility is hidden
+  if($visibility == 'hidden') return;
+
 	ob_start();
 
 	$classes_box = array();
@@ -143,6 +147,7 @@ function shortcode_latest_from_blog($atts, $content = null, $tag) {
 	$repeater['tag'] = $tag;
 	$repeater['type'] = $type;
 	$repeater['class'] = $class;
+	$repeater['visibility'] = $visibility;
 	$repeater['style'] = $style;
 	$repeater['slider_style'] = $slider_nav_style;
 	$repeater['slider_nav_position'] = $slider_nav_position;
@@ -196,7 +201,7 @@ get_flatsome_repeater_start($repeater);
 
 while ( $recentPosts->have_posts() ) : $recentPosts->the_post();
 
-		$col_class = array('post-item');
+			$col_class = array('post-item');
 
 			if(get_post_format() == 'video') $col_class[] = 'has-post-icon';
 

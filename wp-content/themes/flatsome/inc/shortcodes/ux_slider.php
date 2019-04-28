@@ -6,6 +6,7 @@ function shortcode_ux_slider($atts, $content=null) {
         'timer' => '6000',
         'bullets' => 'true',
         'visibility' => '',
+        'class' => '',
         'type' => 'slide',
         'bullet_style' => '',
         'auto_slide' => 'true',
@@ -40,15 +41,18 @@ function shortcode_ux_slider($atts, $content=null) {
 
     // Stop if visibility is hidden
     if($visibility == 'hidden') return;
+    if($mobile !==  'true' && !$visibility) {$visibility = 'hide-for-small';}
 
     ob_start();
+
+    $wrapper_classes = array('slider-wrapper', 'relative');
+    if( $class ) $wrapper_classes[] = $class;
+    if( $visibility ) $wrapper_classes[] = $visibility;
+    $wrapper_classes = implode(" ", $wrapper_classes);
 
     $classes = array('slider');
 
     if ($type == 'fade') $classes[] = 'slider-type-'.$type;
-
-    // Hide if mobile is set to false
-    if($mobile !==  'true' && !$visibility) {$visibility = 'hide-for-small';}
 
     // Bullet style
     if($bullet_style) $classes[] = 'slider-nav-dots-'.$bullet_style;
@@ -97,7 +101,7 @@ function shortcode_ux_slider($atts, $content=null) {
         )
     );
 ?>
-<div class="slider-wrapper relative <?php echo $visibility; ?>" id="<?php echo $_id; ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
+<div class="<?php echo $wrapper_classes; ?>" id="<?php echo $_id; ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
     <div class="<?php echo $classes; ?>"
         data-flickity-options='{
             "cellAlign": "<?php echo $slide_align; ?>",

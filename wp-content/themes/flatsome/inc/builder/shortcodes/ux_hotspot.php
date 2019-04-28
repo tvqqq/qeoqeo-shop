@@ -113,5 +113,7 @@ add_ux_builder_shortcode( 'ux_hotspot', array(
               'min' => '0',
       ),
       'position_options' => $position_options,
+      'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
+
   )
 ) );

@@ -62,6 +62,7 @@ add_ux_builder_shortcode( 'logo',
 				'min'     => 0,
 			),
 			'link_options' => require( __DIR__ . '/commons/links.php' ),
+			'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
 		),
 	)
 );

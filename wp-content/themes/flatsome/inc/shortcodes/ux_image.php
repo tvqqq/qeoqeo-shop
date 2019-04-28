@@ -2,6 +2,8 @@
 function ux_image( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'_id'             => 'image_' . rand(),
+		'class'						=> '',
+		'visibility'			=> '',
 		'id'              => '',
 		'org_img'         => '',
 		'caption'         => '',
@@ -40,7 +42,10 @@ function ux_image( $atts, $content = null ) {
 		$atts['width'] = '100';
 	}
 
-	$classes       = array();
+	$classes = array();
+	if ( $class ) $classes[] = $class;
+  if ( $visibility ) $classes[] = $visibility;
+
 	$classes_inner = array( 'img-inner' );
 	$classes_img   = array();
 	$image_meta    = wp_prepare_attachment_for_js( $id );

@@ -2,6 +2,8 @@
 // [ux_hotspot]
 function ux_hotspot( $atts, $content = null ){
   extract( shortcode_atts( array(
+    'class' => '',
+    'visibility' => '',
     'type' => 'text',
     'text' => 'Enter text here',
     'link' => '#hotspot',
@@ -23,6 +25,9 @@ function ux_hotspot( $atts, $content = null ){
 
   $classes = array('hotspot-wrapper');
   $classes_inner = array('hotspot tooltip');
+  
+  if ( $class ) $classes[] = $class;
+  if ( $visibility ) $classes[] = $visibility;
 
   // Set positions
   $classes[] = flatsome_position_classes( 'x', $position_x, $position_x__sm, $position_x__md );

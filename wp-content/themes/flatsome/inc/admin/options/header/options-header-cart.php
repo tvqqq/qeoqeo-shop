@@ -106,7 +106,7 @@ function flatsome_refresh_header_cart_partials( WP_Customize_Manager $wp_customi
 	    'container_inclusive' => true,
 	    'settings' => array('cart_icon','header_cart_style','cart_icon_style','custom_cart_icon','header_cart_total','header_cart_title','html_cart_header'),
 	    'render_callback' => function() {
-	        return get_template_part('template-parts/header/partials/element','cart');
+	        get_template_part('template-parts/header/partials/element','cart');
 	    },
 	) );
 
@@ -116,7 +116,7 @@ function flatsome_refresh_header_cart_partials( WP_Customize_Manager $wp_customi
 	    'container_inclusive' => true,
 	    'settings' => array('cart_icon','header_cart_style','cart_icon_style','custom_cart_icon','header_cart_total','header_cart_title','html_cart_header'),
 	    'render_callback' => function() {
-	        return get_template_part('template-parts/header/partials/element','cart');
+	        get_template_part('template-parts/header/partials/element','cart');
 	    },
 	) );
 
@@ -125,7 +125,7 @@ function flatsome_refresh_header_cart_partials( WP_Customize_Manager $wp_customi
 	    'container_inclusive' => true,
 	    'settings' => array('cart_icon','header_cart_style','cart_icon_style','custom_cart_icon','header_cart_total','header_cart_title','html_cart_header'),
 	    'render_callback' => function() {
-	        return get_template_part('template-parts/header/partials/element','cart-mobile');
+	        get_template_part('template-parts/header/partials/element','cart-mobile');
 	    },
 	) );
 

@@ -11,6 +11,7 @@ function ux_row($atts, $content = null) {
     'width' => '',
     'custom_width' => '',
     'class' => '',
+    'visibility' => '',
     'v_align' => '',
     'h_align' => '',
     'depth' => '',
@@ -20,6 +21,8 @@ function ux_row($atts, $content = null) {
     'col_bg' => '',
   ), $atts ) );
 
+  // Stop if visibility is hidden
+  if($visibility == 'hidden') return;
 
   $classes[] = 'row';
 
@@ -40,6 +43,8 @@ function ux_row($atts, $content = null) {
 
   // Custom Class
   if($class) $classes[] = $class;
+  if($visibility) $classes[] = $visibility;
+
 
   // Depth
   if($depth) $classes[] = 'row-box-shadow-'.$depth;
@@ -97,7 +102,7 @@ function ux_col($atts, $content = null) {
   ), $atts ) );
 
   // Hide if visibility is hidden
-  if($visibility == 'disabled') return;
+  if($visibility == 'hidden') return;
 
   $classes[] = 'col';
   $classes_inner[] = 'col-inner';
@@ -108,9 +113,7 @@ function ux_col($atts, $content = null) {
 
   // add custom class
   if($class) $classes[] = $class;
-
   if($visibility) $classes[] = $visibility;
-
 
   if($span__md) $classes[] = 'medium-'.$span__md;
   if($span__sm) $classes[] = 'small-'.$span__sm;

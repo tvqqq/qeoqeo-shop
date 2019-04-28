@@ -26,6 +26,7 @@ function flatsome_position_classes ( $axis, $default, $sm, $md ) {
 function get_flatsome_repeater_start( $atts ) {
     $atts = wp_parse_args( $atts, array(
       'class' => '',
+      'visibility' => '',
       'title' => '',
       'style' => '',
       'columns' => '',
@@ -38,11 +39,18 @@ function get_flatsome_repeater_start( $atts ) {
       'format' => '',
     ) );
 
-    $row_classes = array();
-    $row_classes_full = array();
+	$row_classes      = array();
+	$row_classes_full = array();
 
-    if($atts['class']) $row_classes[] = $atts['class'];
-    if($atts['class']) $row_classes_full[] = $atts['class'];
+	if ( $atts['class'] ) {
+		$row_classes[]      = $atts['class'];
+		$row_classes_full[] = $atts['class'];
+	}
+
+	if ( $atts['visibility'] ) {
+		$row_classes[]      = $atts['visibility'];
+		$row_classes_full[] = $atts['visibility'];
+	}
 
     if($atts['type'] == 'slider-full'){
       $atts['columns'] = false;

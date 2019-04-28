@@ -9,6 +9,8 @@ function ux_tabgroup( $params, $content = null, $tag ) {
 		'title' => '',
 		'style' => 'line',
 		'align' => 'left',
+		'class' => '',
+		'visibility' => '',
 		'type' => '', // horizontal, vertical
 		'nav_style' => 'uppercase',
 		'nav_size' => 'normal',
@@ -22,6 +24,10 @@ function ux_tabgroup( $params, $content = null, $tag ) {
 
 	$content = flatsome_contentfix($content);
 
+	$wrapper_class[] = 'tabbed-content';
+	if ( $class ) $wrapper_class[] = $class;
+  if ( $visibility ) $wrapper_class[] = $visibility;
+
 	$classes[] = 'nav';
 
 	if($style) $classes[] = 'nav-'.$style;
@@ -29,6 +35,7 @@ function ux_tabgroup( $params, $content = null, $tag ) {
 	if($nav_style) $classes[] = 'nav-'.$nav_style;
 	if($nav_size) $classes[] = 'nav-size-'.$nav_size;
 	if($align) $classes[] = 'nav-'.$align;
+
 
 	$classes = implode(' ', $classes);
 
@@ -43,7 +50,7 @@ function ux_tabgroup( $params, $content = null, $tag ) {
 		}
 			if($title) $title = '<h4 class="uppercase text-'.$align.'">'.$title.'</h4>';
 			$return = '
-		<div class="tabbed-content">
+		<div class="'.implode(' ', $wrapper_class).'">
 			'.$title.'
 			<ul class="'.$classes.'">'.implode( "\n", $tabs ).'</ul><div class="tab-panels">'.implode( "\n", $panes ).'</div></div>';
 	}

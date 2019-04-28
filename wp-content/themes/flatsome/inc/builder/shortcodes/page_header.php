@@ -243,7 +243,7 @@ add_ux_builder_shortcode( 'page_header', array(
             'min' => 0,
         ),
     ), // end bgs
-
   ),
+  'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
  ),
 ) );

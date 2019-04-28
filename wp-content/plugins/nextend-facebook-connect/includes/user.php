@@ -106,6 +106,9 @@ class NextendSocialUser {
             if (apply_filters('nsl_is_register_allowed', true, $this->provider)) {
                 $this->register($providerUserID, $email);
             } else {
+                //unset the cookie SESSnsl so users can re-authenticate
+                \NSL\Persistent\Persistent::clear();
+
                 NextendSocialProvider::redirect(__('Authentication error', 'nextend-facebook-connect'), add_query_arg('registration', 'disabled', NextendSocialLogin::getLoginUrl()));
                 exit;
             }

@@ -2,6 +2,8 @@
 
 function ux_navigation($atts) {
     extract(shortcode_atts(array(
+      'class' => '',
+      'visibility' => '',
       'parent' => '',
       'align' => 'left',
       'style' => 'line',
@@ -18,7 +20,9 @@ function ux_navigation($atts) {
       global $post;
       $current = get_the_ID($post->ID);
       $classes = array('nav');
-
+      
+      if($class) $classes[] = $class;
+      if($visibility) $classes[] = $visibility;
       if($case) $classes[] = 'nav-'.$case;
       if($type) $classes[] = 'nav-'.$type;
       if($size) $classes[] = 'nav-size-'.$size;

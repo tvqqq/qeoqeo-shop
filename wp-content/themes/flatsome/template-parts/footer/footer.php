@@ -21,4 +21,4 @@
 
 <?php do_action('flatsome_after_footer'); ?>
 
-<?php echo get_template_part('template-parts/footer/footer-absolute'); ?>
+<?php get_template_part('template-parts/footer/footer-absolute'); ?>

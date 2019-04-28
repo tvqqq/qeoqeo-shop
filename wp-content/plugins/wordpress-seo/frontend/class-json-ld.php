@@ -13,12 +13,18 @@
  * @since 1.8
  */
 class WPSEO_JSON_LD implements WPSEO_WordPress_Integration {
+
 	/**
-	 * @var array Holds the social profiles for the entity
+	 * Holds the social profiles for the entity.
+	 *
+	 * @var array
 	 */
 	private $profiles = array();
+
 	/**
-	 * @var array Holds the data to put out
+	 * Holds the data to put out.
+	 *
+	 * @var array
 	 */
 	private $data = array();
 
@@ -38,7 +44,9 @@ class WPSEO_JSON_LD implements WPSEO_WordPress_Integration {
 	 * @since 1.8
 	 */
 	public function json_ld() {
-		do_action( 'wpseo_json_ld' );
+		if ( ! is_404() ) {
+			do_action( 'wpseo_json_ld' );
+		}
 	}
 
 	/**
@@ -102,7 +110,12 @@ class WPSEO_JSON_LD implements WPSEO_WordPress_Integration {
 	 * @return void
 	 */
 	public function breadcrumb() {
-		if ( is_front_page() || ! WPSEO_Options::get( 'breadcrumbs-enable', false ) ) {
+		$breadcrumbs_enabled = current_theme_supports( 'yoast-seo-breadcrumbs' );
+		if ( ! $breadcrumbs_enabled ) {
+			$breadcrumbs_enabled = WPSEO_Options::get( 'breadcrumbs-enable', false );
+		}
+
+		if ( is_front_page() || ! $breadcrumbs_enabled ) {
 			return;
 		}
 
@@ -238,10 +251,10 @@ class WPSEO_JSON_LD implements WPSEO_WordPress_Integration {
 			'facebook_site',
 			'instagram_url',
 			'linkedin_url',
-			'plus-publisher',
 			'myspace_url',
 			'youtube_url',
 			'pinterest_url',
+			'wikipedia_url',
 		);
 		foreach ( $social_profiles as $profile ) {
 			if ( WPSEO_Options::get( $profile, '' ) !== '' ) {

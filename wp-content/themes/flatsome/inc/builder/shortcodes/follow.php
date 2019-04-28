@@ -54,5 +54,6 @@ add_ux_builder_shortcode( 'follow', array(
         'flickr' => array( 'type' => 'textfield','heading' => 'Flickr', 'default' => ''),
         'vkontakte' => array( 'type' => 'textfield','heading' => 'VKontakte', 'default' => ''),
         'px500' => array( 'type' => 'textfield','heading' => '500px', 'default' => ''),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

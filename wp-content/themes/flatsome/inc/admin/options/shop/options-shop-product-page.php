@@ -231,7 +231,7 @@ Flatsome_Option::add_field( 'option', array(
 Flatsome_Option::add_field( 'option', array(
 	'type'            => 'checkbox',
 	'settings'        => 'product_sticky_cart',
-	'label'           => __( 'Sticky add to cart', 'flatsome-admin' ).' (BETA)',
+	'label'           => __( 'Sticky add to cart', 'flatsome-admin' ),
 	'section'         => 'product-page',
 	'default'         => 0,
 ) );

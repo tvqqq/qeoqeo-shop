@@ -18,6 +18,6 @@ add_ux_builder_shortcode( 'gap', array(
                 'style' => 'padding-top: {{ value }}'
             ),
         ),
-     
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

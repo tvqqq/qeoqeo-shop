@@ -15,6 +15,7 @@ function ux_products($atts, $content = null, $tag) {
 		'ids' => '',
 		'style' => 'default',
 		'class' => '',
+		'visibility' => '',
 
 		// Ooptions
 		'back_image' => true,
@@ -70,6 +71,11 @@ function ux_products($atts, $content = null, $tag) {
 
 	), $atts));
 
+	// Stop if visibility is hidden
+  if($visibility == 'hidden') return;
+
+	ob_start();
+
 	// if no style is set
 	if(!$style) $style = 'default';
 
@@ -123,11 +129,11 @@ function ux_products($atts, $content = null, $tag) {
 	  $current_grid = 0;
 	  $grid = flatsome_get_grid($grid);
 	  $grid_total = count($grid);
-	  echo flatsome_get_grid_height($grid_height, $_id);
+	  flatsome_get_grid_height($grid_height, $_id);
 	}
 
 	// Fix image size
-	if(!$image_size) $image_size = 'shop_catalog';
+	if(!$image_size) $image_size = 'woocommerce_thumbnail';
 
    	// Add Animations
 	if($animate) {$animate = 'data-animate="'.$animate.'"';}
@@ -177,6 +183,8 @@ function ux_products($atts, $content = null, $tag) {
 	$repater['id'] = $_id;
 	$repater['title'] = $title;
 	$repater['tag'] = $tag;
+	$repater['class'] = $class;
+	$repater['visibility'] = $visibility;
 	$repater['type'] = $type;
 	$repater['style'] = $style;
 	$repater['slider_style'] = $slider_nav_style;
@@ -194,9 +202,8 @@ function ux_products($atts, $content = null, $tag) {
 	$repater['depth_hover'] = $depth_hover;
 
 
-	ob_start();
 
-	echo get_flatsome_repeater_start($repater);
+	get_flatsome_repeater_start($repater);
 
 	?>
 	<?php
@@ -259,13 +266,13 @@ function ux_products($atts, $content = null, $tag) {
 
 	            	<div class="<?php echo implode(' ', $classes_col); ?>" <?php echo $animate;?>>
 						<div class="col-inner">
-						<?php echo woocommerce_show_product_loop_sale_flash(); ?>
+						<?php woocommerce_show_product_loop_sale_flash(); ?>
 						<div class="product-small <?php echo implode(' ', $classes_box); ?>">
 							<div class="box-image" <?php echo get_shortcode_inline_css($css_args_img); ?>>
 								<div class="<?php echo implode(' ', $classes_image); ?>" <?php echo get_shortcode_inline_css($css_image_height); ?>>
 									<a href="<?php echo get_the_permalink(); ?>">
 										<?php
-											if($back_image) echo flatsome_woocommerce_get_alt_product_thumbnail($image_size);
+											if($back_image) flatsome_woocommerce_get_alt_product_thumbnail($image_size);
 											echo woocommerce_get_product_thumbnail($image_size);
 										?>
 									</a>
@@ -316,7 +323,7 @@ function ux_products($atts, $content = null, $tag) {
 	        endif;
 	        wp_reset_query();
 
-	echo get_flatsome_repeater_end($repater);
+	get_flatsome_repeater_end($repater);
 
 	$content = ob_get_contents();
 	ob_end_clean();

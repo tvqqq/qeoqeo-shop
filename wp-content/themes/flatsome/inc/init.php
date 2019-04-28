@@ -106,7 +106,6 @@ require get_template_directory() . '/inc/shortcodes/scroll_to.php';
 require get_template_directory() . '/inc/shortcodes/ux_pages.php';
 require get_template_directory() . '/inc/shortcodes/ux_gallery.php';
 require get_template_directory() . '/inc/shortcodes/ux_hotspot.php';
-require get_template_directory() . '/inc/shortcodes/item_list.php';
 require get_template_directory() . '/inc/shortcodes/page_header.php';
 require get_template_directory() . '/inc/shortcodes/ux_instagram_feed.php';
 require get_template_directory() . '/inc/shortcodes/ux_countdown/ux-countdown.php';

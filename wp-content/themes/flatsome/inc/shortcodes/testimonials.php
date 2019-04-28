@@ -6,6 +6,8 @@ function flatsome_testimonial($atts, $content = null) {
   $sliderrandomid = rand();
   extract(shortcode_atts(array(
     'name' => '',
+    'class' => '',
+    'visibility' => '',
     'company' => '',
     'stars' => '5',
     'font_size' => '',
@@ -21,6 +23,9 @@ function flatsome_testimonial($atts, $content = null) {
   $classes_img = array('icon-box-img','testimonial-image','circle');
   
   $classes[] = 'icon-box-'.$pos;
+  if ( $class ) $classes[] = $class;
+  if ( $visibility ) $classes[] = $visibility;
+
   if($pos == 'center') $classes[] = 'text-center';
   if($pos == 'left' || $pos == 'top') $classes[] = 'text-left';
   if($pos == 'right') $classes[] = 'text-right';

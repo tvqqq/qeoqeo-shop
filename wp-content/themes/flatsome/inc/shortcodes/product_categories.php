@@ -17,6 +17,8 @@ function ux_product_categories($atts, $content = null, $tag) {
       'parent'     => 'false',
       'offset' => '',
       'show_count' => 'true',
+      'class' => '',
+      'visibility' => '',
 
       // Layout
       'style' => 'badge',
@@ -92,6 +94,8 @@ function ux_product_categories($atts, $content = null, $tag) {
         'offset' => $offset,
     );
 
+	ob_start();
+
     $product_categories = get_terms( 'product_cat', $args );
 
     if ( !empty($parent) ) $product_categories = wp_list_filter( $product_categories, array( 'parent' => $parent ) );
@@ -107,7 +111,7 @@ function ux_product_categories($atts, $content = null, $tag) {
       $current_grid = 0;
       $grid = flatsome_get_grid($grid);
       $grid_total = count($grid);
-      echo flatsome_get_grid_height($grid_height, $_id);
+      flatsome_get_grid_height($grid_height, $_id);
     }
 
     // Add Animations
@@ -148,6 +152,8 @@ function ux_product_categories($atts, $content = null, $tag) {
 
     // Repeater options
     $repater['id'] = $_id;
+    $repater['class'] = $class;
+    $repater['visibility'] = $visibility;
     $repater['tag'] = $tag;
     $repater['type'] = $type;
     $repater['style'] = $style;
@@ -165,16 +171,15 @@ function ux_product_categories($atts, $content = null, $tag) {
     $repater['depth'] = $depth;
     $repater['depth_hover'] = $depth_hover;
 
-    ob_start();
 
-    echo get_flatsome_repeater_start($repater);
+    get_flatsome_repeater_start($repater);
 
     if ( $product_categories ) {
       foreach ( $product_categories as $category ) {
 
         $classes_col = array('product-category','col');
 
-        $thumbnail_size   = apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
+        $thumbnail_size   = apply_filters( 'single_product_archive_thumbnail_size', 'woocommerce_thumbnail' );
 
         if($image_size) $thumbnail_size = $image_size;
 
@@ -243,7 +248,7 @@ function ux_product_categories($atts, $content = null, $tag) {
     }
     woocommerce_reset_loop();
 
-    echo get_flatsome_repeater_end($repater);
+    get_flatsome_repeater_end($repater);
 
     $content = ob_get_contents();
     ob_end_clean();

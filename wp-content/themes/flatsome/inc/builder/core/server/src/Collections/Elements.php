@@ -44,6 +44,7 @@ class Elements extends Collection {
       'scroll_to' => true,
       'add_buttons' => false,
       'addable_spots' => false,
+      'has_presets' => false,
       'tools_controller' => ux_builder_to_pascalcase( "${tag}ToolsController" ),
       'shortcode_controller' => ux_builder_to_pascalcase( "${tag}ShortcodeController" ),
       'template' => null,
@@ -73,6 +74,8 @@ class Elements extends Collection {
         'name' => __( 'Default', 'ux_builder' ),
         'content' => $data['type'] == 'normal' ? "[{$tag}]" : "[{$tag}][/{$tag}]",
       ));
+    } else if ( is_array( $data['presets'] ) && count( $data['presets'] ) > 1 ) {
+      $data['has_presets'] = true;
     }
 
     // Indicate if template should be loaded from server.

@@ -47,7 +47,7 @@ function flatsome_header_elements($options, $type = ''){
          if($value == 'divider' || $value == 'divider_2' || $value == 'divider_3' || $value == 'divider_4' || $value == 'divider_5'){
              echo '<li class="header-divider"></li>';
           } else if($value == 'html' || $value == 'html-2' || $value == 'html-3' || $value == 'html-4' || $value == 'html-5'){
-              echo flatsome_get_header_html_element($value);
+              flatsome_get_header_html_element($value);
           } else if($value == 'block-1' || $value == 'block-2'){
               echo do_shortcode('<li class="header-block"><div class="header-block-'.$value.'">[block id="'.get_theme_mod('header-'.$value).'"]</div></li>');
           } else if($value == 'nav-top'){
@@ -84,7 +84,7 @@ class FlatsomeNavDropdown extends Walker_Nav_Menu
         // check, whether there are children for the given ID and append it to the element with a (new) ID
         $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]);
 
-        return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+        parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
     }
 
     function start_lvl( &$output, $depth = 0, $args = array() ) {
@@ -204,7 +204,7 @@ class FlatsomeNavSidebar extends Walker_Nav_Menu{
         // check, whether there are children for the given ID and append it to the element with a (new) ID
         $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]);
 
-        return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+        parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
     }
 
     function start_lvl( &$output, $depth = 0, $args = array() ) {

@@ -53,5 +53,3 @@ add_ux_builder_shortcode( 'ux_image_box', array(
     ),
     require( __DIR__ . '/commons/box-styles.php' ) ),
 ) );
-
-// ux_builder_parse_args

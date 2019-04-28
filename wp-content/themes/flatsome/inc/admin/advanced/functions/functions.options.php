@@ -265,7 +265,7 @@ if ( ! function_exists( 'of_options' ) ) {
 
 		$of_options[] = array(
 			"name" => "Google Maps API",
-			"desc" => "Enter Google Maps API key here to enable Maps. You can generate one here: <a target='_blank' href='https://developers.google.com/maps/documentation/javascript/'>Google Maps API</a>",
+			"desc" => "Enter Google Maps API key here to enable Maps. You can generate one here: <a target='_blank' href='https://developers.google.com/maps/documentation/javascript/get-api-key'>Google Maps API</a>",
 			"id"   => "google_map_api",
 			"std"  => "",
 			"type" => "text"

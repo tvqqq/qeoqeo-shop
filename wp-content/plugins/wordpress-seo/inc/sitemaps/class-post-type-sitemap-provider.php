@@ -10,19 +10,39 @@
  */
 class WPSEO_Post_Type_Sitemap_Provider implements WPSEO_Sitemap_Provider {
 
-	/** @var string $home_url Holds the home_url() value. */
+	/**
+	 * Holds the home_url() value.
+	 *
+	 * @var string
+	 */
 	protected static $home_url;
 
-	/** @var WPSEO_Sitemap_Image_Parser $image_parser Holds image parser instance. */
+	/**
+	 * Holds image parser instance.
+	 *
+	 * @var WPSEO_Sitemap_Image_Parser
+	 */
 	protected static $image_parser;
 
-	/** @var object $classifier Holds instance of classifier for a link. */
+	/**
+	 * Holds instance of classifier for a link.
+	 *
+	 * @var object
+	 */
 	protected static $classifier;
 
-	/** @var int $page_on_front_id Static front page ID. */
+	/**
+	 * Static front page ID.
+	 *
+	 * @var int
+	 */
 	protected static $page_on_front_id;
 
-	/** @var int $page_for_posts_id Posts page ID. */
+	/**
+	 * Posts page ID.
+	 *
+	 * @var int
+	 */
 	protected static $page_for_posts_id;
 
 	/**
@@ -517,8 +537,11 @@ class WPSEO_Post_Type_Sitemap_Provider implements WPSEO_Sitemap_Provider {
 		$where_filter = $filters[ $post_type ]['where'];
 		$where        = $this->get_sql_where_clause( $post_type );
 
-		// Optimized query per this thread: http://wordpress.org/support/topic/plugin-wordpress-seo-by-yoast-performance-suggestion.
-		// Also see http://explainextended.com/2009/10/23/mysql-order-by-limit-performance-late-row-lookups/.
+		/*
+		 * Optimized query per this thread:
+		 * {@link http://wordpress.org/support/topic/plugin-wordpress-seo-by-yoast-performance-suggestion}.
+		 * Also see {@link http://explainextended.com/2009/10/23/mysql-order-by-limit-performance-late-row-lookups/}.
+		 */
 		$sql = "
 			SELECT l.ID, post_title, post_content, post_name, post_parent, post_author, post_modified_gmt, post_date, post_date_gmt
 			FROM (
@@ -601,7 +624,7 @@ class WPSEO_Post_Type_Sitemap_Provider implements WPSEO_Sitemap_Provider {
 		 */
 		$url['loc'] = apply_filters( 'wpseo_xml_sitemap_post_url', get_permalink( $post ), $post );
 
-		/**
+		/*
 		 * Do not include external URLs.
 		 *
 		 * @see https://wordpress.org/plugins/page-links-to/ can rewrite permalinks to external URLs.

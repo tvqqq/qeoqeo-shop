@@ -28,16 +28,6 @@ function ux_list_products( $args ) {
 			$order = 'asc';
 		}
 
-		// Get Category.
-		$cat = '';
-		if ( isset( $options['cat'] ) ) {
-			if ( is_numeric( $options['cat'] ) && get_term( $options['cat'] ) ) {
-				$cat = get_term( $options['cat'] )->slug;
-			} else {
-				$cat = $options['cat'];
-			}
-		}
-
 		$tags = '';
 		if ( isset( $options['tags'] ) ) {
 			if ( is_numeric( $options['tags'] ) ) {
@@ -113,9 +103,7 @@ function ux_list_products( $args ) {
 			$query_args['orderby'] = 'date';
 	}
 
-	if ( ! empty( $cat ) ) {
-		$query_args = ux_maybe_add_category_args( $query_args, $cat, 'IN' );
-	}
+	$query_args = ux_maybe_add_category_args( $query_args, $options['cat'], 'IN' );
 
 	if ( isset( $options['out_of_stock'] ) && $options['out_of_stock'] === 'exclude' ) {
 		$product_visibility_term_ids = wc_get_product_visibility_term_ids();
@@ -132,21 +120,46 @@ function ux_list_products( $args ) {
 	return $results;
 } // List products
 
-
-function ux_maybe_add_category_args( $args, $category, $operator ) {
+/**
+ * Set categories query args if not empty.
+ *
+ * @param array  $query_args Query args.
+ * @param string $category   Shortcode category attribute value.
+ * @param string $operator   Query Operator.
+ *
+ * @return array $query_args
+ */
+function ux_maybe_add_category_args( $query_args, $category, $operator ) {
 	if ( ! empty( $category ) ) {
-		if ( empty( $args['tax_query'] ) ) {
-			$args['tax_query'] = array(); // @codingStandardsIgnoreLine
+
+		if ( empty( $query_args['tax_query'] ) ) {
+			$query_args['tax_query'] = array(); // @codingStandardsIgnoreLine
 		}
-		$args['tax_query'][] = array(
+
+		$categories = array_map( 'sanitize_title', explode( ',', $category ) );
+		$field      = 'slug';
+
+		if ( is_numeric( $categories[0] ) ) {
+			$field      = 'term_id';
+			$categories = array_map( 'absint', $categories );
+			// Check numeric slugs.
+			foreach ( $categories as $cat ) {
+				$the_cat = get_term_by( 'slug', $cat, 'product_cat' );
+				if ( false !== $the_cat ) {
+					$categories[] = $the_cat->term_id;
+				}
+			}
+		}
+
+		$query_args['tax_query'][] = array(
 			'taxonomy' => 'product_cat',
-			'terms'    => array_map( 'sanitize_title', explode( ',', $category ) ),
-			'field'    => 'slug',
+			'terms'    => $categories,
+			'field'    => $field,
 			'operator' => $operator,
 		);
 	}
 
-	return $args;
+	return $query_args;
 }
 
 global $pagenow;

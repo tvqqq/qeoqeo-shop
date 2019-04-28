@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - LiteSpeed Cache - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-26 02:36:57+0000\n"
+"PO-Revision-Date: 2019-04-01 07:39:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,22 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: vi_VN\n"
 "Project-Id-Version: Plugins - LiteSpeed Cache - Stable (latest release)\n"
+
+#: admin/tpl/setting/settings_media.php:224
+msgid "Preserve EXIF/XMP data"
+msgstr "Giữ nguyên dữ liệu EXIF/XMP"
+
+#: admin/tpl/setting/settings_inc.cache_mobile.php:15
+msgid "Only enable for AMP or mobile-specific design/content, not for responsive sites."
+msgstr "Chỉ kích hoạt cho AMP hoặc thiết kế/nội dung dành riêng cho thiết bị di động, không cho các trang web đáp ứng (responsive)."
+
+#: admin/tpl/setting/settings_inc.cache_mobile.php:14
+msgid "Cache mobile views separately."
+msgstr "Cache cho chế độ xem trên điện thoại riêng biệt"
+
+#: admin/tpl/debug_log.php:20
+msgid "Try GitHub Version"
+msgstr "Dùng thử phiên bản GitHub"
 
 #: admin/tpl/setting/settings_cdn.php:112
 msgid "If you turn any of the above settings OFF, please remove the related file types from the %s box."
@@ -37,13 +53,13 @@ msgstr "Để xác định một TTL tùy chỉnh cho một URI, hãy thêm mộ
 
 #: admin/tpl/inc/banner_promo.new_version.php:84
 msgid "Maybe Later"
-msgstr "Có lẽ sau này"
+msgstr "Để sau"
 
 #: admin/tpl/inc/banner_promo.new_version.php:78
 msgid "Turn On Auto Upgrade"
 msgstr "Bật tự động nâng cấp"
 
-#: admin/tpl/inc/banner_promo.new_version.php:68
+#: admin/tpl/debug_log.php:26 admin/tpl/inc/banner_promo.new_version.php:68
 msgid "Upgrade"
 msgstr "Nâng cấp"
 
@@ -71,18 +87,18 @@ msgstr "Chắc chắn là tôi muốn đánh giá rồi!"
 msgid "Thank You for Using the LiteSpeed Cache Plugin!"
 msgstr "Cảm ơn bạn đã sử dụng Plugin LiteSpeed Cache!"
 
-#: includes/litespeed-cache-activation.class.php:363
-#: inc/activation.class.php:363
+#: inc/activation.class.php:368
+#: includes/litespeed-cache-activation.class.php:368
 msgid "Upgraded successfully."
 msgstr "Nâng cấp thành công."
 
-#: includes/litespeed-cache-activation.class.php:354
+#: inc/activation.class.php:359 inc/activation.class.php:364
 #: includes/litespeed-cache-activation.class.php:359
-#: inc/activation.class.php:354 inc/activation.class.php:359
+#: includes/litespeed-cache-activation.class.php:364
 msgid "Failed to upgrade."
 msgstr "Không thể nâng cấp."
 
-#: includes/litespeed-cache-config.class.php:768 inc/config.class.php:768
+#: inc/config.class.php:768 includes/litespeed-cache-config.class.php:768
 msgid "Changed setting successfully."
 msgstr "Thay đổi cài đặt thành công."
 
@@ -182,7 +198,7 @@ msgstr "CCSS Cache riêng biệt cho các loại bài viết "
 msgid "List post types where each item of that type should have its own CCSS generated."
 msgstr "Liệt kê các loại bài viết mà mỗi mục của loại đó sẽ có CSS của chính nó được tạo."
 
-#: includes/litespeed-cache-purge.class.php:218 inc/purge.class.php:218
+#: inc/purge.class.php:218 includes/litespeed-cache-purge.class.php:218
 msgid "Cleaned all placeholder files."
 msgstr "Đã xóa tất cả các tập tin giữ chỗ."
 
@@ -227,8 +243,8 @@ msgstr "Trình giữ chỗ đáp ứng"
 msgid "This will delete all generated image placeholder files"
 msgstr "Thao tác này sẽ xóa tất cả các tệp giữ chỗ hình ảnh được tạo"
 
-#: includes/litespeed-cache-gui.class.php:571
-#: admin/tpl/manage/manage_purge.php:81 inc/gui.class.php:571
+#: admin/tpl/manage/manage_purge.php:81 inc/gui.class.php:576
+#: includes/litespeed-cache-gui.class.php:576
 msgid "Placeholder Cache"
 msgstr "Cache trình giữ chỗ hình ảnh"
 
@@ -260,47 +276,47 @@ msgstr "Chèn thư viện Lazy Load hình ảnh vào HTML"
 msgid "High-performance page caching and site optimization from LiteSpeed"
 msgstr "Hiệu suất cao trong bộ nhớ đệm trang và tối ưu hóa trang web từ LiteSpeed"
 
-#: admin/tpl/import_export.php:61 inc/media.class.php:241
+#: admin/tpl/import_export.php:61 inc/media.class.php:246
 msgid "Reset"
 msgstr "Đặt lại"
 
-#: inc/media.class.php:222
+#: inc/media.class.php:227
 msgid "Click to Switch To Optimized File"
 msgstr "Click vào đây để chuyển sang tệp đã được tối ưu hóa"
 
-#: inc/media.class.php:217
+#: inc/media.class.php:222
 msgid "Click to Restore Original File"
 msgstr "Click vào đây để khôi phục lại tập tin gốc"
 
-#: inc/media.class.php:185
+#: inc/media.class.php:190
 msgid "Click to Enable WebP"
 msgstr "Click để bật WebP"
 
-#: inc/media.class.php:180
+#: inc/media.class.php:185
 msgid "Click to Disable WebP"
 msgstr "Click để tắt WebP"
 
-#: inc/img_optm.class.php:2048
+#: inc/img_optm.class.php:2045
 msgid "Reset the optimized data successfully."
 msgstr "Đặt lại dữ liệu được tối ưu hóa thành công."
 
-#: inc/img_optm.class.php:1031
+#: inc/img_optm.class.php:1021
 msgid "LSCWP %1$s has simplified the image pulling process. Please %2$s, or resend the pull notification this one time only. After that, the process will be automated."
 msgstr "LSCWP %1$s đã đơn giản hóa quá trình nén hình ảnh. Vui lòng %2$s hoặc gửi lại thông báo nén chỉ một lần này. Sau đó, quá trình sẽ được tự động hóa."
 
-#: includes/litespeed-cache-gui.class.php:638 inc/gui.class.php:638
+#: inc/gui.class.php:643 includes/litespeed-cache-gui.class.php:643
 msgid "Update %s now"
 msgstr "Cập nhật %s ngay bây giờ"
 
-#: includes/litespeed-cache-gui.class.php:633 inc/gui.class.php:633
+#: inc/gui.class.php:638 includes/litespeed-cache-gui.class.php:638
 msgid "View %1$s version %2$s details"
 msgstr "Xem chi tiết %1$s phiên bản %2$s"
 
-#: includes/litespeed-cache-gui.class.php:630 inc/gui.class.php:630
+#: inc/gui.class.php:635 includes/litespeed-cache-gui.class.php:635
 msgid "<a href=\"%1$s\" %2$s>View version %3$s details</a> or <a href=\"%4$s\" %5$s target=\"_blank\">update now</a>."
 msgstr "<a href=\"%1$s\" %2$s>Xem chi tiết %3$s phiên bản</a> hoặc <a href=\"%4$s\" %5$s target=\"_blank\">cập nhật ngay</a>."
 
-#: includes/litespeed-cache-gui.class.php:609 inc/gui.class.php:609
+#: inc/gui.class.php:614 includes/litespeed-cache-gui.class.php:614
 msgid "Install %s"
 msgstr "Cài đặt %s"
 
@@ -416,12 +432,12 @@ msgstr "Cấp độ tiếp theo"
 msgid "Good news from LiteSpeed image server"
 msgstr "Tin tốt từ máy chủ hình ảnh LiteSpeed"
 
-#: admin/tpl/api/quic.login.php:7 admin/tpl/api/quic.user_welcome.php:7
+#: admin/tpl/api/quic.user_welcome.php:7 admin/tpl/api/quic.login.php:7
 #: admin/tpl/api/quic.register.php:7
 msgid "Quic Cloud User Panel"
 msgstr "Bảng điều khiển người dùng Quic Cloud"
 
-#: inc/img_optm.class.php:1928
+#: inc/img_optm.class.php:1925
 msgid "Switched images successfully."
 msgstr "Đã chuyển đổi hình ảnh thành công."
 
@@ -485,7 +501,7 @@ msgstr "Tạo CSS quan trọng"
 msgid "When this option is turned %s, it will also load Google Fonts asynchronously."
 msgstr "Khi tùy chọn này được chuyển thành %s, thì nó sẽ tải Google Fonts một cách không đồng bộ."
 
-#: includes/litespeed-cache-purge.class.php:202 inc/purge.class.php:202
+#: inc/purge.class.php:202 includes/litespeed-cache-purge.class.php:202
 msgid "Cleaned all critical CSS files."
 msgstr "Đã xóa tất cả file CSS quan trọng."
 
@@ -536,8 +552,8 @@ msgstr "Tối ưu việc tải CSS."
 msgid "This will delete all generated critical CSS files"
 msgstr "Điều này sẽ xóa toàn bộ file CSS quan trọng đã được tạo."
 
-#: includes/litespeed-cache-gui.class.php:561
-#: admin/tpl/manage/manage_purge.php:72 inc/gui.class.php:561
+#: admin/tpl/manage/manage_purge.php:72 inc/gui.class.php:566
+#: includes/litespeed-cache-gui.class.php:566
 msgid "Critical CSS"
 msgstr "CSS quan trọng"
 
@@ -561,15 +577,15 @@ msgstr "Vô hiệu hóa điều này có thể gây ra các tác vụ WordPress 
 msgid "Disable WordPress heartbeat to prevent AJAX calls from breaking debug logging."
 msgstr "Vô hiệu hóa nhịp tim của WordPress để ngăn chặn các cuộc gọi AJAX khỏi việc ghi nhật ký gỡ lỗi."
 
-#: includes/litespeed-cache-utility.class.php:223 inc/utility.class.php:223
+#: inc/utility.class.php:239 includes/litespeed-cache-utility.class.php:239
 msgid "right now"
 msgstr "ngay bây giờ"
 
-#: includes/litespeed-cache-utility.class.php:223 inc/utility.class.php:223
+#: inc/utility.class.php:239 includes/litespeed-cache-utility.class.php:239
 msgid "just now"
 msgstr "mới đây"
 
-#: inc/img_optm.class.php:1733
+#: inc/img_optm.class.php:1730
 msgid "Removed %1$s images and saved %2$s successfully."
 msgstr "Đã xóa %1$s hình ảnh và lưu %2$s thành công."
 
@@ -664,17 +680,17 @@ msgstr "Xóa tất cả sẽ được thực hiện khi WordPress chạy các ho
 msgid "Purge All Hooks"
 msgstr "Xóa tất cả các hook"
 
-#: includes/litespeed-cache-purge.class.php:163 inc/purge.class.php:163
+#: inc/purge.class.php:163 includes/litespeed-cache-purge.class.php:163
 msgid "Purged all caches successfully."
 msgstr "Xóa tất cả các bộ nhớ cache thành công."
 
-#: includes/litespeed-cache-gui.class.php:464
-#: includes/litespeed-cache-gui.class.php:514 inc/gui.class.php:464
-#: inc/gui.class.php:514
+#: inc/gui.class.php:469 inc/gui.class.php:519
+#: includes/litespeed-cache-gui.class.php:469
+#: includes/litespeed-cache-gui.class.php:519
 msgid "LSCache"
 msgstr "LSCache"
 
-#: includes/litespeed-cache-gui.class.php:416 inc/gui.class.php:416
+#: inc/gui.class.php:421 includes/litespeed-cache-gui.class.php:421
 msgid "Forced cacheable"
 msgstr "Bắt buộc cacheable"
 
@@ -698,17 +714,17 @@ msgstr "Điều này sẽ vô hiệu hóa LSCache và tất cả các tính năn
 msgid "Disable All Features"
 msgstr "Vô hiệu hoá tất cả tính năng"
 
-#: includes/litespeed-cache-gui.class.php:551
-#: admin/tpl/manage/manage_purge.php:63 inc/gui.class.php:551
+#: admin/tpl/manage/manage_purge.php:63 inc/gui.class.php:556
+#: includes/litespeed-cache-gui.class.php:556
 msgid "Opcode Cache"
 msgstr "Opcode Cache"
 
-#: includes/litespeed-cache-gui.class.php:522
-#: admin/tpl/manage/manage_purge.php:45 inc/gui.class.php:522
+#: admin/tpl/manage/manage_purge.php:45 inc/gui.class.php:527
+#: includes/litespeed-cache-gui.class.php:527
 msgid "CSS/JS Cache"
 msgstr "CSS/JS Cache"
 
-#: inc/img_optm.class.php:1343
+#: inc/img_optm.class.php:1340
 msgid "Destroy unfinished data successfully."
 msgstr "Xóa dữ liệu chưa hoàn thành."
 
@@ -716,7 +732,7 @@ msgstr "Xóa dữ liệu chưa hoàn thành."
 msgid "This will also reset the credit level."
 msgstr "Điều này cũng sẽ đặt lại mức tín dụng."
 
-#: includes/litespeed-cache-gui.class.php:589 inc/gui.class.php:589
+#: inc/gui.class.php:594 includes/litespeed-cache-gui.class.php:594
 msgid "Remove all previous unfinished image optimization requests."
 msgstr "Loại bỏ tất cả các yêu cầu tối ưu hóa hình ảnh chưa hoàn thành trước đó."
 
@@ -724,7 +740,7 @@ msgstr "Loại bỏ tất cả các yêu cầu tối ưu hóa hình ảnh chưa 
 msgid "Images failed with other errors"
 msgstr "Tối ưu hóa hình ảnh thất bại do những lỗi khác"
 
-#: includes/litespeed-cache-gui.class.php:590 inc/gui.class.php:590
+#: inc/gui.class.php:595 includes/litespeed-cache-gui.class.php:595
 msgid "Clean Up Unfinished Data"
 msgstr "Dọn dẹp dữ liệu chưa hoàn thành"
 
@@ -836,12 +852,12 @@ msgstr "%s hình ảnh"
 msgid "%s groups"
 msgstr "%s nhóm"
 
-#: includes/litespeed-cache-crawler.class.php:531 inc/crawler.class.php:531
+#: inc/crawler.class.php:531 includes/litespeed-cache-crawler.class.php:531
 msgid "Guest"
 msgstr "Khách"
 
-#: lib/litespeed/litespeed-crawler.class.php:414
-#: includes/litespeed-cache-crawler.class.php:503 inc/crawler.class.php:503
+#: lib/litespeed/litespeed-crawler.class.php:414 inc/crawler.class.php:503
+#: includes/litespeed-cache-crawler.class.php:503
 msgid "Crawler %s reached end of sitemap file."
 msgstr "Trình thu thập thông tin %s đạt đến cuối tệp sitemap."
 
@@ -949,12 +965,12 @@ msgstr "Giá trị được thi hành của máy chủ"
 msgid "Server allowed min value"
 msgstr "Máy chủ cho phép giá trị thấp nhất"
 
-#: admin/tpl/setting/settings_cdn.php:88
-#: admin/tpl/setting/settings_excludes.php:72
-#: admin/tpl/setting/settings_excludes.php:110
 #: admin/tpl/setting/settings_crawler.php:22
 #: admin/tpl/setting/settings_crawler.php:95
 #: admin/tpl/setting/settings_crawler.php:100
+#: admin/tpl/setting/settings_excludes.php:72
+#: admin/tpl/setting/settings_excludes.php:110
+#: admin/tpl/setting/settings_cdn.php:88
 msgid "NOTE"
 msgstr "CHÚ Ý"
 
@@ -966,23 +982,23 @@ msgstr "Mạng nâng cao"
 msgid "Server variable(s) %s available to override this setting."
 msgstr "(Các) máy chủ %s sẵn sàng để ghi đè cài đặt này."
 
-#: admin/litespeed-cache-admin-display.class.php:959
-#: admin/tpl/setting/settings_optimize.php:140
-#: admin/tpl/setting/settings_media.php:38
 #: admin/tpl/setting/settings_tuning.php:24
 #: admin/tpl/setting/settings_tuning.php:40
 #: admin/tpl/setting/settings_tuning.php:60
 #: admin/tpl/setting/settings_tuning.php:76
 #: admin/tpl/setting/settings_tuning.php:109
 #: admin/tpl/setting/settings_tuning.php:157
+#: admin/tpl/setting/settings_optimize.php:140
+#: admin/tpl/setting/settings_media.php:38
+#: admin/litespeed-cache-admin-display.class.php:959
 msgid "API"
 msgstr "API"
 
-#: includes/litespeed-cache-purge.class.php:268 inc/purge.class.php:268
+#: inc/purge.class.php:268 includes/litespeed-cache-purge.class.php:268
 msgid "Reset the entire opcode cache successfully."
 msgstr "Đặt lại toàn bộ bộ nhớ opcode cache thành công."
 
-#: includes/litespeed-cache-purge.class.php:256 inc/purge.class.php:256
+#: inc/purge.class.php:256 includes/litespeed-cache-purge.class.php:256
 msgid "Opcode cache is not enabled."
 msgstr "Opcode cache không được bật."
 
@@ -1092,11 +1108,11 @@ msgstr "Tên máy chủ hoặc địa chỉ IP của %s."
 msgid "Method"
 msgstr "Phương pháp"
 
-#: includes/litespeed-cache-purge.class.php:297 inc/purge.class.php:297
+#: inc/purge.class.php:297 includes/litespeed-cache-purge.class.php:297
 msgid "Purge all object caches successfully."
 msgstr "Xóa tất cả object caches thành công."
 
-#: includes/litespeed-cache-purge.class.php:287 inc/purge.class.php:287
+#: inc/purge.class.php:287 includes/litespeed-cache-purge.class.php:287
 msgid "Object cache is not enabled."
 msgstr "Object cache không được bật."
 
@@ -1134,7 +1150,7 @@ msgstr "Kiểm tra kết nối"
 msgid "%s Extension"
 msgstr "%s tiện ích mở rộng"
 
-#: admin/tpl/crawler.php:166 admin/tpl/setting/settings_inc.cache_object.php:70
+#: admin/tpl/setting/settings_inc.cache_object.php:70 admin/tpl/crawler.php:166
 msgid "Status"
 msgstr "Trạng thái"
 
@@ -1158,9 +1174,9 @@ msgstr "Host"
 msgid "Use object cache functionality."
 msgstr "Sử dụng chức năng object cache."
 
-#: includes/litespeed-cache-gui.class.php:541
 #: admin/tpl/setting/settings_inc.cache_object.php:28
-#: admin/tpl/manage/manage_purge.php:54 inc/gui.class.php:541
+#: admin/tpl/manage/manage_purge.php:54 inc/gui.class.php:546
+#: includes/litespeed-cache-gui.class.php:546
 msgid "Object Cache"
 msgstr "Object Cache"
 
@@ -1289,8 +1305,8 @@ msgstr "Tên miền Cloudflare"
 msgid "Please go to Settings to turn Cloudflare API on before use the following functionalities."
 msgstr "Vui lòng chuyển đến Cài đặt để bật API Cloudflare trước khi sử dụng các chức năng sau."
 
-#: includes/litespeed-cache-gui.class.php:531
-#: admin/tpl/manage/manage_cdn.php:11 inc/gui.class.php:531
+#: admin/tpl/manage/manage_cdn.php:11 inc/gui.class.php:536
+#: includes/litespeed-cache-gui.class.php:536
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
@@ -1374,8 +1390,8 @@ msgstr "Bật tuỳ chọn này nếu bạn đang sử dụng cả HTTP và HTTP
 msgid "Improve HTTP/HTTPS Compatibility"
 msgstr "Cải thiện khả năng tương thích HTTP/HTTPS"
 
-#: inc/img_optm.class.php:167 inc/img_optm.class.php:1454
-#: inc/img_optm.class.php:1519
+#: inc/img_optm.class.php:167 inc/img_optm.class.php:1451
+#: inc/img_optm.class.php:1516
 msgid "No image found."
 msgstr "Không tìm thấy hình ảnh nào."
 
@@ -1407,11 +1423,7 @@ msgstr "Điều này sẽ làm tăng kích thước của các tập tin tối �
 msgid "Preserve EXIF data (copyright, GPS, comments, keywords, etc) when optimizing."
 msgstr "Bảo vệ dữ liệu EXIF (bản quyền, GPS, nhận xét, từ khóa, v.v ...) khi tối ưu hoá."
 
-#: admin/tpl/setting/settings_media.php:224
-msgid "Preserve EXIF data"
-msgstr "Bảo vệ dữ liệu EXIF"
-
-#: admin/tpl/debug_log.php:30
+#: admin/tpl/debug_log.php:42
 msgid "Clear Log"
 msgstr "Xóa nhật ký"
 
@@ -1419,19 +1431,19 @@ msgstr "Xóa nhật ký"
 msgid "Failed to communicate with LiteSpeed image server"
 msgstr "Không thể liên lạc được với máy chủ hình ảnh LiteSpeed"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:861
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:867
 msgid "To test the cart, visit the <a %s>FAQ</a>."
 msgstr "Để kiểm tra giỏ hàng, hãy truy cập vào <a %s>Câu hỏi thường gặp</a>."
 
-#: includes/litespeed-cache-utility.class.php:226 inc/utility.class.php:226
+#: inc/utility.class.php:242 includes/litespeed-cache-utility.class.php:242
 msgid " %s ago"
 msgstr "%s trước"
 
-#: inc/media.class.php:206
+#: inc/media.class.php:211
 msgid "Original saved %s"
 msgstr "Tiết kiệm nguyên gốc %s"
 
-#: inc/media.class.php:173
+#: inc/media.class.php:178
 msgid "WebP saved %s"
 msgstr "WebP tiết kiệm %s"
 
@@ -1528,15 +1540,15 @@ msgstr "Số báo cáo"
 msgid "LiteSpeed Report Number"
 msgstr "Số báo cáo LiteSpeed"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:852
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:858
 msgid "Privately cache cart when not empty."
 msgstr "Cache giỏ hành cá nhân khi không có sản phẩm nào."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:848
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:854
 msgid "Privately Cache Cart"
 msgstr "Cache giỏ hành cá nhân"
 
-#: inc/media.class.php:147
+#: inc/media.class.php:152
 msgid "LiteSpeed Optimization"
 msgstr "Tối ưu hóa LiteSpeed"
 
@@ -1584,11 +1596,11 @@ msgstr "Chuyển tất cả các hình ảnh trong thư viện media trở lại
 msgid "Revert Optimization"
 msgstr "Hoàn tác tối ưu hoá"
 
-#: admin/litespeed-cache-admin-display.class.php:978
-#: admin/tpl/manage/manage_cdn.php:60 admin/tpl/inc/img_optm.summary.php:164
-#: admin/tpl/inc/img_optm.initialize.php:29
+#: admin/litespeed-cache-admin.class.php:228
+#: admin/tpl/inc/img_optm.summary.php:164
 #: admin/tpl/inc/check_cache_disabled.php:49
-#: admin/litespeed-cache-admin.class.php:228 inc/doc.cls.php:39
+#: admin/tpl/inc/img_optm.initialize.php:29 admin/tpl/manage/manage_cdn.php:60
+#: admin/litespeed-cache-admin-display.class.php:978 inc/doc.cls.php:39
 msgid "Learn More"
 msgstr "Tìm hiểu thêm"
 
@@ -1616,19 +1628,19 @@ msgstr "Hình ảnh chưa được yêu cầu"
 msgid "Images total"
 msgstr "Tổng số hình ảnh"
 
-#: inc/img_optm.class.php:1988
+#: inc/img_optm.class.php:1985
 msgid "Switched to optimized file successfully."
 msgstr "Đã chuyển thành tệp tối ưu hóa thành công."
 
-#: inc/img_optm.class.php:1981
+#: inc/img_optm.class.php:1978
 msgid "Restored original file successfully."
 msgstr "Đã khôi phục tệp gốc thành công."
 
-#: inc/img_optm.class.php:1965
+#: inc/img_optm.class.php:1962
 msgid "Enabled WebP file successfully."
 msgstr "Đã bật tệp WebP thành công."
 
-#: inc/img_optm.class.php:1959
+#: inc/img_optm.class.php:1956
 msgid "Disabled WebP file successfully."
 msgstr "Đã tắt tệp WebP thành công."
 
@@ -1652,15 +1664,15 @@ msgstr "Cài đặt phương tiện mạng"
 msgid "Selected roles will be excluded from cache."
 msgstr "Các vai trò đã chọn sẽ bị loại bỏ khỏi bộ nhớ cache."
 
-#: includes/litespeed-cache-task.class.php:239 inc/task.class.php:239
+#: inc/task.class.php:239 includes/litespeed-cache-task.class.php:239
 msgid "LiteSpeed Cache Custom Cron Crawler"
 msgstr "Trình thu thập thông tin tùy chỉnh Cron LiteSpeed Cache"
 
-#: includes/litespeed-cache-task.class.php:218 inc/task.class.php:218
+#: inc/task.class.php:218 includes/litespeed-cache-task.class.php:218
 msgid "LiteSpeed Cache Custom Cron Common"
 msgstr "Bộ nhớ cache tùy chỉnh LiteSpeed"
 
-#: inc/img_optm.class.php:1557
+#: inc/img_optm.class.php:1554
 msgid "Pushed %1$s groups with %2$s images to LiteSpeed optimization server, accepted %3$s groups with %4$s images."
 msgstr "Đã gửi %1$s nhóm có %2$s hình ảnh lên máy chủ tối ưu hóa của LiteSpeed, đã chấp nhận các nhóm %3$s có %4$s hình ảnh."
 
@@ -1757,8 +1769,8 @@ msgstr "Tóm lược tối ưu hóa"
 msgid "LiteSpeed Cache Image Optimization"
 msgstr "LiteSpeed Cache tối ưu hóa hình ảnh"
 
-#: includes/litespeed-cache-gui.class.php:497
-#: admin/litespeed-cache-admin-display.class.php:165 inc/gui.class.php:497
+#: admin/litespeed-cache-admin-display.class.php:165 inc/gui.class.php:502
+#: includes/litespeed-cache-gui.class.php:502
 msgid "Image Optimization"
 msgstr "Tối ưu hoá hình ảnh"
 
@@ -1811,18 +1823,18 @@ msgstr "Chỉ định một ảnh base64 sẽ được sử dụng như một tr
 msgid "Lazy Load Image Placeholder"
 msgstr "Trình giữ chỗ hình ảnh Lazy Load"
 
-#: admin/tpl/setting/settings_optimize.php:141
-#: admin/tpl/setting/settings_media.php:40
 #: admin/tpl/setting/settings_tuning.php:42
 #: admin/tpl/setting/settings_tuning.php:78
 #: admin/tpl/setting/settings_tuning.php:159
+#: admin/tpl/setting/settings_optimize.php:141
+#: admin/tpl/setting/settings_media.php:40
 msgid "Elements with attribute %s in html code will be excluded."
 msgstr "Các phần tử có thuộc tính %s trong mã html sẽ bị loại trừ."
 
-#: admin/tpl/setting/settings_media.php:39
 #: admin/tpl/setting/settings_tuning.php:41
 #: admin/tpl/setting/settings_tuning.php:77
 #: admin/tpl/setting/settings_tuning.php:158
+#: admin/tpl/setting/settings_media.php:39
 msgid "Filter %s is supported."
 msgstr "Bộ lọc %s được hỗ trợ."
 
@@ -1842,7 +1854,7 @@ msgstr "Cải thiện thời gian tải trang bằng cách tải jQuery từ d�
 msgid "Load JQuery Remotely"
 msgstr "Tải JQuery từ xa"
 
-#: includes/litespeed-cache-gui.class.php:437 inc/gui.class.php:437
+#: inc/gui.class.php:442 includes/litespeed-cache-gui.class.php:442
 msgid "No optimization"
 msgstr "Không tối ưu hóa"
 
@@ -1862,10 +1874,10 @@ msgstr "Dừng tải wordpress.org emoji. Emoji mặc định của trình duy�
 msgid "Listed JS files will not be minified/combined."
 msgstr "Các tệp JS được liệt kê sẽ không được làm nhỏ/kết hợp."
 
-#: admin/tpl/setting/settings_media.php:35
 #: admin/tpl/setting/settings_tuning.php:37
 #: admin/tpl/setting/settings_tuning.php:73
 #: admin/tpl/setting/settings_tuning.php:154
+#: admin/tpl/setting/settings_media.php:35
 msgid "Both full URLs and partial strings can be used."
 msgstr "Có thể sử dụng cả URL đầy đủ và chuỗi một phần."
 
@@ -1918,7 +1930,7 @@ msgstr "Để khớp với phần đầu, hãy thêm %s vào đầu mục."
 msgid "For example, for %s, %s can be used here."
 msgstr "Ví dụ, đối với %s, %s có thể được sử dụng ở đây."
 
-#: admin/tpl/network_settings.php:9 admin/tpl/settings.php:11
+#: admin/tpl/settings.php:11 admin/tpl/network_settings.php:9
 msgid "Media"
 msgstr "Phương tiện"
 
@@ -1950,23 +1962,23 @@ msgstr "Làm sạch tất cả dữ liệu của trình tối ưu hoá CSS/JS th
 msgid "Remove WordPress Emoji"
 msgstr "Gỡ bỏ WordPress Emoji"
 
-#: includes/litespeed-cache-gui.class.php:444 inc/gui.class.php:444
+#: inc/gui.class.php:449 includes/litespeed-cache-gui.class.php:449
 msgid "More settings"
 msgstr "Cài đặt khác"
 
-#: includes/litespeed-cache-gui.class.php:430 inc/gui.class.php:430
+#: inc/gui.class.php:435 includes/litespeed-cache-gui.class.php:435
 msgid "Private cache"
 msgstr "Bộ nhớ cache riêng"
 
-#: includes/litespeed-cache-gui.class.php:423 inc/gui.class.php:423
+#: inc/gui.class.php:428 includes/litespeed-cache-gui.class.php:428
 msgid "Non cacheable"
 msgstr "Không thể lưu vào bộ nhớ cache"
 
-#: includes/litespeed-cache-gui.class.php:409 inc/gui.class.php:409
+#: inc/gui.class.php:414 includes/litespeed-cache-gui.class.php:414
 msgid "Mark this page as "
 msgstr "Đánh dấu trang này dưới dạng"
 
-#: includes/litespeed-cache-gui.class.php:401 inc/gui.class.php:401
+#: inc/gui.class.php:406 includes/litespeed-cache-gui.class.php:406
 msgid "Purge this page"
 msgstr "Xoá trang này"
 
@@ -1986,9 +1998,9 @@ msgstr "Chỉ định quy tắc CSS quan trọng cho nội dung trong màn hình
 msgid "Critical CSS Rules"
 msgstr "Quy tắc CSS quan trọng"
 
+#: admin/tpl/setting/settings_tuning.php:143
 #: admin/tpl/setting/settings_optimize.php:132
 #: admin/tpl/setting/settings_optimize.php:153
-#: admin/tpl/setting/settings_tuning.php:143
 msgid "Load CSS Asynchronously"
 msgstr "Tải không đồng bộ CSS"
 
@@ -2000,12 +2012,12 @@ msgstr "Ngăn chặn các font chữ của Google tải trên tất cả các tr
 msgid "Remove Google Fonts"
 msgstr "Xóa bỏ Google Fonts"
 
+#: admin/tpl/setting/settings_tuning.php:103
+#: admin/tpl/setting/settings_tuning.php:171
 #: admin/tpl/setting/settings_optimize.php:137
 #: admin/tpl/setting/settings_optimize.php:238
 #: admin/tpl/setting/settings_optimize.php:276
 #: admin/tpl/setting/settings_media.php:149
-#: admin/tpl/setting/settings_tuning.php:103
-#: admin/tpl/setting/settings_tuning.php:171
 msgid "This can improve your speed score in services like Pingdom, GTmetrix and PageSpeed."
 msgstr "Điều này có thể cải thiện điểm số tốc độ của bạn trong các dịch vụ như Pingdom, GTmetrix và PageSpeed."
 
@@ -2054,10 +2066,10 @@ msgstr "Để loại trừ %1$s, hãy chèn %2$s."
 msgid "categories"
 msgstr "chuyên mục"
 
-#: admin/tpl/setting/settings_inc.exclude_cookies.php:16
 #: admin/tpl/setting/settings_inc.exclude_useragent.php:15
 #: admin/tpl/setting/settings_excludes.php:66
 #: admin/tpl/setting/settings_excludes.php:104
+#: admin/tpl/setting/settings_inc.exclude_cookies.php:16
 msgid "To prevent %s from being cached, enter it here."
 msgstr "Để ngăn %s được lưu vào bộ nhớ cache, hãy nhập nó vào đây."
 
@@ -2085,28 +2097,28 @@ msgstr "Không cache URIs"
 msgid "The logs will be outputted to %s."
 msgstr "Các bản ghi sẽ được xuất ra %s."
 
-#: admin/litespeed-cache-admin-display.class.php:997
-#: admin/tpl/setting/settings_inc.exclude_cookies.php:19
-#: admin/tpl/setting/settings_cdn.php:107
-#: admin/tpl/setting/settings_cdn.php:139
-#: admin/tpl/setting/settings_cdn.php:151
-#: admin/tpl/setting/settings_excludes.php:45
-#: admin/tpl/setting/settings_excludes.php:68
-#: admin/tpl/setting/settings_excludes.php:106
-#: admin/tpl/setting/settings_optimize.php:264
-#: admin/tpl/setting/settings_media.php:36
-#: admin/tpl/setting/settings_media.php:53
-#: admin/tpl/setting/settings_media.php:252
+#: admin/tpl/setting/settings_cache.php:83
+#: admin/tpl/setting/settings_purge.php:85
+#: admin/tpl/setting/settings_inc.cache_object.php:114
+#: admin/tpl/setting/settings_inc.cache_object.php:122
 #: admin/tpl/setting/settings_crawler.php:132
 #: admin/tpl/setting/settings_crawler.php:154
 #: admin/tpl/setting/settings_tuning.php:38
 #: admin/tpl/setting/settings_tuning.php:74
 #: admin/tpl/setting/settings_tuning.php:155
-#: admin/tpl/setting/settings_purge.php:85
-#: admin/tpl/setting/settings_inc.cache_object.php:114
-#: admin/tpl/setting/settings_inc.cache_object.php:122
-#: admin/tpl/setting/settings_cache.php:83
+#: admin/tpl/setting/settings_optimize.php:264
+#: admin/tpl/setting/settings_media.php:36
+#: admin/tpl/setting/settings_media.php:53
+#: admin/tpl/setting/settings_media.php:252
+#: admin/tpl/setting/settings_excludes.php:45
+#: admin/tpl/setting/settings_excludes.php:68
+#: admin/tpl/setting/settings_excludes.php:106
+#: admin/tpl/setting/settings_cdn.php:107
+#: admin/tpl/setting/settings_cdn.php:139
+#: admin/tpl/setting/settings_cdn.php:151
+#: admin/tpl/setting/settings_inc.exclude_cookies.php:19
 #: admin/tpl/manage/manage_purge.php:152
+#: admin/litespeed-cache-admin-display.class.php:997
 msgid "One per line."
 msgstr "Một trên mỗi dòng."
 
@@ -2191,39 +2203,39 @@ msgstr "Bật CDN"
 msgid "CDN Settings"
 msgstr "Cài đặt CDN"
 
-#: admin/tpl/setting/settings_cdn.php:234 admin/tpl/settings.php:12
+#: admin/tpl/settings.php:12 admin/tpl/setting/settings_cdn.php:234
 #: admin/tpl/manage.php:10
 msgid "CDN"
 msgstr "CDN"
 
-#: admin/litespeed-cache-admin-display.class.php:820
-#: admin/litespeed-cache-admin-display.class.php:908
-#: admin/tpl/setting/settings_cdn.php:25 admin/tpl/setting/settings_cdn.php:163
-#: admin/tpl/setting/settings_optimize.php:152
-#: admin/tpl/setting/settings_optimize.php:164
-#: admin/tpl/setting/settings_media.php:105
-#: admin/tpl/setting/settings_debug.php:29
+#: admin/tpl/setting/settings_inc.cache_object.php:149
 #: admin/tpl/setting/settings_tuning.php:18
 #: admin/tpl/setting/settings_tuning.php:54
-#: admin/tpl/setting/settings_inc.cache_object.php:149
+#: admin/tpl/setting/settings_optimize.php:152
+#: admin/tpl/setting/settings_optimize.php:164
+#: admin/tpl/setting/settings_debug.php:29
+#: admin/tpl/setting/settings_media.php:105
+#: admin/tpl/setting/settings_cdn.php:25 admin/tpl/setting/settings_cdn.php:163
+#: admin/litespeed-cache-admin-display.class.php:820
+#: admin/litespeed-cache-admin-display.class.php:908
 msgid "OFF"
 msgstr "TẮT"
 
-#: admin/litespeed-cache-admin-display.class.php:819
-#: admin/litespeed-cache-admin-display.class.php:904
+#: admin/tpl/setting/settings_tuning.php:21
+#: admin/tpl/setting/settings_tuning.php:57
 #: admin/tpl/setting/settings_optimize.php:138
 #: admin/tpl/setting/settings_optimize.php:152
 #: admin/tpl/setting/settings_optimize.php:153
 #: admin/tpl/setting/settings_optimize.php:248
-#: admin/tpl/setting/settings_media.php:102
 #: admin/tpl/setting/settings_debug.php:35
-#: admin/tpl/setting/settings_tuning.php:21
-#: admin/tpl/setting/settings_tuning.php:57
+#: admin/tpl/setting/settings_media.php:102
 #: admin/tpl/setting/settings_inc.cache_mobile.php:65
+#: admin/litespeed-cache-admin-display.class.php:819
+#: admin/litespeed-cache-admin-display.class.php:904
 msgid "ON"
 msgstr "BẬT"
 
-#: includes/litespeed-cache-purge.class.php:239 inc/purge.class.php:239
+#: inc/purge.class.php:239 includes/litespeed-cache-purge.class.php:239
 msgid "Notified LiteSpeed Web Server to purge CSS/JS entries."
 msgstr "Máy chủ Web LiteSpeed đã được thông báo để lọc các mục CSS/JS."
 
@@ -2591,20 +2603,20 @@ msgstr "Dọn dẹp cài đặt mạng"
 msgid "Cache Control Network Settings"
 msgstr "Kiểm soát cache đối với cài đặt mạng"
 
-#: admin/tpl/network_settings.php:8 admin/tpl/settings.php:8
+#: admin/tpl/settings.php:8 admin/tpl/network_settings.php:8
 msgid "Excludes"
-msgstr "Không bao gồm"
+msgstr "Loại trừ"
 
-#: admin/tpl/network_settings.php:7 admin/tpl/manage/manage_purge.php:116
 #: admin/tpl/settings.php:7 admin/tpl/manage.php:5
+#: admin/tpl/network_settings.php:7 admin/tpl/manage/manage_purge.php:116
 msgid "Purge"
 msgstr "Dọn dẹp"
 
-#: admin/tpl/network_settings.php:6 admin/tpl/settings.php:6
+#: admin/tpl/settings.php:6 admin/tpl/network_settings.php:6
 msgid "Cache"
 msgstr "Cache"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:793
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:799
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
@@ -2674,12 +2686,12 @@ msgstr "Heartbeat"
 msgid "Specify the maximum size of the log file. Minimum is 3MB. Maximum is 3000MB."
 msgstr "Chỉ định kích thước tối đa của tệp nhật ký. Tối thiểu là 3MB. Tối đa là 3000MB."
 
-#: admin/tpl/setting/settings_debug.php:95
 #: admin/tpl/setting/settings_tuning.php:88
+#: admin/tpl/setting/settings_debug.php:95
 msgid "MB"
 msgstr "MB"
 
-#: admin/tpl/debug_log.php:9
+#: admin/tpl/debug_log.php:8
 msgid "LiteSpeed Cache Debug Log Viewer"
 msgstr "Trình xem nhật ký gỡ lỗi LiteSpeed Cache"
 
@@ -2727,7 +2739,7 @@ msgstr "Giá trị đề xuất: 28800 giây (8 giờ)."
 msgid "Widget Cache TTL:"
 msgstr "Widget Cache TTL:"
 
-#: admin/tpl/setting/settings_esi.php:43 admin/tpl/esi_widget_edit.php:30
+#: admin/tpl/esi_widget_edit.php:30 admin/tpl/setting/settings_esi.php:43
 msgid "Enable ESI"
 msgstr "Bật ESI"
 
@@ -2776,9 +2788,9 @@ msgstr "Dọn dẹp các trang bằng URL tương đối hoặc đầy đủ."
 msgid "The crawler feature is not enabled on the LiteSpeed server. Please consult your server admin."
 msgstr "Tính năng thu thập thông tin không được bật trên máy chủ của LiteSpeed. Vui lòng tham khảo ý kiến quản trị viên máy chủ của bạn."
 
-#: admin/tpl/crawler.php:91 admin/tpl/setting/settings_optimize.php:15
-#: admin/tpl/manage/manage_cdn.php:15 admin/tpl/settings.php:183
-#: admin/tpl/inc/check_cache_disabled.php:38
+#: admin/tpl/settings.php:183 admin/tpl/setting/settings_optimize.php:15
+#: admin/tpl/crawler.php:91 admin/tpl/inc/check_cache_disabled.php:38
+#: admin/tpl/manage/manage_cdn.php:15
 msgid "WARNING"
 msgstr "CẢNH BÁO"
 
@@ -2838,31 +2850,31 @@ msgstr "Đã dừng do vượt quá thời gian chạy tối đa được xác �
 msgid "Oh look, there is already another LiteSpeed crawler running!"
 msgstr "Ôi, có một trình thu thập thông tin LiteSpeed khác đang chạy!"
 
-#: includes/litespeed-cache.class.php:341 inc/litespeed-cache.class.php:341
+#: inc/litespeed-cache.class.php:347 includes/litespeed-cache.class.php:347
 msgid "Notified LiteSpeed Web Server to purge the list."
 msgstr "Máy chủ Web LiteSpeed đã được thông báo để xóa danh sách."
 
-#: includes/litespeed-cache.class.php:320 inc/litespeed-cache.class.php:320
+#: inc/litespeed-cache.class.php:326 includes/litespeed-cache.class.php:326
 msgid "Crawler blacklist is saved."
 msgstr "Danh sách đen của trình thu thập thông tin được lưu."
 
-#: includes/litespeed-cache-crawler.class.php:332 inc/crawler.class.php:332
+#: inc/crawler.class.php:332 includes/litespeed-cache-crawler.class.php:332
 msgid "Position reset notification sent successfully"
 msgstr "Đã gửi thông báo đặt lại vị trí thành công"
 
-#: includes/litespeed-cache-crawler.class.php:328 inc/crawler.class.php:328
+#: inc/crawler.class.php:328 includes/litespeed-cache-crawler.class.php:328
 msgid "Failed to send position reset notification: %s"
 msgstr "Không thể gửi thông báo đặt lại vị trí: %s"
 
-#: includes/litespeed-cache-crawler.class.php:169 inc/crawler.class.php:169
+#: inc/crawler.class.php:169 includes/litespeed-cache-crawler.class.php:169
 msgid "File created successfully: %s"
 msgstr "Đã tạo tệp thành công: %s"
 
-#: includes/litespeed-cache-crawler.class.php:117 inc/crawler.class.php:117
+#: inc/crawler.class.php:117 includes/litespeed-cache-crawler.class.php:117
 msgid "File saved successfully: %s"
 msgstr "Đã lưu thành công tệp: %s"
 
-#: includes/litespeed-cache-crawler.class.php:102 inc/crawler.class.php:102
+#: inc/crawler.class.php:102 includes/litespeed-cache-crawler.class.php:102
 msgid "Can not find any form data for blacklist"
 msgstr "Không thể tìm thấy bất kỳ dữ liệu biểu mẫu nào cho danh sách đen"
 
@@ -3058,7 +3070,7 @@ msgstr "%d giờ"
 msgid "%d hour"
 msgstr "%d giờ"
 
-#: admin/litespeed-cache-admin-display.class.php:166 admin/tpl/settings.php:22
+#: admin/tpl/settings.php:22 admin/litespeed-cache-admin-display.class.php:166
 msgid "Crawler"
 msgstr "Trình thu thập thông tin"
 
@@ -3138,7 +3150,7 @@ msgstr "Tệp %1$s không thể ghi cho %2$s"
 msgid "%s file did not find a place to insert define."
 msgstr "%s tệp không tìm thấy địa điểm để chèn xác định."
 
-#: includes/litespeed-cache-purge.class.php:463 inc/purge.class.php:463
+#: inc/purge.class.php:463 includes/litespeed-cache-purge.class.php:463
 msgid "Notified LiteSpeed Web Server to purge pages."
 msgstr "Máy chủ Web LiteSpeed đã được thông báo để xóa các trang."
 
@@ -3146,7 +3158,7 @@ msgstr "Máy chủ Web LiteSpeed đã được thông báo để xóa các trang
 msgid "Purged the tags!"
 msgstr "Đã xóa các thẻ!"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:806
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:812
 msgid "For example, if the homepage for the site is located at %1$s, the shop page may be located at %2$s."
 msgstr "Ví dụ: nếu trang chủ của trang web được đặt ở %1$s, trang cửa hàng có thể được đặt ở %2$s."
 
@@ -3190,12 +3202,13 @@ msgstr "IP trang web"
 msgid "Email Address"
 msgstr "Địa chỉ email"
 
-#: admin/tpl/api/quic.login.php:25 admin/tpl/api/quic.user_welcome.php:15
-#: admin/tpl/api/quic.user_welcome.php:16 admin/tpl/api/quic.register.php:25
+#: admin/tpl/api/quic.user_welcome.php:15
+#: admin/tpl/api/quic.user_welcome.php:16 admin/tpl/api/quic.login.php:25
+#: admin/tpl/api/quic.register.php:25
 msgid "Email"
 msgstr "Email"
 
-#: includes/litespeed-cache-gui.class.php:610 inc/gui.class.php:610
+#: inc/gui.class.php:615 includes/litespeed-cache-gui.class.php:615
 msgid "Install Now"
 msgstr "Cài đặt ngay"
 
@@ -3211,7 +3224,7 @@ msgstr "Đã dọn dẹp blog!"
 msgid "Purged All!"
 msgstr "Đã xóa tất cả!"
 
-#: includes/litespeed-cache-purge.class.php:483 inc/purge.class.php:483
+#: inc/purge.class.php:483 includes/litespeed-cache-purge.class.php:483
 msgid "Notified LiteSpeed Web Server to purge error pages."
 msgstr "LiteSpeed Web Server đã được thông báo để xóa các trang lỗi."
 
@@ -3303,7 +3316,7 @@ msgstr "Nếu chỉ có trang web WordPress cần được dọn dẹp, hãy s�
 msgid "A LiteSpeed server (OLS, LSWS, WebADC) and its LSCache module must be installed and enabled."
 msgstr "Một máy chủ LiteSpeed (OLS, LSWS, WebADC) và mô-đun LSCache của nó phải được cài đặt và kích hoạt."
 
-#: includes/litespeed-cache.class.php:331 inc/litespeed-cache.class.php:331
+#: inc/litespeed-cache.class.php:337 includes/litespeed-cache.class.php:337
 msgid "Notified LiteSpeed Web Server to purge everything."
 msgstr "LiteSpeed Web Server đã được thông báo để xóa tất cả."
 
@@ -3363,7 +3376,7 @@ msgstr "Điều này sẽ xóa bỏ MỌI THỨ bên trong bộ nhớ cache."
 msgid "Failed to purge by url, invalid input: %s."
 msgstr "Không thể dọn dẹp theo url, đầu vào không hợp lệ: %s."
 
-#: includes/litespeed-cache-gui.class.php:464 inc/gui.class.php:464
+#: inc/gui.class.php:469 includes/litespeed-cache-gui.class.php:469
 msgid "LiteSpeed Cache Purge All"
 msgstr "Dọn dẹp tất cả LiteSpeed Cache "
 
@@ -3395,8 +3408,8 @@ msgstr "Thông báo này cho biết plugin đã được cài đặt bởi quả
 msgid "LiteSpeed Cache plugin is installed!"
 msgstr "Plugin LiteSpeed Cache đã được cài đặt!"
 
-#: admin/litespeed-cache-admin-display.class.php:171
 #: admin/tpl/setting/settings_debug.php:23
+#: admin/litespeed-cache-admin-display.class.php:171
 msgid "Debug Log"
 msgstr "Debug Log"
 
@@ -3444,7 +3457,7 @@ msgstr "Plugin này sẽ liên lạc với máy chủ web của LiteSpeed để 
 msgid "LiteSpeed Cache is a page cache built into LiteSpeed Web Server."
 msgstr "LiteSpeed Cache là một trang bộ nhớ cache được tích hợp trong LiteSpeed Web Server."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:858
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:864
 #: admin/tpl/setting/settings_purge.php:53
 msgid "Note"
 msgstr "Lưu ý"
@@ -3457,7 +3470,7 @@ msgstr "Máy chủ sẽ xác định xem người dùng có đăng nhập dựa 
 msgid "List in WordPress database is: %s"
 msgstr "Danh sách trong cơ sở dữ liệu WordPress là: %s"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:860
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:866
 msgid "After verifying that the cache works in general, please test the cart."
 msgstr "Sau khi kiểm tra bộ nhớ cache hoạt động nói chung, hãy kiểm tra giỏ hàng."
 
@@ -3473,43 +3486,43 @@ msgstr "Xóa tất cả khi nâng cấp"
 msgid "File editing is disabled in configuration."
 msgstr "Tính năng chỉnh sửa tệp bị tắt trong cấu hình"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:841
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:847
 msgid "Use Front Page TTL for the Shop Page"
 msgstr "Sử dụng TTL Trang chủ cho Trang Cửa hàng"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:834
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:840
 msgid "Product Update Interval"
 msgstr "Khoảng cập nhật sản phẩm"
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:805
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:811
 msgid "Checking this option will force the shop page to use the front page TTL setting."
 msgstr "Chọn tùy chọn này sẽ buộc trang cửa hàng sử dụng cài đặt TTL của trang chủ."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:804
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:810
 msgid "Determines how changes in product quantity and product stock status affect product pages and their associated category pages."
 msgstr "Xác định các thay đổi về số lượng sản phẩm và trạng thái còn hàng của sản phẩm ảnh hưởng như thế nào đến các trang sản phẩm và các trang danh mục liên quan của chúng."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:801
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:807
 msgid "Always purge both product and categories on changes to the quantity or stock status."
 msgstr "Luôn luôn xóa cả hai sản phẩm và chuyên mục trên sự thay đổi về số lượng hoặc trạng thái hàng hóa."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:800
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:806
 msgid "Do not purge categories on changes to the quantity or stock status."
 msgstr "Không dọn dẹp các chuyên mục trên những thay đổi đối với số lượng hoặc trạng thái hàng."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:799
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:805
 msgid "Purge product only when the stock status changes."
 msgstr "Xóa sản phẩm chỉ khi trạng thái hàng hóa thay đổi."
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:798
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:804
 msgid "Purge product and categories only when the stock status changes."
 msgstr "Xóa sản phẩm và chuyên mục chỉ khi trạng thái hàng hóa thay đổi. "
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:797
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:803
 msgid "Purge categories only when stock status changes."
 msgstr "Xóa chuyên mục chỉ khi trạng thái hàng hóa thay đổi. "
 
-#: thirdparty/lscwp-3rd-woocommerce.cls.php:796
+#: thirdparty/lscwp-3rd-woocommerce.cls.php:802
 msgid "Purge product on changes to the quantity or stock status."
 msgstr "Xóa sản phẩm khi thay đổi số lượng hoặc trạng thái hàng hóa."
 
@@ -3665,8 +3678,8 @@ msgstr "Cookie đăng nhập"
 msgid "Current %s Contents"
 msgstr "Hiện tại %s Nội dung"
 
-#: admin/tpl/network_settings.php:10 admin/tpl/setting/settings_debug.php:82
-#: admin/tpl/settings.php:14
+#: admin/tpl/settings.php:14 admin/tpl/setting/settings_debug.php:82
+#: admin/tpl/network_settings.php:10
 msgid "Advanced"
 msgstr "Nâng cao"
 
@@ -3718,7 +3731,7 @@ msgstr "Đã cố gắng xóa danh sách với danh sách trống."
 msgid "Something went wrong with the form! Please try again."
 msgstr "Đã xảy ra lỗi với biểu mẫu! Vui lòng thử lại."
 
-#: includes/litespeed-cache-purge.class.php:601 inc/purge.class.php:601
+#: inc/purge.class.php:601 includes/litespeed-cache-purge.class.php:601
 msgid "Purge url %s"
 msgstr "Xóa url %s"
 
@@ -3730,7 +3743,7 @@ msgstr "Không thể dọn dẹp chuyên mục, slug không hợp lệ."
 msgid "Failed to purge by category, does not exist: %s"
 msgstr "Không thể dọn dẹp theo chuyên mục, không tồn tại: %s"
 
-#: includes/litespeed-cache-purge.class.php:511 inc/purge.class.php:511
+#: inc/purge.class.php:511 includes/litespeed-cache-purge.class.php:511
 msgid "Purge category %s"
 msgstr "Xóa chuyên mục %s"
 
@@ -3742,7 +3755,7 @@ msgstr "Không thể dọn dẹp bằng ID bài viết, ID đã cho không phả
 msgid "Failed to purge by Post ID, given ID does not exist or is not published: %s"
 msgstr "Không thể dọn dẹp bằng ID bài viết, ID đã cho không tồn tại hoặc không được đăng: %s"
 
-#: includes/litespeed-cache-purge.class.php:538 inc/purge.class.php:538
+#: inc/purge.class.php:538 includes/litespeed-cache-purge.class.php:538
 msgid "Purge Post ID %s"
 msgstr "Xóa ID bài viết %s"
 
@@ -3754,7 +3767,7 @@ msgstr "Không thể dọn dẹp thẻ, slug không hợp lệ."
 msgid "Failed to purge by tag, does not exist: %s"
 msgstr "Không thể dọn dẹp thẻ, không tồn tại: %s"
 
-#: includes/litespeed-cache-purge.class.php:567 inc/purge.class.php:567
+#: inc/purge.class.php:567 includes/litespeed-cache-purge.class.php:567
 msgid "Purge tag %s"
 msgstr "Xóa tag %s"
 
@@ -3766,18 +3779,18 @@ msgstr "Không thể xóa bằng url, chứa \"<\"."
 msgid "When disabling the cache, all cached entries for this blog will be purged."
 msgstr "Khi tắt cache, tất cả các mục được lưu trong bộ nhớ cache của blog này sẽ bị xóa."
 
-#: admin/tpl/setting/settings_optimize.php:21
 #: admin/tpl/setting/settings_general.php:53
+#: admin/tpl/setting/settings_optimize.php:21
 msgid "NOTICE"
 msgstr "CHÚ Ý"
 
-#: admin/tpl/setting/settings_inc.cache_favicon.php:14
-#: admin/tpl/setting/settings_inc.exclude_cookies.php:23
-#: admin/tpl/setting/settings_inc.exclude_useragent.php:22
-#: admin/tpl/setting/settings_inc.cache_resources.php:15
 #: admin/tpl/setting/settings_inc.media_webp.php:13
-#: admin/tpl/setting/settings_inc.cache_mobile.php:18
+#: admin/tpl/setting/settings_inc.cache_resources.php:15
+#: admin/tpl/setting/settings_inc.exclude_useragent.php:22
+#: admin/tpl/setting/settings_inc.cache_favicon.php:14
 #: admin/tpl/setting/settings_inc.cache_browser.php:13
+#: admin/tpl/setting/settings_inc.exclude_cookies.php:23
+#: admin/tpl/setting/settings_inc.cache_mobile.php:18
 msgid "This setting will edit the .htaccess file."
 msgstr "Cài đặt này sẽ chỉnh sửa tập tin .htaccess."
 
@@ -3805,7 +3818,7 @@ msgstr "Không thể sao lưu tệp, thay đổi bị hủy."
 msgid "%s file not readable or not writable."
 msgstr "Tập tin %s không thể đọc được hoặc không thể ghi."
 
-#: admin/tpl/crawler.php:246 admin/tpl/edit_htaccess.php:74
+#: admin/tpl/edit_htaccess.php:74 admin/tpl/crawler.php:246
 msgid "Save"
 msgstr "Lưu lại"
 
@@ -3853,8 +3866,8 @@ msgstr "Chọn \"Tất cả\" nếu có widgets động được liên kết đ�
 msgid "SYNTAX: Separate each user agent with a bar, %s."
 msgstr "CÚ PHÁP: Tách riêng từng tác nhân người dùng bằng dấu, %s."
 
-#: admin/tpl/setting/settings_inc.exclude_cookies.php:18
 #: admin/tpl/setting/settings_inc.exclude_useragent.php:18
+#: admin/tpl/setting/settings_inc.exclude_cookies.php:18
 msgid "Spaces should have a backslash in front of them, %s."
 msgstr "Khoảng cách phải có dấu gạch chéo ngược ở phía trước chúng, %s."
 
@@ -3875,14 +3888,6 @@ msgstr "Bất kỳ khoảng không nào nên được thay thế bằng một d�
 msgid "SYNTAX: Each entry should be separated with a bar, %s."
 msgstr "CÚ PHÁP: Mỗi mục sẽ được tách ra với một dấu. %s."
 
-#: admin/tpl/setting/settings_inc.cache_mobile.php:15
-msgid "A site built with responsive design does not need to check this."
-msgstr "Một trang web được xây dựng với thiết kế đáp ứng (responsive) không cần phải chọn tùy chọn này."
-
-#: admin/tpl/setting/settings_inc.cache_mobile.php:14
-msgid "When enabled, mobile views will be cached separately."
-msgstr "Khi được bật, chế độ xem dành cho thiết bị di động sẽ được lưu trữ riêng."
-
 #: admin/litespeed-cache-admin-error.class.php:200
 msgid "Failed to put contents into %s"
 msgstr "Không thể đưa nội dung vào %s"
@@ -3896,9 +3901,9 @@ msgstr "Tệp %s không thể ghi."
 msgid "Edit .htaccess"
 msgstr "Sửa .htaccess"
 
-#: includes/litespeed-cache-gui.class.php:480
-#: admin/litespeed-cache-admin-display.class.php:158
-#: admin/tpl/setting/settings_cdn.php:234 inc/gui.class.php:480
+#: admin/tpl/setting/settings_cdn.php:234
+#: admin/litespeed-cache-admin-display.class.php:158 inc/gui.class.php:485
+#: includes/litespeed-cache-gui.class.php:485
 msgid "Manage"
 msgstr "Quản lý"
 
@@ -3906,7 +3911,7 @@ msgstr "Quản lý"
 msgid "Default Front Page TTL"
 msgstr "TTL mặc định trang chủ"
 
-#: includes/litespeed-cache-purge.class.php:449 inc/purge.class.php:449
+#: inc/purge.class.php:449 includes/litespeed-cache-purge.class.php:449
 msgid "Notified LiteSpeed Web Server to purge the front page."
 msgstr "Máy chủ của LiteSpeed đã được thông báo để xóa cache trang chủ."
 
@@ -3970,12 +3975,12 @@ msgstr "Ghi chú:"
 msgid "Use Network Admin Setting"
 msgstr "Sử dụng cài đặt quản trị mạng"
 
-#: admin/tpl/crawler.php:84 admin/tpl/setting/settings_general.php:30
-#: admin/tpl/esi_widget_edit.php:56
+#: admin/tpl/esi_widget_edit.php:56 admin/tpl/setting/settings_general.php:30
+#: admin/tpl/crawler.php:84
 msgid "Disable"
 msgstr "Vô hiệu hóa"
 
-#: admin/tpl/crawler.php:84 admin/tpl/setting/settings_general.php:36
+#: admin/tpl/setting/settings_general.php:36 admin/tpl/crawler.php:84
 msgid "Enable"
 msgstr "Bật"
 
@@ -4016,8 +4021,9 @@ msgid "LiteSpeed Technologies"
 msgstr "Công nghệ LiteSpeed"
 
 #. Plugin Name of the plugin
-#: includes/litespeed-cache-gui.class.php:472 admin/tpl/inc/admin_footer.php:6
-#: inc/gui.class.php:472
+#: admin/tpl/inc/admin_footer.php:6
+#: admin/tpl/inc/banner_promo.new_version.php:56 inc/gui.class.php:477
+#: includes/litespeed-cache-gui.class.php:477
 msgid "LiteSpeed Cache"
 msgstr "LiteSpeed Cache"
 
@@ -4089,20 +4095,19 @@ msgstr "Tự động xóa cache khi đăng/cập nhật bài"
 msgid "Default Public Cache TTL"
 msgstr "Thời gian cache mặc định cho toàn bộ các trang"
 
-#: admin/tpl/setting/settings_optimize.php:93
-#: admin/tpl/setting/settings_general.php:65
+#: admin/tpl/esi_widget_edit.php:69 admin/tpl/setting/settings_general.php:65
 #: admin/tpl/setting/settings_general.php:77
 #: admin/tpl/setting/settings_general.php:89
 #: admin/tpl/setting/settings_general.php:101
 #: admin/tpl/setting/settings_general.php:114
 #: admin/tpl/setting/settings_general.php:127
 #: admin/tpl/setting/settings_general.php:140
+#: admin/tpl/setting/settings_inc.cache_object.php:63
 #: admin/tpl/setting/settings_crawler.php:40
 #: admin/tpl/setting/settings_crawler.php:52
 #: admin/tpl/setting/settings_crawler.php:64
-#: admin/tpl/setting/settings_inc.cache_object.php:63
+#: admin/tpl/setting/settings_optimize.php:93
 #: admin/tpl/setting/settings_inc.cache_browser.php:24
-#: admin/tpl/esi_widget_edit.php:69
 msgid "seconds"
 msgstr "giây"
 
@@ -4114,8 +4119,8 @@ msgstr "Địa chỉ IP của Admin"
 msgid "Enable LiteSpeed Cache"
 msgstr "Bật LiteSpeed Cache"
 
-#: admin/tpl/network_settings.php:5 admin/tpl/setting/settings_general.php:7
-#: admin/tpl/settings.php:5
+#: admin/tpl/settings.php:5 admin/tpl/setting/settings_general.php:7
+#: admin/tpl/network_settings.php:5
 msgid "General"
 msgstr "Tổng quan"
 
@@ -4123,25 +4128,24 @@ msgstr "Tổng quan"
 msgid "LiteSpeed Cache Settings"
 msgstr "Cài đặt LiteSpeed Cache"
 
-#: includes/litespeed-cache-purge.class.php:186 inc/purge.class.php:186
+#: inc/purge.class.php:186 includes/litespeed-cache-purge.class.php:186
 msgid "Notified LiteSpeed Web Server to purge all LSCache entries."
 msgstr "Máy chủ web của LiteSpeed đã được thông báo để xóa sạch tất cả các bộ nhớ cache."
 
-#: includes/litespeed-cache-gui.class.php:506
-#: includes/litespeed-cache-gui.class.php:514
-#: includes/litespeed-cache-gui.class.php:522
-#: includes/litespeed-cache-gui.class.php:531
-#: includes/litespeed-cache-gui.class.php:541
-#: includes/litespeed-cache-gui.class.php:551
-#: includes/litespeed-cache-gui.class.php:561
-#: includes/litespeed-cache-gui.class.php:571
 #: admin/tpl/manage/manage_purge.php:39 admin/tpl/manage/manage_purge.php:45
 #: admin/tpl/manage/manage_purge.php:54 admin/tpl/manage/manage_purge.php:63
 #: admin/tpl/manage/manage_purge.php:72 admin/tpl/manage/manage_purge.php:81
-#: admin/tpl/manage/manage_purge.php:90 inc/gui.class.php:506
-#: inc/gui.class.php:514 inc/gui.class.php:522 inc/gui.class.php:531
-#: inc/gui.class.php:541 inc/gui.class.php:551 inc/gui.class.php:561
-#: inc/gui.class.php:571
+#: admin/tpl/manage/manage_purge.php:90 inc/gui.class.php:511
+#: inc/gui.class.php:519 inc/gui.class.php:527 inc/gui.class.php:536
+#: inc/gui.class.php:546 inc/gui.class.php:556 inc/gui.class.php:566
+#: inc/gui.class.php:576 includes/litespeed-cache-gui.class.php:511
+#: includes/litespeed-cache-gui.class.php:519
+#: includes/litespeed-cache-gui.class.php:527
+#: includes/litespeed-cache-gui.class.php:536
+#: includes/litespeed-cache-gui.class.php:546
+#: includes/litespeed-cache-gui.class.php:556
+#: includes/litespeed-cache-gui.class.php:566
+#: includes/litespeed-cache-gui.class.php:576
 msgid "Purge All"
 msgstr "Xóa toàn bộ"
 
@@ -4149,9 +4153,9 @@ msgstr "Xóa toàn bộ"
 msgid "LiteSpeed Cache Management"
 msgstr "Quản lý LiteSpeed Cache"
 
-#: includes/litespeed-cache-gui.class.php:488
 #: admin/litespeed-cache-admin-display.class.php:156
-#: admin/litespeed-cache-admin-display.class.php:248 inc/gui.class.php:488
+#: admin/litespeed-cache-admin-display.class.php:248 inc/gui.class.php:493
+#: includes/litespeed-cache-gui.class.php:493
 msgid "Settings"
 msgstr "Thiết lập"
 

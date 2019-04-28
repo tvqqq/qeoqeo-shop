@@ -3,6 +3,8 @@
 function flatsome_banner_grid($atts, $content = null) {
     extract( shortcode_atts( array(
     '_id' => 'banner-grid-'.rand(),
+    'class' => '',
+    'visibility' => '',
     'width' => '',
     'height' => '600px',
     'height__sm' => '',
@@ -16,6 +18,9 @@ function flatsome_banner_grid($atts, $content = null) {
     ), $atts ) );
 
     $classes = array('row','row-grid');
+
+    if ( $class ) $classes[] = $class;
+    if ( $visibility ) $classes[] = $visibility;
 
     // Fix old
     if($padding == '0px'){
@@ -46,7 +51,7 @@ function flatsome_banner_grid($atts, $content = null) {
               $current_grid = 0;
               $grid = flatsome_get_grid($grid);
               $grid_total = count($grid);
-              echo flatsome_get_grid_height($height, $_id);
+              flatsome_get_grid_height($height, $_id);
 
               if (preg_match_all( '/'. $pattern .'/s', $content, $matches )
                   && array_key_exists( 2, $matches )
@@ -60,7 +65,7 @@ function flatsome_banner_grid($atts, $content = null) {
             }
           ?>
   </div><!-- .banner-grid .row .grid -->
-  <?php echo flatsome_get_grid_height(array($height, $height__md, $height__sm), $_id); ?>
+  <?php flatsome_get_grid_height(array($height, $height__md, $height__sm), $_id); ?>
   </div><!-- .banner-grid-wrapper -->
   <?php
   // Get banner grid styles
@@ -80,6 +85,7 @@ function ux_grid_col($atts, $content = null) {
     'animate' => '',
     'height' => '',
     'class' => '',
+    'visibility' => '',
     'depth' => '',
     'depth_hover' => '',
     ), $atts ) );
@@ -87,7 +93,6 @@ function ux_grid_col($atts, $content = null) {
   $classes[] = 'col grid-col';
   $classes_inner[] = 'col-inner';
 
-  if($class) $classes[] = $class;
   if($span__md) $classes[] = 'medium-'.$span__md;
   if($span__sm) $classes[] = 'small-'.$span__sm;
   if($span) $classes[] = 'large-'.$span;
@@ -96,6 +101,9 @@ function ux_grid_col($atts, $content = null) {
 
   // Add Animation Class
   if($animate) { $animate = 'data-animate="'.$animate.'"'; }
+
+  if ( $class ) $classes[] = $class;
+  if ( $visibility ) $classes[] = $visibility;
 
   // Add Depth Class
   if($depth) $classes_inner[] = 'box-shadow-'.$depth;

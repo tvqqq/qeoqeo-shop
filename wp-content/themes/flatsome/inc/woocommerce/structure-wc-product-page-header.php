@@ -5,7 +5,7 @@
 // Product Headers
 function flatsome_product_header(){
     if(is_product() && get_theme_mod('product_header') && get_theme_mod('product_layout') !== 'custom'){
-       return wc_get_template_part('single-product/headers/header-product', get_theme_mod('product_header'));
+       wc_get_template_part('single-product/headers/header-product', get_theme_mod('product_header'));
     }
 }
 add_action('flatsome_after_header','flatsome_product_header', 10);
@@ -38,7 +38,7 @@ add_action( 'woocommerce_single_product_summary', 'flatsome_woocommerce_product_
 
 // Add Breadcrumbs to Featured Headers if set
 function flatsome_product_page_breadcrumbs(){
-  echo wc_get_template_part('loop/breadcrumbs');
+  wc_get_template_part('loop/breadcrumbs');
 }
 add_action('flatsome_product_title','flatsome_product_page_breadcrumbs',20);
 
@@ -58,7 +58,7 @@ add_action('flatsome_product_title','flatsome_product_page_title', 10);
 if(!function_exists('flatsome_product_title_next_prev')) {
   function flatsome_product_title_next_prev(){
     if(get_theme_mod('product_next_prev_nav',1)){
-     echo flatsome_product_next_prev_nav();
+      flatsome_product_next_prev_nav();
     }
   }
 }
@@ -108,7 +108,7 @@ if(!function_exists('flatsome_next_post_link_product')) {
               </a>
               <div class="nav-dropdown">
                 <a title="<?php echo get_the_title( $next_post->ID ); ?>" href="<?php echo get_the_permalink( $next_post->ID ); ?>">
-                <?php echo get_the_post_thumbnail($next_post->ID, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' )) ?></a>
+                <?php echo get_the_post_thumbnail($next_post->ID, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' )) ?></a>
               </div>
           </li>
       <?php }
@@ -126,7 +126,7 @@ if(!function_exists('flatsome_previous_post_link_product')) {
               </a>
               <div class="nav-dropdown">
                   <a title="<?php echo get_the_title( $prev_post->ID ); ?>" href="<?php echo get_the_permalink( $prev_post->ID ); ?>">
-                  <?php echo get_the_post_thumbnail($prev_post->ID, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' )) ?></a>
+                  <?php echo get_the_post_thumbnail($prev_post->ID, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_gallery_thumbnail' )) ?></a>
               </div>
           </li>
       <?php }

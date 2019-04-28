@@ -3,7 +3,7 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<div class="text-<?php echo get_theme_mod( 'blog_posts_title_align', 'center' );?>">
-			<a class="more-link button primary is-outline is-smaller" href="<?php echo get_the_permalink(); ?>"><?php echo _e('Continue reading <span class="meta-nav">&rarr;</span>', 'flatsome'); ?></a>
+			<a class="more-link button primary is-outline is-smaller" href="<?php echo get_the_permalink(); ?>"><?php _e('Continue reading <span class="meta-nav">&rarr;</span>', 'flatsome'); ?></a>
 		</div>
 	</div><!-- .entry-summary -->
 	<?php } else { ?>

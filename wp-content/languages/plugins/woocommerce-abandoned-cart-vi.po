@@ -1,0 +1,903 @@
+# Translation of Plugins - Abandoned Cart Lite for WooCommerce - Development (trunk) in Vietnamese
+# This file is distributed under the same license as the Plugins - Abandoned Cart Lite for WooCommerce - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-03-08 03:52:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: vi_VN\n"
+"Project-Id-Version: Plugins - Abandoned Cart Lite for WooCommerce - Development (trunk)\n"
+
+#: woocommerce-ac.php:2343
+msgid "Export"
+msgstr "Xuất"
+
+#. translators: %s: price decimal separator
+#: woocommerce-ac.php:2336
+msgid "Please enter in monetary decimal (%s) format without thousand separators and currency symbols."
+msgstr "Vui lòng nhập định dạng thập phân tiền tệ (%s) không bao gồm dấu phân cách và ký hiệu tiền tệ."
+
+#. translators: %s: decimal
+#: woocommerce-ac.php:2334
+msgid "Please enter in decimal (%s) format without thousand separators."
+msgstr "Vui lòng nhập định dạng thập phân (%s) không bao gồm dấu phân cách."
+
+#: woocommerce-ac.php:2338
+msgid "Please enter in a value less than the regular price."
+msgstr "Vui lòng nhập một giá trị nhỏ hơn giá thông thường."
+
+#: woocommerce-ac.php:2342
+msgid "Import"
+msgstr "Nhập"
+
+#: woocommerce-ac.php:2337
+msgid "Please enter in country code with two capital letters."
+msgstr "Vui lòng nhập mã quốc gia với hai chữ cái viết hoa."
+
+#: includes/component/welcome-page/ts-welcome.php:166
+msgid "Welcome to "
+msgstr "Chào mừng đến với"
+
+#: includes/component/tracking-data/ts-tracking.php:268
+msgid "Want to help make "
+msgstr "Muốn trợ giúp làm"
+
+#: includes/component/faq-support/ts-faq-support.php:127
+msgid "Frequently Asked Questions for "
+msgstr "Câu hỏi thường gặp cho"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:18
+msgid "Thank you for activating or updating to the latest version of "
+msgstr "Cảm ơn bạn đã kích hoạt hoặc cập nhật lên phiên bản mới nhất của    "
+
+#: woocommerce-ac.php:3233
+msgid "Shipping Charges"
+msgstr "Chi phí vận chuyển"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:363
+msgid "Unsubscribed"
+msgstr "Bỏ theo dõi"
+
+#: woocommerce-ac.php:1059
+msgid "Automatically Delete Abandoned Orders after X days has to be greater than 0."
+msgstr "Tự động xóa Đơn đặt hàng bị hủy sau X ngày phải lớn hơn 0. "
+
+#: woocommerce-ac.php:876
+msgid "Automatically delete abandoned cart orders after X days."
+msgstr "Tự động xóa Đơn đặt hàng bị hủy sau X ngày.  "
+
+#: woocommerce-ac.php:872
+msgid "Automatically Delete Abandoned Orders after X days"
+msgstr "Tự động xóa Đơn đặt hàng bị hủy sau X ngày."
+
+#: includes/admin/wcal_privacy_erase.php:90
+msgid "No personal data found for any abandoned carts."
+msgstr "Không tìm thấy dữ liệu cá nhân cho bất kỳ giỏ hàng bị hủy nào."
+
+#: woocommerce-ac.php:910
+msgid "Message to be displayed for registered users when tracking their carts."
+msgstr "Thông báo sẽ được hiển thị cho người dùng đã đăng ký khi theo dõi giỏ hàng của họ."
+
+#: woocommerce-ac.php:914
+msgid "<br>In compliance with GDPR, add a message on the Shop & Product pages to inform Registered users of how their data is being used.<br><i>For example: Please check our Privacy Policy to see how we use your personal data.</i>"
+msgstr "<br>Tuân thủ GDPR, thêm một thông báo trên trang Cửa hàng & Sản phẩm để thông báo cho người dùng đã đăng ký về cách sử dụng dữ liệu của họ. <br><i> Ví dụ: Vui lòng kiểm tra Chính sách bảo mật để xem cách chúng tôi sử dụng dữ liệu cá nhân của bạn.</i>"
+
+#: woocommerce-ac.php:901
+msgid "Message to be displayed for Guest users when tracking their carts"
+msgstr "Thông báo sẽ được hiển thị cho người dùng Khách khi theo dõi giỏ hàng của họ"
+
+#: woocommerce-ac.php:358
+msgid "I want to upgrade the plugin to the PRO version."
+msgstr "Tôi muốn nâng cấp plugin lên phiên bản PRO."
+
+#: includes/component/welcome-page/ts-welcome.php:165
+msgid "Welcome to %s %s"
+msgstr "Chào mừng đến với %s %s"
+
+#: includes/component/tracking-data/ts-tracking.php:133
+msgid "Reset usage tracking"
+msgstr "Đặt lại theo dõi sử dụng"
+
+#: includes/component/faq-support/ts-faq-support.php:175
+msgid "FAQ & Support"
+msgstr "FAQ và Hỗ trợ"
+
+#: includes/component/faq-support/ts-faq-support.php:126
+msgid "Frequently Asked Questions for %s"
+msgstr "Câu hỏi thường gặp cho %s"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:91
+msgctxt "the text of the 'other' reason for deactivating the plugin that is shown in the modal box."
+msgid "Other"
+msgstr "Khác"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:90
+msgid "I don't like to share my information with you"
+msgstr "Tôi không muốn chia sẻ thông tin của tôi với bạn"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:89
+msgid "What feature?"
+msgstr "Tính năng gì?"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:88
+msgid "The plugin is great, but I need specific feature that you don't support"
+msgstr "Plugin rất tuyệt, nhưng tôi cần tính năng cụ thể mà bạn không hỗ trợ"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:87
+msgid "Kindly share what didn't work so we can fix it for future users..."
+msgstr "Vui lòng chia sẻ những gì không hoạt động để chúng tôi có thể sửa nó cho người dùng trong tương lai..."
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:86
+msgid "The plugin is not working"
+msgstr "Plugin không hoạt động"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:85
+msgid "I only needed the plugin for a short period"
+msgstr "Tôi chỉ cần plugin trong một thời gian ngắn"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:84
+msgid "What's the plugin's name?"
+msgstr "Tên của plugin là gì?"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:83
+msgid "I found a better plugin"
+msgstr "Tôi tìm thấy một plugin tốt hơn"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:79
+msgid "Yes - Deactivate"
+msgstr "Có - Tắt"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:78
+msgid "Cancel"
+msgstr "Hủy"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:77
+msgid "Deactivate"
+msgstr "Tắt"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:76
+msgid "Submit & Deactivate"
+msgstr "Gửi và Tắt"
+
+#: includes/component/deactivate-survey-popup/class-ts-deactivation.php:75
+msgid "If you have a moment, please let us know why you are deactivating"
+msgstr "Nếu bạn có một chút thời gian, xin vui lòng cho chúng tôi biết lý do tại sao bạn đang hủy kích hoạt"
+
+#: includes/admin/wcal_privacy_export.php:215
+#: includes/admin/wcal_privacy_export.php:218
+msgid "Cart Recovered - Order #"
+msgstr "Giỏ hàng được phục hồi - Đơn hàng #"
+
+#: includes/admin/wcal_privacy_export.php:173
+#: includes/admin/wcal_privacy_export.php:184
+msgid "Billing Address"
+msgstr "Địa chỉ thanh toán"
+
+#: includes/admin/wcal_privacy_export.php:171
+#: includes/admin/wcal_privacy_export.php:183
+msgid "Items Present"
+msgstr "Item hiện tại"
+
+#. Translators: %s Abandoned Cart ID.
+#: includes/admin/wcal_privacy_erase.php:127
+msgid "Personal data within cart %s has been retained."
+msgstr "Dữ liệu cá nhân trong giỏ hàng %s đã được giữ lại."
+
+#. Translators: %s Abandoned Cart ID.
+#: includes/admin/wcal_privacy_erase.php:123
+msgid "Removed personal data from cart %s."
+msgstr "Đã xóa dữ liệu cá nhân khỏi giỏ hàng %s."
+
+#: woocommerce-ac.php:346
+msgid "Capturing of cart and other information was not satisfactory."
+msgstr "Việc lưu lại giỏ hàng và thông tin khác là không thỏa đáng."
+
+#: woocommerce-ac.php:340
+msgid "Emails are not being sent to customers."
+msgstr "Email không được gửi tới khách hàng."
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:283
+msgid "User Deleted"
+msgstr "Người dùng đã xóa"
+
+#: includes/admin/wcal_privacy_export.php:172
+msgid "Session ID"
+msgstr "ID Phiên làm việc"
+
+#: includes/admin/wcal_privacy_export.php:170
+#: includes/admin/wcal_privacy_export.php:182
+msgid "Cart Total"
+msgstr "Tổng đơn hàng"
+
+#: includes/admin/wcal_privacy_erase.php:204
+msgid "ANONYMIZED"
+msgstr "ĐÃ ẨN DANH"
+
+#: woocommerce-ac.php:905
+msgid "<br>In compliance with GDPR, add a message on the Checkout page to inform Guest users of how their data is being used.<br><i>For example: Your email address will help us support your shopping experience throughout the site. Please check our Privacy Policy to see how we use your personal data.</i>"
+msgstr "<br>Tuân thủ GDPR, thêm một thông báo trên trang Thanh toán để thông báo cho người dùng về cách sử dụng dữ liệu của họ. <br><i> Ví dụ: Địa chỉ email của bạn sẽ giúp chúng tôi hỗ trợ trải nghiệm mua sắm của bạn trên toàn trang web. Vui lòng kiểm tra Chính sách bảo mật của chúng tôi để xem cách chúng tôi sử dụng dữ liệu cá nhân của bạn.</i>"
+
+#: woocommerce-ac.php:352
+msgid "I cannot see abandoned cart reminder emails records."
+msgstr "Tôi không thể thấy bản ghi email nhắc nhở giỏ hàng bị hủy."
+
+#: includes/admin/wcal_privacy_export.php:221
+msgid "Abandoned - Order Unpaid (Order #"
+msgstr "Đơn hàng chưa thanh toán - Bị hủy (Đơn hàng #"
+
+#: includes/admin/wcal_privacy_export.php:218
+msgid "Abandoned but new cart created"
+msgstr "Đã bị hủy nhưng giỏ hàng mới đã được tạo"
+
+#: includes/admin/wcal_privacy_export.php:169
+#: includes/admin/wcal_privacy_export.php:181
+msgid "Abandoned Cart Status"
+msgstr "Trạng thái Giỏ hàng bị hủy"
+
+#: includes/admin/wcal_privacy_export.php:167
+#: includes/admin/wcal_privacy_export.php:179
+msgid "Abandoned Cart ID"
+msgstr "ID Giỏ hàng bị hủy"
+
+#: includes/admin/wcal_privacy_export.php:41
+#: includes/admin/wcal_privacy_erase.php:41
+msgid "Abandoned & Recovered Carts"
+msgstr "Giỏ hàng bị hủy và phục hồi"
+
+#: includes/wcal-common.php:567
+msgid "Database Updated Successfully"
+msgstr "Cơ sở dữ liệu được cập nhật thành công"
+
+#: includes/wcal_admin_notice.php:37
+msgid "<div id=\"wcal_update\" class=\"updated woocommerce-message\" style=\"padding:15px;\"><span>We need to update your email template database for some improvements. Please take a backup of your databases for your peice of mind</span><span class=\"submit\"><a href=\"%s\" class=\"button-primary\" style=\"float:right;\">Update</a></span></div>"
+msgstr "<div id=\"wcal_update\" class=\"updated woocommerce-message\" style=\"padding:15px;\"><span>Chúng tôi cần cập nhật cơ sở dữ liệu email template của bạn cho một số cải tiến. Vui lòng tạo một bản sao lưu dữ liệu của bạn cho bạn yên tâm</span><span class=\"submit\"><a href=\"%s\" class=\"button-primary\" style=\"float:right;\">Cập nhật</a></span></div>"
+
+#: includes/wcal-common.php:582
+msgid "Database Update Failed. Please try again after sometime"
+msgstr "Cập nhật cơ sở dữ liệu không thành công. Vui lòng thử lại sau"
+
+#. Description of the plugin
+msgid "This plugin captures abandoned carts by logged-in users & emails them about it."
+msgstr "Plugin này lưu lại các giỏ hàng bị hủy bởi người dùng đã đăng nhập và gửi email cho họ về nó."
+
+#: woocommerce-ac.php:2943
+msgid "End Date:"
+msgstr "Ngày kết thúc:"
+
+#: woocommerce-ac.php:1567 includes/admin/wcal_privacy_export.php:123
+msgid "Abandoned Carts"
+msgstr "Giỏ hàng bị hủy"
+
+#: woocommerce-ac.php:2284
+msgid "Abandoned Orders"
+msgstr "Đơn hàng bị hủy"
+
+#: woocommerce-ac.php:2892
+msgid "The Report below shows how many Abandoned Carts we were able to recover for you by sending automatic emails to encourage shoppers."
+msgstr "Báo cáo dưới đây cho thấy có bao nhiêu Giỏ hàng bị hủy mà chúng ta có thể khôi phục cho bạn bằng cách gửi email tự động để khuyến khích người mua hàng."
+
+#. Author URI of the plugin
+msgid "http://www.tychesoftwares.com/"
+msgstr "http://www.tychesoftwares.com/"
+
+#. Plugin Name of the plugin
+msgid "Abandoned Cart Lite for WooCommerce"
+msgstr "Abandoned Cart Lite for WooCommerce"
+
+#: woocommerce-ac.php:3425
+msgid "Send this email:"
+msgstr "Gửi email này:"
+
+#: woocommerce-ac.php:3405
+msgid "Email Template Header Text: "
+msgstr "Văn bản đầu trang Email Template:"
+
+#: woocommerce-ac.php:3329
+msgid "Email Body:"
+msgstr "Thân email:"
+
+#: woocommerce-ac.php:3314
+msgid "Subject:"
+msgstr "Chủ đề:"
+
+#: woocommerce-ac.php:3308
+msgid "Enter a template name for reference"
+msgstr "Nhập một tên template để tham khảo"
+
+#: woocommerce-ac.php:3212
+msgid "Shipping Details"
+msgstr "Chi tiết vận chuyển"
+
+#: woocommerce-ac.php:3207
+msgid "Phone:"
+msgstr "Điện thoại:"
+
+#: woocommerce-ac.php:3203
+msgid "Email:"
+msgstr "Email:"
+
+#: woocommerce-ac.php:3193 woocommerce-ac.php:3213
+msgid "Address:"
+msgstr "Địa chỉ:"
+
+#: woocommerce-ac.php:3190
+msgid "Name:"
+msgstr "Tên:"
+
+#: woocommerce-ac.php:3189
+msgid "Billing Details"
+msgstr "Chi tiết hóa đơn"
+
+#: woocommerce-ac.php:3185
+msgid "Customer Details"
+msgstr "Chi tiết khách hàng"
+
+#: woocommerce-ac.php:2969
+msgid " of them, which led to an extra"
+msgstr "trong số đó, dẫn đến thêm"
+
+#: woocommerce-ac.php:2951
+msgid "During the selected range "
+msgstr "Trong phạm vi đã chọn"
+
+#: woocommerce-ac.php:2945
+msgid "Go"
+msgstr "Đi"
+
+#: woocommerce-ac.php:2941
+msgid "Start Date:"
+msgstr "Ngày bắt đầu:"
+
+#: woocommerce-ac.php:2815
+msgid "Add New Template"
+msgstr "Thêm Template mới:"
+
+#: woocommerce-ac.php:2632
+msgid "Guest %s"
+msgstr "Khách %s"
+
+#: woocommerce-ac.php:2626
+msgid "Registered %s"
+msgstr "Đã đăng kí %s"
+
+#: woocommerce-ac.php:2549
+msgid "Email Sending Settings"
+msgstr "Cài đặt gửi email"
+
+#: woocommerce-ac.php:2546
+msgid "General Settings"
+msgstr "Cài đặt chung"
+
+#: woocommerce-ac.php:2522
+msgid "The Template has been successfully deleted."
+msgstr "Template đã được xóa thành công."
+
+#: woocommerce-ac.php:2457
+msgid "WooCommerce - Abandon Cart Lite"
+msgstr "WooCommerce - Abandon Cart Lite"
+
+#: woocommerce-ac.php:2285
+msgid "Email Templates"
+msgstr "Email Template"
+
+#: woocommerce-ac.php:949
+msgid "Send Reply Emails to"
+msgstr "Gửi Email Trả lời đến"
+
+#: woocommerce-ac.php:892
+msgid "Start tracking from Cart Page"
+msgstr "Bắt đầu theo dõi từ Trang Giỏ hàng"
+
+#: woocommerce-ac.php:882
+msgid "Email admin On Order Recovery"
+msgstr "Email tới admin khi Khôi phục Đơn hàng"
+
+#: woocommerce-ac.php:856 woocommerce-ac.php:2286
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: woocommerce-ac.php:650
+msgid "HTML Email Template"
+msgstr "HTML Email Template"
+
+#: includes/component/tracking-data/ts-tracking.php:177
+msgid "Once in a Week"
+msgstr "Một lần một tuần"
+
+#: includes/component/welcome-page/templates/social-media-elements.php:10
+#: includes/welcome.php:271
+msgid "Follow %s"
+msgstr "Theo %s"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:128
+#: includes/welcome.php:223
+msgid "Current Offers"
+msgstr "Ưu đãi hiện tại"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:122
+#: includes/welcome.php:215
+msgid "Meet the team"
+msgstr "Gặp đội ngũ"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:112
+#: includes/welcome.php:205
+msgid "Visit the Tyche Softwares Website"
+msgstr "Ghé thăm trang web Tyche Softwares"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:110
+#: includes/welcome.php:202
+msgid "Getting to Know Tyche Softwares"
+msgstr "Làm quen với Tyche Softwares"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:67
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:80
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:101
+#: includes/welcome.php:135 includes/welcome.php:148 includes/welcome.php:169
+#: includes/welcome.php:182
+msgid "Learn More"
+msgstr "Tìm hiểu thêm"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:54
+#: includes/welcome.php:122
+msgid "The Abandoned Cart Pro plugin gives you features where you are able to recover more sales compared to the Lite plugin. Here are some notable features the Pro version provides."
+msgstr "Plugin Abandoned Cart Pro cung cấp cho bạn các tính năng nơi bạn có thể phục hồi doanh số cao hơn so với plugin Lite. Dưới đây là một số tính năng đáng chú ý mà phiên bản Pro cung cấp."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:52
+#: includes/welcome.php:120
+msgid "Know more about Abandoned Cart Pro"
+msgstr "Tìm hiểu thêm về Abandoned Cart Pro"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:42
+#: includes/welcome.php:110
+msgid "Click Here to go to Email Templates page"
+msgstr "Nhấp chuột vào đây để đến trang Email Template"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:38
+#: includes/welcome.php:106
+msgid "Activate Email Template"
+msgstr "Kích hoạt Email Template"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:34
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:59
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:86
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:93
+#: includes/welcome.php:102 includes/welcome.php:127 includes/welcome.php:154
+#: includes/welcome.php:161 includes/welcome.php:188
+msgid "WooCommerce Abandoned Cart Lite"
+msgstr "WooCommerce Abandoned Cart Lite"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:30
+#: includes/welcome.php:98
+msgid "Get Started with Abandoned Cart Lite"
+msgstr "Bắt đầu với Abandoned Cart Lite"
+
+#: woocommerce-ac.php:2288
+msgid "Product Report"
+msgstr "Báo cáo Sản phẩm"
+
+#: woocommerce-ac.php:2287
+msgid "Recovered Orders"
+msgstr "Đơn hàng đã phục hồi"
+
+#. Author of the plugin
+msgid "Tyche Softwares"
+msgstr "Tyche Softwares"
+
+#. Plugin URI of the plugin
+msgid "http://www.tychesoftwares.com/store/premium-plugins/woocommerce-abandoned-cart-pro"
+msgstr "http://www.tychesoftwares.com/store/premium-plugins/woocommerce-abandoned-cart-pro "
+
+#: woocommerce-ac.php:3511
+msgid ""
+"If you love <strong>Abandoned Cart Lite for WooCommerce</strong>, then please leave us a <a href=\"https://wordpress.org/support/plugin/woocommerce-abandoned-cart/reviews/?rate=5#new-post\" target=\"_blank\" class=\"ac-rating-link\" data-rated=\"Thanks :)\">★★★★★</a>\n"
+"                            rating. Thank you in advance. :)"
+msgstr ""
+"Nếu bạn thích <strong>Abandoned Cart Lite for WooCommerce</strong>, vui lòng dành cho chúng tôi đánh giá <a href=\"https://wordpress.org/support/plugin/woocommerce-abandoned-cart/reviews/?rate=5#new-post\" target=\"_blank\" class=\"ac-rating-link\" data-rated=\"Thanks :)\">★★★★★</a>\n"
+". Cảm ơn bạn trước. :)"
+
+#: woocommerce-ac.php:3478
+msgid "Enter the email id to which the test email needs to be sent."
+msgstr "Nhập email ID mà email thử nghiệm cần được gửi."
+
+#: woocommerce-ac.php:3383
+msgid "Use WooCommerce Template Style:"
+msgstr "Sử dụng kiểu Template WooCommerce:"
+
+#: woocommerce-ac.php:3356
+msgid "Message to be sent in the reminder email."
+msgstr "Thông báo được gửi trong email nhắc nhở."
+
+#: woocommerce-ac.php:2956
+msgid "carts totaling"
+msgstr "tổng giỏ hàng"
+
+#: woocommerce-ac.php:2806
+msgid "There was a problem updating the email template. Please contact the plugin author via <a href= \"https://wordpress.org/support/plugin/woocommerce-abandoned-cart\">support forum</a>."
+msgstr "Có một vấn đề khi cập nhật email template. Vui lòng liên hệ tác giả của plugin qua <a href= \"https://wordpress.org/support/plugin/woocommerce-abandoned-cart\">diễn đàn hỗ trợ</a>."
+
+#: woocommerce-ac.php:2786
+msgid "There was a problem adding the email template. Please contact the plugin author via <a href= \"https://wordpress.org/support/plugin/woocommerce-abandoned-cart\">support forum</a>."
+msgstr "Có một vấn đề khi thêm email template. Vui lòng liên hệ tác giả của plugin qua <a href= \"https://wordpress.org/support/plugin/woocommerce-abandoned-cart\">diễn đàn hỗ trợ</a>."
+
+#: woocommerce-ac.php:2777
+msgid "The Email Template has been successfully added."
+msgstr "Email Template đã được thêm thành công."
+
+#: woocommerce-ac.php:2797
+msgid "The Email Template has been successfully updated."
+msgstr "Email Template đã được cập nhật thành công."
+
+#: woocommerce-ac.php:3694 woocommerce-ac.php:3729
+msgid "Woman\\'\\s Hand Bags"
+msgstr "Túi xách Nữ"
+
+#: woocommerce-ac.php:3687 woocommerce-ac.php:3722
+msgid "Men\\'\\s Formal Shoes"
+msgstr "Giày Nam"
+
+#: woocommerce-ac.php:3473
+msgid "Send a test email to:"
+msgstr "Gửi email thử nghiệm tới:"
+
+#: woocommerce-ac.php:3299
+msgid "Template Name:"
+msgstr "Tên Template:"
+
+#: woocommerce-ac.php:3000
+msgid "Line Total"
+msgstr "Tổng số"
+
+#: includes/welcome.php:50
+msgid "Welcome to Abandoned Cart Lite"
+msgstr "Chào mừng đến với Abandoned Cart Lite"
+
+#: includes/welcome.php:49
+msgid "Welcome to Abandoned Cart Lite %s"
+msgstr "Chào mừng đến với Abandoned Cart Lite %s"
+
+#: includes/component/tracking-data/ts-tracking.php:271
+#: includes/wcal_ts_tracking.php:79
+msgid "No thanks"
+msgstr "Không, cảm ơn"
+
+#: includes/component/tracking-data/ts-tracking.php:270
+#: includes/wcal_ts_tracking.php:78
+msgid "Allow"
+msgstr "Cho phép"
+
+#: includes/wcal_ts_tracking.php:76
+msgid "Want to help make Abandoned Cart even more awesome? Allow Abandoned Cart to collect non-sensitive diagnostic data and usage information and get 20% off on your next purchase. <a href=\"https://www.tychesoftwares.com/abandoned-cart-lite-usage-tracking/\" target=\"_blank\">Find out more</a>. <br><br>"
+msgstr "Muốn giúp Abandoned Cart tuyệt vời hơn? Cho phép Abandoned Cart thu thập dữ liệu phân tích không nhạy cảm và thông tin sử dụng và được giảm giá 20% cho lần mua hàng tiếp theo của bạn. <a href=\"https://www.tychesoftwares.com/abandoned-cart-lite-usage-tracking/\" target=\"_blank\">Tìm hiểu thêm</a>. <br><br>"
+
+#: includes/classes/class-wcal-templates-table.php:144
+msgid "Edit"
+msgstr "Sửa"
+
+#: includes/classes/class-wcal-templates-table.php:94
+msgid "Active ?"
+msgstr "Kích hoạt ?"
+
+#: includes/classes/class-wcal-templates-table.php:93
+msgid "Sent After Set Time"
+msgstr "Đã gửi sau khi đặt thời gian"
+
+#: includes/classes/class-wcal-templates-table.php:92
+msgid "Name Of Template"
+msgstr "Tên của Template"
+
+#: includes/classes/class-wcal-templates-table.php:91
+msgid "Sr"
+msgstr "Sr"
+
+#: includes/classes/class-wcal-templates-table.php:54
+msgid "template_ids"
+msgstr "template_ids"
+
+#: includes/classes/class-wcal-templates-table.php:53
+msgid "template_id"
+msgstr "template_id"
+
+#: includes/classes/class-wcal-recover-orders-table.php:161
+msgid "View Details"
+msgstr "Xem Chi tiết"
+
+#: includes/classes/class-wcal-recover-orders-table.php:124
+msgid "Customer Name"
+msgstr "Tên Khách hàng"
+
+#: includes/classes/class-wcal-recover-orders-table.php:87
+msgid "rec_abandoned_ids"
+msgstr "rec_abandoned_ids"
+
+#: includes/classes/class-wcal-recover-orders-table.php:86
+msgid "rec_abandoned_id"
+msgstr "rec_abandoned_id"
+
+#: includes/classes/class-wcal-product-report-table.php:93
+msgid "Number of Times Recovered"
+msgstr "Số lần khôi phục"
+
+#: includes/classes/class-wcal-product-report-table.php:91
+msgid "Product Name"
+msgstr "Tên Sản phẩm"
+
+#: includes/classes/class-wcal-product-report-table.php:59
+msgid "product_ids"
+msgstr "product_ids"
+
+#: includes/classes/class-wcal-product-report-table.php:58
+msgid "product_id"
+msgstr "product_id"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:359
+msgid "items"
+msgstr "item"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:357
+msgid "item"
+msgstr "item"
+
+#: includes/classes/class-wcal-templates-table.php:145
+#: includes/classes/class-wcal-templates-table.php:330
+#: includes/classes/class-wcal-abandoned-orders-table.php:151
+#: includes/classes/class-wcal-abandoned-orders-table.php:544
+msgid "Delete"
+msgstr "Xóa"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:150
+msgid "View order"
+msgstr "Xem đơn hàng"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:101
+msgid "Status of Cart"
+msgstr "Trạng thái Giỏ hàng"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:99
+#: includes/classes/class-wcal-recover-orders-table.php:128
+msgid "Order Total"
+msgstr "Tổng Đơn hàng"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:98
+msgid "Customer"
+msgstr "Khách hàng"
+
+#: includes/admin/wcal_privacy_export.php:174
+#: includes/admin/wcal_privacy_export.php:185
+#: includes/classes/class-wcal-abandoned-orders-table.php:97
+#: includes/classes/class-wcal-recover-orders-table.php:125
+msgid "Email Address"
+msgstr "Địa chỉ Email"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:96
+msgid "Id"
+msgstr "ID"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:53
+msgid "abandoned_order_ids"
+msgstr "abandoned_order_ids"
+
+#: includes/classes/class-wcal-abandoned-orders-table.php:52
+msgid "abandoned_order_id"
+msgstr "abandoned_order_id"
+
+#: woocommerce-ac.php:3703 woocommerce-ac.php:3738 cron/wcal_send_email.php:366
+msgid "Cart Total:"
+msgstr "Tổng Giỏ hàng:"
+
+#: woocommerce-ac.php:2999 woocommerce-ac.php:3683 woocommerce-ac.php:3718
+#: cron/wcal_send_email.php:280 cron/wcal_send_email.php:290
+msgid "Line Subtotal"
+msgstr "Tổng phụ"
+
+#: woocommerce-ac.php:3682 woocommerce-ac.php:3717 cron/wcal_send_email.php:279
+#: cron/wcal_send_email.php:289
+msgid "Price"
+msgstr "Giá"
+
+#: woocommerce-ac.php:2998 woocommerce-ac.php:3681 woocommerce-ac.php:3716
+#: cron/wcal_send_email.php:278 cron/wcal_send_email.php:288
+msgid "Quantity"
+msgstr "Số lượng"
+
+#: woocommerce-ac.php:2997 woocommerce-ac.php:3680 woocommerce-ac.php:3715
+#: cron/wcal_send_email.php:277 cron/wcal_send_email.php:287
+msgid "Name"
+msgstr "Tên"
+
+#: woocommerce-ac.php:2996 woocommerce-ac.php:3679 woocommerce-ac.php:3714
+#: cron/wcal_send_email.php:276 cron/wcal_send_email.php:286
+msgid "Item"
+msgstr "Item"
+
+#: woocommerce-ac.php:3677 woocommerce-ac.php:3711 cron/wcal_send_email.php:274
+#: cron/wcal_send_email.php:283
+msgid "Your Shopping Cart"
+msgstr "Giỏ hàng của bạn"
+
+#: includes/welcome.php:88
+msgid "Thank you for activating or updating to the latest version of Abandoned Cart Lite! If you're a first time user, welcome! You're well on your way to start recovering your lost revenues."
+msgstr "Cảm ơn vì đã kích hoạt hoặc cập nhật phiên bản mới nhất của Abandoned Cart Lite! Nếu bạn là người dùng lần đầu tiên, xin chào mừng! Bạn đang trên đường để bắt đầu khôi phục doanh thu bị mất của mình."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:97
+#: includes/welcome.php:165
+msgid "Send abandoned cart recovery email in minutes of cart being abandoned"
+msgstr "Gửi email khôi phục giỏ hàng trong vài phút"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:65
+#: includes/welcome.php:133
+msgid "The ability to capture the email address early in the order process is very important to reduce cart abandonment by unknown users as well as to be able to recover their carts if they abandon it. This ultimately leads to increase in your store sales."
+msgstr "Khả năng ghi lại địa chỉ email sớm trong quy trình đặt hàng là rất quan trọng để giảm sự từ bỏ giỏ hàng của những người dùng không xác định cũng như có thể khôi phục giỏ hàng của họ nếu họ từ bỏ nó. Điều này cuối cùng dẫn đến tăng doanh số của cửa hàng bạn."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:63
+#: includes/welcome.php:131
+msgid "Capture Visitor Emails on click of Add to Cart button"
+msgstr "Ghi lại Email khách khi nhấp chuột vào nút Thêm vào giỏ hàng"
+
+#: woocommerce-ac.php:863
+msgid "Cart abandoned cut-off time"
+msgstr "Thời gian hủy Giỏ hàng"
+
+#: woocommerce-ac.php:656
+msgid "Abandoned cart Email Template"
+msgstr "Email Template Giỏ hàng bị hủy"
+
+#: woocommerce-ac.php:50
+msgid "Once Every Fifteen Minutes"
+msgstr "Một lần mỗi mười lăm phút"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:113
+#: includes/welcome.php:206
+msgid "View all Premium Plugins"
+msgstr "Xem tất cả các Plugin cao cấp"
+
+#: includes/welcome.php:193
+msgid "View full list of differences between Lite & Pro plugin"
+msgstr "Xem danh sách đầy đủ về sự khác nhau giữa plugin Lite & Pro"
+
+#: includes/welcome.php:180
+msgid "The Lite version has only 3 merge tags available to personalize the abandoned cart recovery emails. The Pro version instead, has 20 different merge tags that can be used effectively to personalize each email that gets sent out to the customers for recovering their abandoned carts."
+msgstr "Phiên bản Lite chỉ có 3 thẻ có sẵn để cá nhân hóa các email khôi phục giỏ hàng bị hủy. Thay vào đó, phiên bản Pro có 20 thẻ khác nhau có thể được sử dụng một cách hiệu quả để cá nhân hóa từng email được gửi cho khách hàng để phục hồi giỏ hàng bị hủy của họ."
+
+#: includes/welcome.php:178
+msgid "Full range of merge tags that allow you to personalize the abandoned cart email"
+msgstr "Đầy đủ các thẻ cho phép bạn cá nhân hóa email giỏ hàng bị hủy"
+
+#: woocommerce-ac.php:600 woocommerce-ac.php:2108 cron/wcal_send_email.php:549
+#: cron/wcal_send_email.php:616
+msgid "This order was abandoned & subsequently recovered."
+msgstr "Đơn hàng này đã bị hủy và được phục hồi sau đó."
+
+#: cron/wcal_send_email.php:93
+msgid "Abandoned cart reminder"
+msgstr "Nhắc nhở Giỏ hàng bị hủy"
+
+#: includes/classes/class-wcal-product-report-table.php:92
+msgid "Number of Times Abandoned"
+msgstr "Số lần hủy"
+
+#: includes/admin/wcal_privacy_export.php:215
+#: includes/classes/class-wcal-abandoned-orders-table.php:365
+msgid "Abandoned"
+msgstr "Bị hủy"
+
+#: includes/admin/wcal_privacy_export.php:168
+#: includes/admin/wcal_privacy_export.php:180
+#: includes/classes/class-wcal-abandoned-orders-table.php:100
+msgid "Abandoned Date"
+msgstr "Ngày hủy"
+
+#: includes/classes/class-wcal-recover-orders-table.php:126
+msgid "Cart Abandoned Date"
+msgstr "Ngày Giỏ hàng bị hủy"
+
+#: includes/classes/class-wcal-recover-orders-table.php:127
+msgid "Cart Recovered Date"
+msgstr "Ngày Giỏ hàng được khôi phục"
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:99
+#: includes/welcome.php:167
+msgid "The ability to send the abandoned cart recovery email within first few minutes of cart being abandoned is a big advantage. In the Lite plugin, the earliest an email can be sent is after 1 hour. Whereas in the Pro version, the first recovery email gets sent 15 minutes after the cart is abandoned. This increases the recovery chances manifold."
+msgstr "Khả năng gửi email khôi phục trong vài phút đầu tiên của giỏ hàng bị hủy là một lợi thế lớn. Trong plugin Lite, email sớm nhất có thể được gửi sau 1 giờ. Trong khi ở phiên bản Pro, email khôi phục đầu tiên sẽ được gửi 15 phút sau khi giỏ hàng bị hủy. Điều này làm tăng cơ hội phục hồi."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:40
+#: includes/welcome.php:108
+msgid "To start sending out abandoned cart notification emails, simply activate the email template from under WooCommerce -> Abandoned Carts -> Email Templates page."
+msgstr "Để bắt đầu gửi email thông báo giỏ hàng bị hủy, chỉ cần kích hoạt email template từ trang WooCommerce -> Giỏ hàng bị bỏ rơi -> Email Template."
+
+#: woocommerce-ac.php:1463 woocommerce-ac.php:1465 woocommerce-ac.php:1518
+#: woocommerce-ac.php:1520
+msgid "New Customer Order - Recovered"
+msgstr "Đơn hàng mới của Khách hàng - Đã phục hồi"
+
+#: woocommerce-ac.php:1043
+msgid "Abandoned cart cut off time should be numeric and has to be greater than 0."
+msgstr "Thời gian hủy giỏ hàng phải là số và phải lớn hơn 0."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:78
+#: includes/welcome.php:146
+msgid "The provision for setting two separate cut-off times for different roles is mainly because sometimes if the store admin wants the visitor carts to be captured earlier than the registered user carts, then these different settings can play an important role."
+msgstr "Việc cung cấp hai thời gian hủy riêng biệt cho các vai trò khác nhau chủ yếu là vì đôi khi nếu admin muốn giỏ hàng của khách được ghi lại sớm hơn giỏ hàng của người dùng đã đăng ký, thì các cài đặt khác nhau này có thể đóng vai trò quan trọng."
+
+#: includes/component/welcome-page/templates/welcome/welcome-page.php:76
+#: includes/welcome.php:144
+msgid "Set different cut-off times for visitors & logged-in users"
+msgstr "Đặt thời gian hủy khác nhau cho khách và người dùng đã đăng nhập"
+
+#: woocommerce-ac.php:931
+msgid "\"From\" Name"
+msgstr "Tên người gửi"
+
+#: woocommerce-ac.php:940
+msgid "\"From\" Address"
+msgstr "Địa chỉ gửi"
+
+#: woocommerce-ac.php:924
+msgid "Settings for abandoned cart recovery emails"
+msgstr "Cài đặt cho email khôi phục giỏ hàng bị hủy"
+
+#: woocommerce-ac.php:896
+msgid "Enable tracking of abandoned products & carts even if customer does not visit the checkout page or does not enter any details on the checkout page like Name or Email. Tracking will begin as soon as a visitor adds a product to their cart and visits the cart page."
+msgstr "Bật theo dõi các sản phẩm và giỏ hàng bị hủy ngay cả khi khách hàng không truy cập trang thanh toán hoặc không nhập bất kỳ chi tiết nào trên trang thanh toán như Tên hoặc Email. Theo dõi sẽ bắt đầu ngay khi khách thêm sản phẩm vào giỏ hàng của họ và truy cập trang giỏ hàng."
+
+#: woocommerce-ac.php:886
+msgid "Sends email to Admin if an Abandoned Cart Order is recovered."
+msgstr "Gửi email đến Admin nếu một Đơn đặt hàng bị hủy được phục hồi."
+
+#: woocommerce-ac.php:867
+msgid "Consider cart abandoned after X minutes of item being added to cart & order not placed."
+msgstr "Xem xét hủy giỏ hàng sau X phút của item được thêm vào giỏ hàng & không đặt hàng."
+
+#: woocommerce-ac.php:2621
+msgid "All "
+msgstr "Tất cả"
+
+#: woocommerce-ac.php:2579
+msgid "The list below shows all Abandoned Carts which have remained in cart for a time higher than the \"Cart abandoned cut-off time\" setting."
+msgstr "Danh sách dưới đây hiển thị tất cả các Giỏ hàng bị hủy vẫn còn trong giỏ hàng trong thời gian dài hơn cài đặt \"Thời gian hủy giỏ hàng\"."
+
+#: woocommerce-ac.php:2528
+msgid "Change settings for sending email notifications to Customers, to Admin etc."
+msgstr "Thay đổi cài đặt gửi thông báo email cho Khách hàng, tới Quản trị viên, v.v."
+
+#: woocommerce-ac.php:2517
+msgid "The Abandoned cart has been successfully deleted."
+msgstr "Giỏ hàng bị hủy đã được xóa thành công."
+
+#: woocommerce-ac.php:2453
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Bạn không có đủ quyền để truy cập trang này."
+
+#: woocommerce-ac.php:2638
+msgid "Carts without Customer Details"
+msgstr "Giỏ hàng không có Thông tin Khách hàng"
+
+#: woocommerce-ac.php:2659
+msgid "Add email templates at different intervals to maximize the possibility of recovering your abandoned carts."
+msgstr "Thêm email template ở các khoảng thời gian khác nhau để tối đa hóa khả năng phục hồi các giỏ hàng bị hủy của bạn."
+
+#: woocommerce-ac.php:2992
+msgid "Abandoned Order #%s Details"
+msgstr "Chi tiết Đơn hàng bị hủy #%s"
+
+#: woocommerce-ac.php:2962
+msgid " were abandoned. We were able to recover"
+msgstr "đã bị hủy. Chúng tôi đã có thể phục hồi"
+
+#: woocommerce-ac.php:3323
+msgid "Enter the subject that should appear in the email sent"
+msgstr "Nhập chủ sẽ xuất hiện trong email đã gửi"
+
+#: woocommerce-ac.php:3466
+msgid "after cart is abandoned."
+msgstr "sau khi giỏ hàng bị hủy."
+
+#: woocommerce-ac.php:3419
+msgid "Enter the header which will appear in the abandoned WooCommerce email sent. This is only applicable when only used when \"Use WooCommerce Template Style:\" is checked."
+msgstr "Nhập phần đầu trang mà sẽ xuất hiện trong WooCommerce email đơn hàng bị hủy được gửi. Điều này chỉ áp dụng khi \"Sử dụng Kiểu Template WooCommerce:\" được chọn."
+
+#: woocommerce-ac.php:3398
+msgid "Use WooCommerce default style template for abandoned cart reminder emails."
+msgstr "Sử dụng kiểu template mặc định WooCommerce cho các email nhắc nhở giỏ hàng bị hủy."

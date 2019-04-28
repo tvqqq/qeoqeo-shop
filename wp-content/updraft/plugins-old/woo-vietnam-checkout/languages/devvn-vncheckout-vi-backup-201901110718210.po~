@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Vietnam Checkout\n"
+"POT-Creation-Date: 2017-12-30 02:24+0700\n"
+"PO-Revision-Date: 2019-01-11 05:18+0000\n"
+"Last-Translator: qeoqeo <tvq9612@gmail.com>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: devvn-woo-address-selectbox.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.2.0; wp-5.0.3"
+
+#: devvn-woo-address-selectbox.php:129
+msgid "Woo Vietnam Checkout Setting"
+msgstr "Cài đặt trang thanh toán"
+
+#: devvn-woo-address-selectbox.php:130
+msgid "Vietnam Checkout"
+msgstr "Woocommerce Việt Nam"
+
+#: devvn-woo-address-selectbox.php:159 devvn-woo-address-selectbox.php:202
+#: devvn-woo-address-selectbox.php:638
+msgid "Full name"
+msgstr "Họ và tên"
+
+#: devvn-woo-address-selectbox.php:160 devvn-woo-address-selectbox.php:203
+#: devvn-woo-address-selectbox.php:639
+msgctxt "placeholder"
+msgid "Type Full name"
+msgstr "Nhập đầy đủ họ và tên"
+
+#: devvn-woo-address-selectbox.php:166 devvn-woo-address-selectbox.php:209
+msgid "Province/City"
+msgstr "Tỉnh/Thành phố"
+
+#: devvn-woo-address-selectbox.php:170 devvn-woo-address-selectbox.php:213
+msgctxt "placeholder"
+msgid "Select Province/City"
+msgstr "Chọn tỉnh/thành phố"
+
+#: devvn-woo-address-selectbox.php:174 devvn-woo-address-selectbox.php:217
+msgid "District"
+msgstr "Quận/Huyện"
+
+#: devvn-woo-address-selectbox.php:178 devvn-woo-address-selectbox.php:221
+msgctxt "placeholder"
+msgid "Select District"
+msgstr "Chọn quận huyện"
+
+#: devvn-woo-address-selectbox.php:185 devvn-woo-address-selectbox.php:228
+msgid "Commune/Ward/Town"
+msgstr "Xã/Phường/Thị trấn"
+
+#: devvn-woo-address-selectbox.php:189 devvn-woo-address-selectbox.php:232
+msgctxt "placeholder"
+msgid "Select Commune/Ward/Town"
+msgstr "Chọn xã/phường/thị trấn"
+
+#: devvn-woo-address-selectbox.php:198 devvn-woo-address-selectbox.php:248
+msgctxt "placeholder"
+msgid "Ex: No. 20, 90 Alley"
+msgstr "Ví dụ: Số 20, ngõ 90"
+
+#: devvn-woo-address-selectbox.php:242
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#: devvn-woo-address-selectbox.php:243
+msgctxt "placeholder"
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#: devvn-woo-address-selectbox.php:320
+msgid "No value"
+msgstr "Không có giá trị"
+
+#: devvn-woo-address-selectbox.php:474
+msgid "Phone number of the recipient"
+msgstr "Số điện thoại của người nhận"
+
+#: devvn-woo-address-selectbox.php:487
+msgid "Shipping Phone:"
+msgstr "Số điện thoại:"
+
+#: devvn-woo-address-selectbox.php:504
+msgid "Delete the selected boxes?"
+msgstr ""
+
+#: devvn-woo-address-selectbox.php:598
+msgid "Settings"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:11
+msgid "District Zone"
+msgstr "Quận/Huyện"
+
+#: includes/class-devvn-district-zone-shipping.php:12
+msgid "Thay đổi giá vận chuyển dựa trên quận/huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:13
+msgid "Phí vận chuyển dựa trên quận/ huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:14
+msgid "Xác định giá theo quận/huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:24
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:47
+msgid "Tiêu đề phương thức"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:49
+msgid ""
+"The title which the user sees during checkout, if not defined in Shipping "
+"Rates."
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:50
+msgid "Phí vận chuyển cho Quận/Huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:67
+msgid "Phụ thu"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:69
+msgid "Fee excluding tax, e.g. 3.50. Leave blank to disable."
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:75
+msgid "Phí vận chuyển mặc định"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:77
+msgid "Phí vận chuyển mặc định cho tất cả quận/huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:83
+#: includes/class-devvn-district-zone-shipping.php:357
+msgid "Tùy chỉnh điều kiện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:85
+msgid "Điều kiện mặc định cho toàn bộ quận/huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:90
+msgid "Tùy chỉnh điều kiện cân nặng"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:92
+msgid "Điều kiện cân nặng mặc định cho toàn bộ quận/huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:141
+#: includes/class-devvn-district-zone-shipping.php:149
+msgid "Miễn phí vận chuyển"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:357
+msgid "Điều kiện mặc định cho toàn bộ quận huyện"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:363
+#: includes/functions-admin.php:161 includes/functions-admin.php:269
+#: includes/functions-admin.php:358 includes/functions-admin.php:393
+#: includes/functions-admin.php:420
+msgid "Giá vận chuyển"
+msgstr ""
+
+#: includes/class-devvn-district-zone-shipping.php:363
+msgid "Phí vận chuyển cho từng quận/huyện"
+msgstr ""
+
+#: includes/functions-admin.php:129
+msgid "Quận/huyện"
+msgstr ""
+
+#: includes/functions-admin.php:130
+msgid "Phí vận chuyển"
+msgstr ""
+
+#: includes/functions-admin.php:131
+msgid "Tiêu đề"
+msgstr ""
+
+#: includes/functions-admin.php:136
+msgid "Thêm quận/huyện"
+msgstr ""
+
+#: includes/functions-admin.php:136
+msgid "Xóa lựa chọn"
+msgstr ""
+
+#: includes/functions-admin.php:154 includes/functions-admin.php:262
+msgid "0"
+msgstr ""
+
+#: includes/functions-admin.php:160 includes/functions-admin.php:268
+#: includes/functions-admin.php:357
+msgid "Điều kiện giá order >="
+msgstr ""
+
+#: includes/functions-admin.php:173 includes/functions-admin.php:180
+#: includes/functions-admin.php:207 includes/functions-admin.php:214
+#: includes/functions-admin.php:274 includes/functions-admin.php:294
+#: includes/functions-admin.php:368 includes/functions-admin.php:375
+#: includes/functions-admin.php:403 includes/functions-admin.php:410
+msgid "x"
+msgstr ""
+
+#: includes/functions-admin.php:185 includes/functions-admin.php:219
+#: includes/functions-admin.php:278 includes/functions-admin.php:298
+#: includes/functions-admin.php:382 includes/functions-admin.php:415
+msgid "Thêm điều kiện"
+msgstr ""
+
+#: includes/functions-admin.php:194 includes/functions-admin.php:287
+msgid "<= (kg)"
+msgstr ""
+
+#: includes/functions-admin.php:195 includes/functions-admin.php:224
+msgid "Phí vượt mức"
+msgstr ""
+
+#: includes/functions-admin.php:223 includes/functions-admin.php:302
+msgid "Mỗi kg sau"
+msgstr ""
+
+#: includes/functions-admin.php:238 includes/functions-admin.php:317
+#: includes/functions-admin.php:434
+msgid "Hệ số quy đổi"
+msgstr ""
+
+#: includes/functions-admin.php:248
+msgid "Ví dụ"
+msgstr ""
+
+#: includes/functions-admin.php:288 includes/functions-admin.php:303
+msgid "Phí"
+msgstr ""
+
+#: includes/functions-admin.php:327
+msgid "Tiêu đề của hình thức vận chuyển"
+msgstr ""
+
+#: includes/functions-admin.php:381 includes/functions-admin.php:439
+msgid "Lưu điều kiện"
+msgstr ""
+
+#: includes/functions-admin.php:392
+msgid "Điều kiện cân nặng <= kg"
+msgstr ""
+
+#: includes/functions-admin.php:419
+msgid "Mỗi kg vượt mức (kg)"
+msgstr ""
+
+#: includes/options-page.php:14 includes/options-page.php:16
+msgid "Ẩn mục phường/xã"
+msgstr ""
+
+#: includes/options-page.php:20
+msgid "KHÔNG bắt buộc nhập phường/xã"
+msgstr ""
+
+#: includes/options-page.php:22
+msgid "Không bắt buộc"
+msgstr ""
+
+#: includes/options-page.php:26
+msgid "Chuyển ₫ sang VNĐ"
+msgstr ""
+
+#: includes/options-page.php:28
+msgid "Cho phép chuyển sang VNĐ"
+msgstr ""
+
+#: includes/options-page.php:33
+msgid "Loại bỏ tiêu đề vận chuyển"
+msgstr ""
+
+#: includes/options-page.php:35
+msgid "Loại bỏ hoàn toàn tiêu đề của phương thức vận chuyển"
+msgstr ""
+
+#: includes/options-page.php:39
+msgid "Ẩn phương thức khi có free-shipping"
+msgstr ""
+
+#: includes/options-page.php:41
+msgid "Ẩn tất cả những phương thức vận chuyển khác khi có miễn phí vận chuyển"
+msgstr ""
+
+#: includes/options-page.php:45
+msgid "Số quy đổi"
+msgstr ""
+
+#: includes/options-page.php:48
+msgid "Thương số quy đổi. Mặc định theo Viettel Post là 6000"
+msgstr ""
+
+#: includes/options-page.php:52
+msgid "Chọn Tỉnh/thành phố"
+msgstr ""
+
+#: includes/options-page.php:61
+msgid "Tỉnh/thành phố mặc định"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Woocommerce Vietnam Checkout PRO"
+msgstr "Woocommerce Vietnam Checkout PRO"
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"http://levantoan.com/plugin-tinh-phi-van-chuyen-cho-quan-huyen-trong-"
+"woocommerce/"
+msgstr ""
+"http://levantoan.com/plugin-tinh-phi-van-chuyen-cho-quan-huyen-trong-"
+"woocommerce/"
+
+#. Description of the plugin/theme
+msgid ""
+"Add province/city, district, commune/ward/town to checkout form and simplify "
+"checkout form"
+msgstr ""
+"Thêm tỉnh/thành phố, quận huyện, xã/phường/thị trấn vào form checkout của "
+"woocommerce và tối giản form checkout cho phù hợp với Việt Nam"
+
+#. Author of the plugin/theme
+msgid "Le Van Toan"
+msgstr "Le Van Toan"
+
+#. Author URI of the plugin/theme
+msgid "http://levantoan.com"
+msgstr "http://levantoan.com"

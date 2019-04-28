@@ -7,7 +7,7 @@
         ng-attr-data-parallax="-{{ shortcode.options.parallax }}" >
       <div class="bg fill bg-fill" ng-style="{ 'backgroundPosition': shortcode.options.bgPos }" wp-attachment="shortcode.options.bg" wp-attachment-size="shortcode.options.bgSize"></div>
       <video ng-if="shortcode.options.videoMp4"
-      class="video-bg no-click hide-for-small"
+      class="video-bg no-click {{shortcode.options.videoVisibility}}"
       preload="auto" autoplay="true" ng-attr-loop="{{shortcode.options.videoLoop !== 'false'}}" muted="muted">
         <source ng-if="shortcode.options.videoMp4" ng-src="{{ shortcode.options.videoMp4 | trusted: 'resourceUrl' }}" type="video/mp4">
         <source ng-if="shortcode.options.videoOgg" ng-src="{{ shortcode.options.videoOgg | trusted: 'resourceUrl' }}" type="video/ogg">

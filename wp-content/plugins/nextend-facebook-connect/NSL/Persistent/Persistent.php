@@ -74,6 +74,11 @@ class Persistent {
 
         $this->storage = $newStorage;
     }
+
+    public static function clear() {
+
+        self::$instance->storage->clear();
+    }
 }
 
 

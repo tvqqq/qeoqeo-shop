@@ -25,12 +25,17 @@ function ux_builder_asset( $path ) {
  *
  * @param  number $post_id Post to preview.
  * @param  number $edit_post_id Post to edit.
- * @param  string $mode
+ * @param  string $type
  * @return string
  */
-function ux_builder_edit_url( $post_id, $edit_post_id = null, $mode = 'frontend' ) {
-  $edit_post_id = $edit_post_id ? "&edit_post_id=${edit_post_id}" : '';
-  return admin_url( "edit.php?page=uxbuilder&post_id=${post_id}" . $edit_post_id );
+function ux_builder_edit_url( $post_id, $edit_post_id = null, $type = 'editor' ) {
+  $query = http_build_query( array(
+    'edit_post_id' => $edit_post_id,
+    'app' => 'uxbuilder',
+    'type' => $type
+  ) );
+
+  return get_edit_post_link( $post_id, 'raw' ) . "&{$query}";
 }
 
 /**
@@ -40,7 +45,7 @@ function ux_builder_edit_url( $post_id, $edit_post_id = null, $mode = 'frontend'
  */
 function ux_builder_iframe_url() {
   $iframe_url = array_key_exists( 'iframe_url', $_GET ) ? $_GET['iframe_url'] : null;
-  $post_id = array_key_exists( 'post_id', $_GET ) ? $_GET['post_id'] : null;
+  $post_id = array_key_exists( 'post', $_GET ) ? $_GET['post'] : null;
   $edit_post_id = array_key_exists( 'edit_post_id', $_GET ) ? $_GET['edit_post_id'] : null;
   $permalink = $iframe_url ? site_url( $iframe_url ) : get_permalink( $post_id );
   $has_query = !!parse_url( $permalink, PHP_URL_QUERY );

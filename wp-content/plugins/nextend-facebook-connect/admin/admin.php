@@ -380,12 +380,12 @@ class NextendSocialLoginAdmin {
                                         'domain'      => NextendSocialLogin::getDomain()
                                     )
                                 );
-
                             }
                         } catch (Exception $e) {
                             \NSL\Notices::addError($e->getMessage());
                         }
                     } else {
+                        delete_site_transient('update_plugins');
                         $newData['licenses'] = array();
                     }
                     break;
@@ -480,6 +480,8 @@ class NextendSocialLoginAdmin {
         $activation_data = NextendSocialLogin::getLicense();
         if ($activation_data !== false) {
             $body['license_key'] = $activation_data['license_key'];
+        } else {
+            $body['license_key'] = '';
         }
 
         $http_args = array(
@@ -525,6 +527,8 @@ class NextendSocialLoginAdmin {
                 return 'activated';
             } else if (!current_user_can('install_plugins')) {
                 return 'no-capability';
+            } else if (class_exists('NextendSocialLoginPRO', false) && version_compare(NextendSocialLoginPRO::$version, NextendSocialLogin::$nslPROMinVersion, '<')) {
+                return 'not-compatible';
             } else {
                 if (file_exists(WP_PLUGIN_DIR . '/nextend-social-login-pro/nextend-social-login-pro.php')) {
                     return 'installed';

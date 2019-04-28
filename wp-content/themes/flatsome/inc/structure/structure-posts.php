@@ -50,7 +50,7 @@ add_filter('flatsome_header_class','flatsome_blog_header_classes', 10);
 // Add Big blog header
 function flatsome_single_page_header(){
   if(is_singular('post') && get_theme_mod('blog_post_style') == 'top'){
-		echo get_template_part( 'template-parts/posts/partials/single-featured', get_theme_mod('blog_post_style'));
+	   get_template_part( 'template-parts/posts/partials/single-featured', get_theme_mod('blog_post_style'));
 	}
 }
 add_action('flatsome_after_header','flatsome_single_page_header', 10);
@@ -59,7 +59,7 @@ add_action('flatsome_after_header','flatsome_single_page_header', 10);
 // Add Blog Archive title
 function flatsome_archive_title(){
     if(flatsome_option('blog_archive_title') && (is_archive() || is_search())){
-        echo get_template_part( 'template-parts/posts/partials/archive-title');
+        get_template_part( 'template-parts/posts/partials/archive-title');
     }
 }
 add_action('flatsome_before_blog','flatsome_archive_title', 15);

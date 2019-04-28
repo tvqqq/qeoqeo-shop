@@ -135,10 +135,10 @@ function flatsome_scripts() {
 
 	// Register scripts (Loaded on request).
 	wp_register_script( 'flatsome-masonry-js', $uri . '/assets/libs/packery.pkgd.min.js', array( 'jquery' ), $version, true );
-	wp_register_script( 'flatsome-isotope-js', $uri . '/assets/libs/isotope.pkgd.min.js', array( 'jquery' ), $version, true );
+	wp_register_script( 'flatsome-isotope-js', $uri . '/assets/libs/isotope.pkgd.min.js', array( 'jquery', 'flatsome-js' ), $version, true );
 
 	// Google maps.
-	$maps_api = get_theme_mod( 'google_map_api' );
+	$maps_api = trim( get_theme_mod( 'google_map_api' ) );
 	if ( ! empty( $maps_api ) ) {
 		wp_register_script( 'flatsome-maps', '//maps.googleapis.com/maps/api/js?key=' . $maps_api, array( 'jquery' ), $version, true );
 	}
@@ -201,8 +201,8 @@ function flatsome_ux_builder_scripts( $context ) {
 
 	// Add UxBuilder assets.
 	if ( $context == 'editor' ) {
-		wp_enqueue_script( 'ux-builder-flatsome', $uri . '/assets/js/builder/custom/editor.js', null, $version, true );
-		wp_enqueue_style( 'ux-builder-flatsome', $uri . '/assets/css/builder/custom/builder.css', null, $version );
+		wp_enqueue_script( 'ux-builder-flatsome', $uri . '/assets/js/builder/custom/editor.js', array( 'ux-builder-core' ), $version, true );
+		wp_enqueue_style( 'ux-builder-flatsome', $uri . '/assets/css/builder/custom/builder.css', array( 'ux-builder-core' ), $version );
 	}
 	if ( $context == 'content' ) {
 		wp_enqueue_style( 'ux-builder-flatsome', $uri . '/assets/css/builder/custom/builder.css', null, $version );

@@ -36,6 +36,7 @@ function flatsome_text_box( $atts, $content = null ){
     'radius' => '',
     'rotate' => '',
     'class' => '',
+    'visibility' => '',
     'border_radius' => '',
     // Borders
     'border' => '',
@@ -65,6 +66,7 @@ function flatsome_text_box( $atts, $content = null ){
 
     if($style) $classes[] = 'text-box-'.$style;
     if($class) $classes[] = $class;
+    if($visibility) $classes[] = $visibility;
 
     // Set positions
     $classes[] = flatsome_position_classes( 'x', $position_x, $position_x__sm, $position_x__md );

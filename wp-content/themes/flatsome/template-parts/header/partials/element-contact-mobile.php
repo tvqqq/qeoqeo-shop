@@ -26,7 +26,7 @@
 			<li class="<?php echo $class; ?>">
 			  <a target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=<?php echo flatsome_option('contact_location'); ?>" title="<?php echo flatsome_option('contact_location'); ?>" class="<?php echo $class_link;?>">
 			  	 <?php echo get_flatsome_icon('icon-map-pin-fill',$icon_size); ?>
-			     <?php if($label) echo _e('Location','flatsome'); ?>
+			     <?php if($label) _e('Location','flatsome'); ?>
 			  </a>
 			</li>
 			<?php } ?>
@@ -35,7 +35,7 @@
 			<li class="<?php echo $class; ?>">
 			  <a href="mailto:<?php echo flatsome_option('contact_email'); ?>" class="<?php echo $class_link;?>" title="<?php echo flatsome_option('contact_email'); ?>">
 				  <?php echo get_flatsome_icon('icon-envelop',$icon_size); ?>
-			      <?php if($label) echo _e('Contact','flatsome'); ?>
+			      <?php if($label) _e('Contact','flatsome'); ?>
 			  </a>
 			</li>
 			<?php } ?>

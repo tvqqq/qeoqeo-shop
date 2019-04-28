@@ -5,6 +5,8 @@ function ux_instagram_feed( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'_id'                 => 'instagram-' . rand(),
 		'photos'              => '10',
+		'class'								=> '',
+		'visibility' 					=> '', 
 		'username'            => 'wonderful_places',
 		'target'              => '_self',
 		'caption'             => 'true',
@@ -51,6 +53,8 @@ function ux_instagram_feed( $atts, $content = null ) {
 
 			$repeater['id']                  = $_id;
 			$repeater['type']                = $type;
+			$repeater['class']               = $class;
+			$repeater['visibility']          = $visibility;
 			$repeater['style']               = 'overlay';
 			$repeater['slider_style']        = $slider_nav_style;
 			$repeater['slider_nav_position'] = $slider_nav_position;

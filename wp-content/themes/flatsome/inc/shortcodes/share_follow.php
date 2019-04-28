@@ -3,6 +3,8 @@
 function flatsome_share($atts, $content = null) {
 	extract(shortcode_atts(array(
 		'title'  => '',
+		'class'	=> '',
+		'visibility' => '',
 		'size' => '',
 		'align' => '',
 		'scale' => '',
@@ -13,6 +15,16 @@ function flatsome_share($atts, $content = null) {
 	if(get_theme_mod('custom_share_icons')){
 		return do_shortcode(get_theme_mod('custom_share_icons'));
 	}
+
+	$wrapper_class = array('social-icons','share-icons', 'share-row', 'relative');
+	if( $class ) $wrapper_class[] = $class;
+	if( $visibility ) $wrapper_class[] = $visibility;
+	if( $align ) {
+		$wrapper_class[] = 'full-width';
+		$wrapper_class[] = 'text-'.$align;
+	}
+	if ( $style ) $wrapper_class[] = 'icon-style-'.$style;
+
 
 	global $post;
 	if(!$post) return false;
@@ -38,15 +50,13 @@ function flatsome_share($atts, $content = null) {
 	if(!$style) $style = get_theme_mod('social_icons_style','outline');
 
 	$classes = get_flatsome_icon_class($style);
-	$classes = $classes.' tooltip';
+	$classes = $classes. ' tooltip';
 
 	$share = get_theme_mod('social_icons', array('facebook','twitter','email','linkedin','googleplus','pinterest','whatsapp'));
 
 	// Scale
 	if($scale) $scale = 'style="font-size:'.$scale.'%"';
 
-	// Align
-	if($align) $align = 'full-width text-'.$align;
 
 	// Fix old depricated
 	if(!isset($share[0])){
@@ -58,9 +68,10 @@ function flatsome_share($atts, $content = null) {
 	}
 
 	ob_start();
+
 	?>
 
-	<div class="social-icons share-icons share-row relative icon-style-<?php echo $style; ?> <?php echo $align; ?>" <?php echo $scale;?>>
+	<div class="<?php echo implode(' ', $wrapper_class); ?>" <?php echo $scale;?>>
 		  <?php echo $title; ?>
 		  <?php if(in_array('whatsapp', $share)){ ?>
 		  <a href="whatsapp://send?text=<?php echo $whatsapp_text; ?>" data-action="share/whatsapp/share" class="<?php echo $classes;?> whatsapp show-for-medium" title="<?php _e('Share on WhatsApp','flatsome'); ?>"><i class="icon-phone"></i></a>
@@ -97,6 +108,8 @@ function flatsome_follow($atts, $content = null) {
 	$sliderrandomid = rand();
 	extract(shortcode_atts(array(
 		'title' => '',
+		'class' => '',
+		'visibility' => '',
 		'style' => 'outline',
 		'align' => '',
 		'scale' => '',
@@ -122,7 +135,15 @@ function flatsome_follow($atts, $content = null) {
 	), $atts));
 	ob_start();
 
-	if($size == 'small') $style = 'small';
+
+	$wrapper_class = array('social-icons','follow-icons');
+	if( $class ) $wrapper_class[] = $class;
+	if( $visibility ) $wrapper_class[] = $visibility;
+	if( $align ) {
+		$wrapper_class[] = 'full-width';
+		$wrapper_class[] = 'text-'.$align;
+	}
+
 
 	// Get Defaults
 	if($defaults){
@@ -142,16 +163,15 @@ function flatsome_follow($atts, $content = null) {
 		$rss = get_theme_mod('follow_rss');
 	}
 
+	if($size == 'small') $style = 'small';
 	$style = get_flatsome_icon_class($style);
 
 	// Scale
 	if($scale) $scale = 'style="font-size:'.$scale.'%"';
-
-	// Align
-	if($align) $align = 'full-width text-'.$align;
+	
 
 	?>
-    <div class="social-icons follow-icons <?php echo $align; ?>" <?php echo $scale;?>>
+    <div class="<?php echo implode(' ', $wrapper_class); ?>" <?php echo $scale;?>>
     	<?php if($title){?>
     	<span><?php echo $title; ?></span>
 		<?php }?>

@@ -10,7 +10,7 @@
 			</h1>
 	 	</div>
 	 	<div class="flex-col flex-right">
-			<?php echo get_flatsome_portfolio_breadcrumbs(); ?>
+			<?php get_flatsome_portfolio_breadcrumbs(); ?>
 	 	</div>
 	 
 	</div><!-- flex-row -->

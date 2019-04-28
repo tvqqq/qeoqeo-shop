@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  _nsl.push(function ($) {
+  window._nsl.push(function ($) {
       $(document).ready(function () {
           var $main = $('#nsl-custom-login-form-main');
 

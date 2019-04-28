@@ -2,7 +2,6 @@
 // [lightbox]
 function ux_lightbox($atts, $content=null) {
     $sliderrandomid = rand();
-    ob_start();
     extract( shortcode_atts( array(
         'id' => 'enter-id-here',
         'width' => '650px',
@@ -12,6 +11,7 @@ function ux_lightbox($atts, $content=null) {
         'auto_timer' => '2500',
         'auto_show' => ''
     ), $atts ) );
+    ob_start();
     ?>
 <div id="<?php echo $id; ?>"
     class="lightbox-by-id lightbox-content mfp-hide lightbox-white <?php echo $class; ?>"

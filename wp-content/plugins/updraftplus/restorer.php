@@ -985,7 +985,7 @@ class Updraft_Restorer {
 	 * $preserve_existing: this setting only applies at the top level: 0 = overwrite with no backup; 1 = make backup of existing; 2 = do nothing if there is existing, 3 = do nothing to the top level directory, but do copy-in contents (and over-write files). Thus, on a multi-archive set where you want a backup, you'd do this: first call with $preserve_existing === 1, then on subsequent zips call with 3
 	 *
 	 * @param  string  $working_dir       specify working directory
-	 * @param  string  $dest_dir          specify destination directory
+	 * @param  string  $dest_dir          specify destination directory (a WP_Filesystem path)
 	 * @param  integer $preserve_existing check to preserve exisitng file
 	 * @param  array   $do_not_overwrite  Specify files or directories not to overwrite
 	 * @param  string  $type              specify type
@@ -1011,7 +1011,12 @@ class Updraft_Restorer {
 		if (empty($upgrade_files)) return true;
 
 		if (!$wpfs->is_dir($dest_dir)) {
-			return new WP_Error('no_such_dir', __('The directory does not exist', 'updraftplus')." ($dest_dir)");
+			if ($wpfs->is_dir(dirname($dest_dir))) {
+				if (!$wpfs->mkdir($dest_dir, FS_CHMOD_DIR)) return new WP_Error('mkdir_failed', __('The directory does not exist, and the attempt to create it failed', 'updraftplus') . ' (' . $dest_dir . ')');
+				$updraftplus->log("Destination directory did not exist, but was successfully created ($dest_dir)");
+			} else {
+				return new WP_Error('no_such_dir', __('The directory does not exist', 'updraftplus') . " ($dest_dir)");
+			}
 		}
 
 		$wpcore_config_moved = false;
@@ -1294,6 +1299,10 @@ class Updraft_Restorer {
 				break;
 			case WP_CONTENT_DIR . '/themes':
 				$wp_filesystem_dir = $wp_filesystem->wp_themes_dir();
+				// If the themes directory does not exist then it's possible to get a broken path, confirm and try to resolve this
+				if (!$wp_filesystem->exists($wp_filesystem_dir) && $wp_filesystem_dir == $wp_filesystem->find_folder(WP_CONTENT_DIR.get_theme_root()) && $wp_filesystem->exists($wp_filesystem->wp_content_dir())) {
+					$wp_filesystem_dir = $wp_filesystem->find_folder(WP_CONTENT_DIR.'/themes');
+				}
 				break;
 			default:
 				$wp_filesystem_dir = $wp_filesystem->find_folder($path);
@@ -1900,11 +1909,13 @@ ENDHERE;
 	}
 
 	/**
-	 * First added in UD 1.9.47. We have only ever had reports of cached stuff from WP Super Cache being retained, so, being cautious, we will only clear that for now
+	 * First added in UD 1.9.47.
 	 */
 	public function clear_cache() {
 		// Functions called here need to not assume that the relevant plugin actually exists - they should check for any functions they intend to call, before calling them.
 		$this->clear_cache_wpsupercache();
+		// It should be harmless to just purge the standard directory anyway (it's not backed up by default)
+		if (is_dir(WP_CONTENT_DIR.'/cache')) UpdraftPlus_Filesystem_Functions::remove_local_directory(WP_CONTENT_DIR.'/cache', true);
 	}
 
 	/**
@@ -2247,31 +2258,46 @@ ENDHERE;
 		$this->create_forbidden = false;
 		$this->drop_forbidden = false;
 		$this->lock_forbidden = false;
+		
+		// This will get flipped if positive success is confirmed
+		$this->triggers_forbidden = true;
 
 		$this->last_error = '';
 		$random_table_name = 'updraft_tmp_'.rand(0, 9999999).md5(microtime(true));
 
 		// The only purpose in funnelling queries directly here is to be able to get the error number
 		if ($this->use_wpdb()) {
+		
 			$req = $wpdb->query("CREATE TABLE $random_table_name (test INT)");
 			// WPDB, for several query types, returns the number of rows changed; in distinction from an error, indicated by (bool)false
-			if (0 === $req) {
-				$req = true;
-			}
+			if (0 === $req) $req = true;
 			if (!$req) $this->last_error = $wpdb->last_error;
 			$this->last_error_no = false;
+
+			if ($req && false !== $wpdb->query("CREATE TRIGGER test_trigger BEFORE INSERT ON $random_table_name FOR EACH ROW SET @sum = @sum + NEW.test")) $this->triggers_forbidden = false;
+
 		} else {
+		
 			if ($this->use_mysqli) {
 				$req = mysqli_query($this->mysql_dbh, "CREATE TABLE $random_table_name (test INT)");
 			} else {
 				// @codingStandardsIgnoreLine
 				$req = mysql_unbuffered_query("CREATE TABLE $random_table_name (test INT)", $this->mysql_dbh);
 			}
+			
 			if (!$req) {
 				// @codingStandardsIgnoreLine
-				$this->last_error = ($this->use_mysqli) ? mysqli_error($this->mysql_dbh) : mysql_error($this->mysql_dbh);
+				$this->last_error = $this->use_mysqli ? mysqli_error($this->mysql_dbh) : mysql_error($this->mysql_dbh);
 				// @codingStandardsIgnoreLine
-				$this->last_error_no = ($this->use_mysqli) ? mysqli_errno($this->mysql_dbh) : mysql_errno($this->mysql_dbh);
+				$this->last_error_no = $this->use_mysqli ? mysqli_errno($this->mysql_dbh) : mysql_errno($this->mysql_dbh);
+			} else {
+				if ($this->use_mysqli) {
+					$reqtrigger = mysqli_query($this->mysql_dbh, "CREATE TRIGGER test_trigger BEFORE INSERT ON $random_table_name FOR EACH ROW SET @sum = @sum + NEW.test");
+				} else {
+					// @codingStandardsIgnoreLine
+					$reqtrigger = mysql_unbuffered_query("CREATE TRIGGER test_trigger BEFORE INSERT ON $random_table_name FOR EACH ROW SET @sum = @sum + NEW.test", $this->mysql_dbh);
+				}
+				if ($reqtrigger) $this->triggers_forbidden = false;
 			}
 		}
 
@@ -2338,7 +2364,7 @@ ENDHERE;
 
 		$this->max_allowed_packet = $updraftplus->max_packet_size();
 
-		$updraftplus->log("Entering maintenance mode");
+		$updraftplus->log('Entering maintenance mode');
 		$this->wp_upgrader->maintenance_mode(true);
 
 		// N.B. There is no such function as bzeof() - we have to detect that another way
@@ -2691,12 +2717,17 @@ ENDHERE;
 					$sql_line = UpdraftPlus_Manipulation_Functions::str_lreplace($smatches[1]." ".$charset, "SET NAMES ".$this->restore_options['updraft_restorer_charset'], $sql_line);
 					$updraftplus->log('SET NAMES: '.sprintf(__('Requested character set (%s) is not present - changing to %s.', 'updraftplus'), esc_html($charset), esc_html($this->restore_options['updraft_restorer_charset'])), 'notice-restore');
 				}
+			} elseif (preg_match('/^\s*create trigger /i', $sql_line)) {
+				$sql_type = 9;
+				if ('' != $this->old_table_prefix && $import_table_prefix != $this->old_table_prefix) $sql_line = UpdraftPlus_Manipulation_Functions::str_replace_once($this->old_table_prefix, $import_table_prefix, $sql_line);
+				if ($this->triggers_forbidden) $updraftplus->log("Database user lacks permission to create triggers; statement will not be executed ($sql_line)");
 			} else {
 				// Prevent the previous value of $sql_type being retained for an unknown type
 				$sql_type = 0;
 			}
 			
-			if (6 != $sql_type && 7 != $sql_type) {
+			// Do not execute "USE" or "CREATE|DROP DATABASE" commands
+			if (6 != $sql_type && 7 != $sql_type && (9 != $sql_type || false == $this->triggers_forbidden)) {
 				$do_exec = $this->sql_exec($sql_line, $sql_type);
 				if (is_wp_error($do_exec)) return $do_exec;
 			} else {
@@ -2745,6 +2776,7 @@ ENDHERE;
 		if (!$wp_filesystem->delete($working_dir.'/'.$db_basename, false, 'f')) {
 			$this->restore_log_permission_failure_message($working_dir, 'Delete '.$working_dir.'/'.$db_basename);
 		}
+
 		return true;
 
 	}
@@ -2946,6 +2978,12 @@ ENDHERE;
 					return new WP_Error('initial_db_error', sprintf(__('An error occurred on the first %s command - aborting run', 'updraftplus'), 'INSERT (options)'));
 				}
 				return false;
+			}
+			
+			static $first_trigger = true;
+			if (9 == $sql_type && $first_trigger) {
+				$first_trigger = false;
+				$updraftplus->log('Restoring TRIGGERs...');
 			}
 
 			if ($this->use_wpdb()) {

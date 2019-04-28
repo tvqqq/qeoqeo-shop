@@ -94,5 +94,6 @@ add_ux_builder_shortcode( 'title', array(
 			'heading' => 'Link',
 			'default' => '',
 		),
+		'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
 	),
 ) );

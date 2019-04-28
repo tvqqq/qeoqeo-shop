@@ -86,7 +86,7 @@ function flatsome_refresh_header_account_partials( WP_Customize_Manager $wp_cust
 	    'container_inclusive' => true,
 	    'settings' => array('header_account_register','account_login_style','account_icon_style','header_account_title','header_account_username'),
 	    'render_callback' => function() {
-	        return get_template_part('template-parts/header/partials/element','account');
+	        get_template_part('template-parts/header/partials/element','account');
 	    },
 	) );
 }

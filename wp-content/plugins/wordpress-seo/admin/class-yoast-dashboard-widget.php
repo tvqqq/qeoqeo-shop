@@ -10,6 +10,9 @@
  */
 class Yoast_Dashboard_Widget {
 
+	/**
+	 * @var string
+	 */
 	const CACHE_TRANSIENT_KEY = 'wpseo-dashboard-totals';
 
 	/**
@@ -78,19 +81,6 @@ class Yoast_Dashboard_Widget {
 	 */
 	public function display_dashboard_widget() {
 		echo '<div id="yoast-seo-dashboard-widget"></div>';
-	}
-
-	/**
-	 * Enqueues stylesheet for the dashboard if the current page is the dashboard.
-	 */
-	public function enqueue_dashboard_stylesheets() {
-		_deprecated_function( __METHOD__, 'WPSEO 5.5', 'This method is deprecated, please use the <code>enqueue_dashboard_assets</code> method.' );
-
-		if ( ! $this->is_dashboard_screen() ) {
-			return;
-		}
-
-		$this->asset_manager->enqueue_style( 'wp-dashboard' );
 	}
 
 	/**

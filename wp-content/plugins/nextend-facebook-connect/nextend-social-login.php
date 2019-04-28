@@ -16,9 +16,9 @@ require_once(NSL_PATH . '/compat.php');
 
 class NextendSocialLogin {
 
-    public static $version = '3.0.17';
+    public static $version = '3.0.19';
 
-    public static $nslPROMinVersion = '3.0.15';
+    public static $nslPROMinVersion = '3.0.19';
 
     public static $proxyPage = false;
 
@@ -156,6 +156,10 @@ class NextendSocialLogin {
             'buddypress_register_button'       => 'bp_before_account_details_fields',
             'buddypress_register_button_align' => 'left',
             'buddypress_register_button_style' => 'default',
+            'buddypress_login'                 => 'show',
+            'buddypress_login_form_layout'     => 'default',
+            'buddypress_login_button_style'    => 'default',
+            'buddypress_sidebar_login'         => 'show',
 
             'woocommerce_login'                => 'after',
             'woocommerce_login_form_layout'    => 'default',
@@ -197,6 +201,8 @@ class NextendSocialLogin {
             'ultimatemember_register_form_button_style' => 'default',
             'ultimatemember_register_form_layout'       => 'below-separator',
             'ultimatemember_account_details'            => 'after',
+
+            'admin_bar_roles' => array(),
         ));
 
         add_action('itsec_initialized', 'NextendSocialLogin::disable_better_wp_security_block_long_urls', -1);
@@ -277,6 +283,9 @@ class NextendSocialLogin {
 
         add_action('parse_request', 'NextendSocialLogin::editProfileRedirect');
 
+        //check if jQuery is loaded
+        add_action('wp_print_scripts', 'NextendSocialLogin::checkJqueryLoaded');
+
         if (count(self::$enabledProviders) > 0) {
 
             if (self::$settings->get('show_login_form') == 'hide') {
@@ -296,7 +305,13 @@ class NextendSocialLogin {
             if (NextendSocialLogin::$settings->get('show_embedded_login_form') != 'hide') {
                 add_filter('login_form_bottom', 'NextendSocialLogin::filterAddEmbeddedLoginFormButtons');
             }
-            add_action('bp_sidebar_login_form', 'NextendSocialLogin::addLoginButtons');
+
+            //some themes trigger both the bp_sidebar_login_form action and the login_form action.
+            switch (NextendSocialLogin::$settings->get('buddypress_sidebar_login')) {
+                case 'show':
+                    add_action('bp_sidebar_login_form', 'NextendSocialLogin::addLoginButtons');
+                    break;
+            }
 
             add_action('profile_personal_options', 'NextendSocialLogin::addLinkAndUnlinkButtons');
 
@@ -313,11 +328,8 @@ class NextendSocialLogin {
 
 
             add_action('wp_head', 'NextendSocialLogin::styles', 100);
-            add_action('wp_head', 'NextendSocialLogin::checkFrontendJquery');
-            add_action('login_head', 'NextendSocialLogin::checkFrontendJquery');
 
             add_action('admin_head', 'NextendSocialLogin::styles', 100);
-            add_action('admin_head', 'NextendSocialLogin::checkFrontendJquery');
             add_action('login_head', 'NextendSocialLogin::loginHead', 100);
 
             add_action('wp_print_footer_scripts', 'NextendSocialLogin::scripts', 100);
@@ -396,8 +408,8 @@ class NextendSocialLogin {
         }
     }
 
-    public static function checkFrontendJquery() {
-        echo '<script type="text/javascript">var _nsl=[];(function(a,d){var c=function(){if(a.jQuery===d)setTimeout(c,33);else{for(var b=0;b<_nsl.length;b++)_nsl[b].call(a,a.jQuery);_nsl={push:function(b){b.call(a,a.jQuery)}}}};c()})(window);</script>';
+    public static function checkJqueryLoaded() {
+        echo '<script type="text/javascript">(function(a,d){if(a._nsl===d){a._nsl=[];var c=function(){if(a.jQuery===d)setTimeout(c,33);else{for(var b=0;b<a._nsl.length;b++)a._nsl[b].call(a,a.jQuery);a._nsl={push:function(b){b.call(a,a.jQuery)}}}};c()}})(window);</script>';
     }
 
     public static function loginHead() {
@@ -416,7 +428,7 @@ class NextendSocialLogin {
         if ($once === null) {
             $scripts = NSL_PATH . '/js/nsl.js';
             if (file_exists($scripts)) {
-                echo '<script type="text/javascript">(function (undefined) {var targetWindow =' . wp_json_encode(self::$settings->get('target')) . ";\n" . file_get_contents($scripts) . '})();</script>';
+                echo '<script type="text/javascript">(function (undefined) {var _targetWindow =' . wp_json_encode(self::$settings->get('target')) . ";\n" . file_get_contents($scripts) . '})();</script>';
             }
             $once = true;
         }
@@ -757,7 +769,8 @@ class NextendSocialLogin {
             'login'   => 1,
             'link'    => 0,
             'unlink'  => 0,
-            'heading' => false
+            'heading' => false,
+            'align'   => 'left',
         ), $atts);
 
         if (!is_user_logged_in()) {
@@ -768,7 +781,6 @@ class NextendSocialLogin {
 
             $atts = array_merge(array(
                 'style'       => 'default',
-                'align'       => 'left',
                 'provider'    => false,
                 'redirect'    => false,
                 'trackerdata' => false
@@ -850,7 +862,7 @@ class NextendSocialLogin {
             $ret = '<div class="nsl-container ' . self::$styles[$style]['container'] . '" data-align="' . esc_attr($align) . '">' . $heading . $buttons . '</div>';
             if (defined('DOING_AJAX') && DOING_AJAX) {
                 $id  = md5(uniqid('nsl-ajax-'));
-                $ret = '<div id="' . $id . '">' . $ret . '</div><script>_nsl.push(function($){$("#' . $id . '").find("a").each(function(i,el){var href=$(el).attr("href");if(href.indexOf("?") === -1){href+="?"}else{href+="&"}$(el).attr("href", href+"redirect="+encodeURIComponent(window.location.href));});});</script>';
+                $ret = '<div id="' . $id . '">' . $ret . '</div><script>window._nsl.push(function($){$("#' . $id . '").find("a").each(function(i,el){var href=$(el).attr("href");if(href.indexOf("?") === -1){href+="?"}else{href+="&"}$(el).attr("href", href+"redirect="+encodeURIComponent(window.location.href));});});</script>';
             }
 
             return $ret;

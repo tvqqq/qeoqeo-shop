@@ -129,5 +129,6 @@ add_ux_builder_shortcode( 'ux_banner_grid', array(
             'max' => 5,
             'min' => 0,
         ),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

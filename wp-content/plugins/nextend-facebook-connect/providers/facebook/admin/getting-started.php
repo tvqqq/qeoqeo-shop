@@ -22,7 +22,7 @@ $provider = $this->getProvider();
             <li><?php printf(__('Navigate to %s', 'nextend-facebook-connect'), '<a href="https://developers.facebook.com/apps/" target="_blank">https://developers.facebook.com/apps/</a>'); ?></li>
             <li><?php printf(__('Log in with your %s credentials if you are not logged in', 'nextend-facebook-connect'), 'Facebook'); ?></li>
             <li><?php _e('Click on the "Add a New App" button', 'nextend-facebook-connect'); ?></li>
-            <li><?php _e('Fill "Display Name" and "Contact Email"', 'nextend-facebook-connect'); ?></li>
+            <li><?php printf(__('Fill "Display Name" and "Contact Email". The specified "Display Name" will appear on your %s!', 'nextend-facebook-connect'),'<a href="https://developers.facebook.com/docs/facebook-login/permissions/overview/" target="_blank">Consent Screen</a>'); ?></li>
             <li><?php _e('Click on blue "Create App ID" button', 'nextend-facebook-connect'); ?></li>
             <li><?php _e('Select "Integrate Facebook Login" at the Select a Scenario page, then click Confirm.', 'nextend-facebook-connect'); ?></li>
             <li><?php _e('Enter your domain name to the App Domains', 'nextend-facebook-connect'); ?></li>

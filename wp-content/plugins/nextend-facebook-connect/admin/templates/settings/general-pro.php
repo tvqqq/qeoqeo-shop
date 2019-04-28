@@ -75,6 +75,34 @@ NextendSocialLoginAdmin::showProBox();
         </td>
     </tr>
 
+    <tr>
+        <th scope="row"><?php _e('Disable Admin bar for roles', 'nextend-facebook-connect'); ?></th>
+
+        <td>
+            <?php
+            $wp_roles = new WP_Roles();
+            $roles    = $wp_roles->get_names();
+
+            $adminbar_disabled_roles = $settings->get('admin_bar_roles');
+            foreach ($roles AS $roleKey => $label):
+                ?>
+                <fieldset><label for="admin_bar_roles_<?php echo esc_attr($roleKey); ?>">
+                        <input name="admin_bar_roles[]" type="checkbox"
+                               id="admin_bar_roles_<?php echo esc_attr($roleKey); ?>"
+                               value="<?php echo esc_attr($roleKey); ?>" <?php if (in_array($roleKey, $adminbar_disabled_roles)) : ?> checked="checked" <?php endif ?> <?php echo $attr; ?> />
+                        <?php echo $label; ?></label>
+                </fieldset>
+            <?php endforeach; ?>
+        <input type="hidden" name="admin_bar_roles[]" value=""/>
+        </td>
+
+        <td>
+            <fieldset>
+                <input type='hidden' name='admin_bar_roles[]' value='0'>
+            </fieldset>
+        </td>
+    </tr>
+
     </tbody>
 </table>
 <?php if ($isPRO): ?>

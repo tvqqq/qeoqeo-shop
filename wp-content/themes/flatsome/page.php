@@ -9,7 +9,7 @@
 if(flatsome_option('pages_layout') != 'default') {
 	
 	// Get default template from theme options.
-	echo get_template_part('page', flatsome_option('pages_layout'));
+	get_template_part('page', flatsome_option('pages_layout'));
 	return;
 
 } else {

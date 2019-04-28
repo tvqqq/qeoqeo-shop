@@ -4,7 +4,7 @@ Contributors: ashokrane, pinal.shah, bhavik.kiri, chetnapatel, tychesoftwares, d
 Tags: abandon cart, cart recovery, increase woocommerce conversion rate , recover woocommerce cart, increase sales with woocommerce
 Author URI: https://www.tychesoftwares.com/
 Requires at least: 1.3
-Tested up to: 5.0
+Tested up to: 5.1
 Stable tag: trunk
 License: GPLv2 or late
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -192,6 +192,38 @@ You can refer **[here](https://www.tychesoftwares.com/differences-between-pro-an
 6. Product Report Tab.
 
 == Changelog ==
+
+= 5.3.1 (04.04.2019) =
+
+* Bug - Fixed a bug where the login was conflicting with sites hosted on WP Engine.
+
+= 5.3.0 (26.03.2019) =
+
+* Enhancement - Corrected the way recovered orders were tracked. Replaced the hooks tracking orders.
+
+* Bug - Newly created Email Templates will be inactive by default.
+
+* Bug - When an email template is activated, the emails will not be sent to older abandoned carts.
+
+* Bug - Fixed an issue where Recovered Order note was getting added to all the Orders.
+
+* Bug - Fixed an issue where notices were getting displayed in abandoned details page if the product was deleted.
+
+* Tweak - Updated the pot file with some new strings added. Also corrected the display of a few strings.
+
+= 5.2.1 (18.02.2019) =
+
+* Bug - Fixed an issue where ajax url was missing for some sites preventing emails to be captured.
+
+= 5.2.0 (18.02.2019) =
+
+This is a security release with the following fixes:
+
+* Added sanitization checks for checkout field capture for guest users.
+
+* Fixed an issue where the emails were getting sent to customers even after purchasing the products.
+
+* Removed inline Javascript from checkout page and added to a minified file.
 
 = 5.1.3 (29.11.2018) =
 

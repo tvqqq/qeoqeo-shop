@@ -4,6 +4,8 @@ function ux_pages($atts) {
     extract(shortcode_atts(array(
       // meta
       '_id' => 'pages-'.rand(),
+      'class' => '',
+      'visibility' => '',
       'parent' => '',
       'orderby' => 'menu_order',
       'order' => 'asc',
@@ -89,7 +91,7 @@ function ux_pages($atts) {
         $current_grid = 0;
         $grid = flatsome_get_grid($grid);
         $grid_total = count($grid);
-        echo flatsome_get_grid_height($grid_height, $_id);
+        flatsome_get_grid_height($grid_height, $_id);
       }
 
       // Add Animations
@@ -135,6 +137,8 @@ function ux_pages($atts) {
       $repater['id'] = $_id;
       $repater['type'] = $type;
       $repater['style'] = $style;
+      $repater['class'] = $class;
+      $repater['visibility'] = $visibility;
       $repater['slider_style'] = $slider_nav_style;
       $repater['slider_nav_color'] = $slider_nav_color;
       $repater['slider_nav_position'] = $slider_nav_position;
@@ -148,9 +152,7 @@ function ux_pages($atts) {
       $repater['depth'] = $depth;
       $repater['depth_hover'] = $depth_hover;
 
-      ob_start();
-
-      echo get_flatsome_repeater_start($repater);
+      get_flatsome_repeater_start($repater);
 
       foreach (  $childpages as $page ) {
 

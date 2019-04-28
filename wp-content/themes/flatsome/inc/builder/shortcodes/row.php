@@ -208,12 +208,6 @@ add_ux_builder_shortcode( 'row', array(
             'min' => 0,
         ),
 
-        'class' => array(
-            'type' => 'textfield',
-            'heading' => 'Custom Class',
-            'full_width' => true,
-            'placeholder' => 'class-name',
-            'default' => '',
-        ),
+       'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

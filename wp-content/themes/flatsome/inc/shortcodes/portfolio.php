@@ -11,6 +11,7 @@ function flatsome_portfolio_shortcode($atts, $content = null, $tag) {
         '_id' => 'portfolio-'.rand(),
         'link' => '',
         'class' => '',
+        'visibility' => '',
         'orderby' => 'menu_order',
         'order' => '',
         'offset' => '',
@@ -63,6 +64,8 @@ function flatsome_portfolio_shortcode($atts, $content = null, $tag) {
         // Deprecated
         'height' => '',
 ), $atts));
+
+	ob_start();
 
   if($height && !$image_height) $image_height = $height;
 
@@ -129,7 +132,6 @@ function flatsome_portfolio_shortcode($atts, $content = null, $tag) {
 
  if($animate) {$animate = 'data-animate="'.$animate.'"';}
 
- ob_start();
 
  echo '<div id="' . $_id . '" class="portfolio-element-wrapper has-filtering">';
 
@@ -159,6 +161,8 @@ $repeater['id'] = $_id;
 $repeater['tag'] = $tag;
 $repeater['type'] = $type;
 $repeater['style'] = $style;
+$repeater['class'] = $class;
+$repeater['visibility'] = $visibility;
 $repeater['slider_style'] = $slider_nav_style;
 $repeater['slider_nav_color'] = $slider_nav_color;
 $repeater['slider_nav_position'] = $slider_nav_position;
@@ -249,7 +253,7 @@ get_flatsome_repeater_start($repeater);
           <a href="<?php echo $link; ?>" class="plain <?php echo $has_lightbox; ?>">
           <div class="<?php echo implode(' ', $classes_box); ?>">
             <div class="box-image" <?php echo get_shortcode_inline_css( $css_args_img ); ?>>
-                <div class="<?php echo implode(' ', $classes_image); ?>"<?php echo get_shortcode_inline_css($css_image_height); ?>>
+                <div class="<?php echo implode(' ', $classes_image); ?>" <?php echo get_shortcode_inline_css($css_image_height); ?>>
                 <?php echo wp_get_attachment_image($image, $image_size); ?>
                 <?php if($image_overlay) { ?><div class="overlay" style="background-color:<?php echo $image_overlay; ?>"></div><?php } ?>
                 <?php if($style == 'shade'){ ?><div class="shade"></div><?php } ?>

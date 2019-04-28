@@ -3,17 +3,23 @@
 function flatsome_message_box($atts, $content = null) {
 	extract(shortcode_atts(array(
         'bg'  => '',
+        'class' => '',
+        'visibility' => '',
         'bg_color' => '',
         'text_color'  => 'dark',
         'padding' => '15',
 	), $atts));
 
+  if($visibility == 'hidden') return;
+
   $classes = array('message-box','relative');
+  
+  if( $class ) $classes[] = $class;
+  if( $visibility ) $classes[] = $visibility;
 
   if($bg) {
     $bg = flatsome_get_image_url($bg);
   }
-
 
   if($text_color == 'dark') $classes[] = 'dark';
 

@@ -58,7 +58,7 @@ else { ?>
  <ul class="nav-dropdown <?php flatsome_dropdown_classes(); ?>">
     <li class="html widget_shopping_cart">
       <div class="widget_shopping_cart_content">
-        <?php echo woocommerce_mini_cart(); ?>
+        <?php woocommerce_mini_cart(); ?>
       </div>
     </li>
     <?php if($custom_cart_content){
@@ -78,7 +78,7 @@ else { ?>
           <div class="is-divider"></div>
       </div>
       <div class="widget_shopping_cart_content">
-          <?php echo woocommerce_mini_cart(); ?>
+          <?php woocommerce_mini_cart(); ?>
       </div>
       <?php if($custom_cart_content) {
         echo '<div class="header-cart-content">'.do_shortcode($custom_cart_content).'</div>'; }

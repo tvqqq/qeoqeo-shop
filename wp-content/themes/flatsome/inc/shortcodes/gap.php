@@ -4,9 +4,17 @@
 function flatsome_gap_shortcode( $atts, $content = null ){
   extract( shortcode_atts( array(
     'height' => '30px',
+    'class' => '',
+    'visibility' => '',
   ), $atts ) );
 
-	return '<div class="gap-element" style="display:block; height:auto; padding-top:'.$height.'" class="clearfix"></div>';
+	$classes	= array( 'gap-element' , 'clearfix' );
+	
+	if( $class ) $classes[] = $class;
+	if( $visibility ) $classes[] = $visibility;
+	$classes = implode(' ', $classes);
+
+	return '<div class="'.$classes.'" style="display:block; height:auto; padding-top:'.$height.'"></div>';
 
 }
 add_shortcode('gap', 'flatsome_gap_shortcode');

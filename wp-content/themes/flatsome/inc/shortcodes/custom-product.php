@@ -267,3 +267,18 @@ add_shortcode( 'ux_product_breadcrumbs', function ( $atts ) {
 
 	return ob_get_clean();
 } );
+
+add_shortcode( 'ux_product_next_prev_nav', function ( $atts ) {
+	$atts = shortcode_atts( array(
+		'class' => '',
+	), $atts, 'ux_product_next_prev_nav' );
+
+	if ( ! is_product() ) {
+		return null;
+	}
+
+	ob_start();
+	flatsome_product_next_prev_nav( $atts['class'] );
+
+	return ob_get_clean();
+} );

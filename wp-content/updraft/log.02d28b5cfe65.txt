@@ -1,0 +1,4 @@
+0000.000 (1) Opened log file at time: Sun, 07 Apr 2019 09:55:17 +0000 on http://qeoqeo.local
+0000.005 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.10 WP: 5.0.3 PHP: 7.3.2 (apache2handler, Windows NT TVQ-PC 10.0 build 17763 (Windows 10) AMD64) MySQL: 5.7.25-log WPLANG: vi Server: Apache/2.4.38 (Win64) PHP/7.3.2 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 67.9M | 14M) multisite: N openssl: OpenSSL 1.1.1a  20 Nov 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.010 (1) Free space on disk containing Updraft's temporary directory: 46813.5 MB
+0000.018 (1) This backup task (02d28b5cfe65) is either complete or began over 2 days ago: ending (1554630917.2782, ) (existing jobdata keys: )

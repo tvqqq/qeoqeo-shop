@@ -4,10 +4,10 @@
 	 * Plugin URI: https://wordpress.org/plugins/woo-variation-swatches/
 	 * Description: Beautiful colors, images and buttons variation swatches for woocommerce product attributes. Requires WooCommerce 3.2+
 	 * Author: Emran Ahmed
-	 * Version: 1.0.53
+	 * Version: 1.0.55
 	 * Domain Path: /languages
 	 * Requires at least: 4.8
-	 * Tested up to: 5.0
+	 * Tested up to: 5.1
 	 * WC requires at least: 3.2
 	 * WC tested up to: 3.5
 	 * Text Domain: woo-variation-swatches
@@ -20,7 +20,7 @@
 		
 		final class Woo_Variation_Swatches {
 			
-			protected $_version = '1.0.53';
+			protected $_version = '1.0.55';
 			
 			protected static $_instance = null;
 			private          $_settings_api;
@@ -101,7 +101,9 @@
 					add_filter( 'wp_ajax_gwp_deactivate_feedback', array( $this, 'deactivate_feedback' ) );
 					
 					add_filter( 'plugin_action_links_' . $this->basename(), array( $this, 'plugin_action_links' ) );
-					add_action( 'after_wvs_product_option_terms_button', array( $this, 'add_product_attribute_dialog' ), 10, 2 );
+					
+					// @TODO: Removed because pro save error. Don't uncomment
+					// add_action( 'after_wvs_product_option_terms_button', array( $this, 'add_product_attribute_dialog' ), 10, 2 );
 				}
 			}
 			
@@ -306,7 +308,7 @@
 				}
 				
 				if ( wvs_is_ie11() ) {
-					wp_enqueue_script( 'bluebird', esc_url( "https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.2/bluebird{$suffix}.js" ), array(), '3.5.2' );
+					wp_enqueue_script( 'bluebird', $this->assets_uri( "/js/bluebird{$suffix}.js" ), array(), '3.5.3' );
 				}
 				
 				wp_enqueue_script( 'woo-variation-swatches', $this->assets_uri( "/js/frontend{$suffix}.js" ), array( 'jquery', 'wp-util' ), $this->version(), true );
@@ -358,7 +360,7 @@
 				wp_enqueue_script( 'woo-variation-swatches-admin', $this->assets_uri( "/js/admin{$suffix}.js" ), array( 'jquery' ), $this->version(), true );
 				
 				if ( ! apply_filters( 'stop_gwp_live_feed', false ) ) {
-					wp_enqueue_style( 'gwp-feed', esc_url( $this->feed_css_uri() ) );
+					wp_enqueue_style( 'gwp-feed', esc_url( $this->feed_css_uri() ), array('dashicons') );
 				}
 				
 				
@@ -383,7 +385,7 @@
 				wp_localize_script( 'gwp-admin', 'GWPAdmin', array(
 					'feedback_title' => esc_html__( 'Quick Feedback', 'woo-variation-swatches' )
 				) );
-				wp_enqueue_style( 'gwp-admin', $this->assets_uri( "/css/gwp-admin{$suffix}.css" ), array( 'wp-jquery-ui-dialog' ), $this->version() );
+				wp_enqueue_style( 'gwp-admin', $this->assets_uri( "/css/gwp-admin{$suffix}.css" ), array( 'wp-jquery-ui-dialog', 'dashicons' ), $this->version() );
 				
 			}
 			
@@ -847,31 +849,13 @@
 				
 				$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 				
-				$api_url = "https://api.github.com/repos/EmranAhmed/gwp-admin-notice/commits/master";
-				
 				// For Dev Mode
 				if ( $feed_css_uri = apply_filters( 'gwp_feed_css_uri', false ) ) {
 					return $feed_css_uri;
 				}
 				
-				if ( isset( $_GET[ 'raw_gwp_feed_css' ] ) ) {
-					delete_transient( "gwp_feed_css" );
-				}
+				return $this->assets_uri( "/css/gwp-admin-notice{$suffix}.css" );
 				
-				if ( false === ( $sha = get_transient( 'gwp_feed_css' ) ) ) {
-					$response = wp_remote_get( $api_url, $args = array(
-						'sslverify' => false,
-						'timeout'   => 60
-					) );
-					
-					if ( ! is_wp_error( $response ) && wp_remote_retrieve_response_code( $response ) == 200 ) {
-						$body = json_decode( wp_remote_retrieve_body( $response ) );
-						$sha  = $body->sha;
-						set_transient( "gwp_feed_css", $sha, 3 * HOUR_IN_SECONDS );
-					}
-				}
-				
-				return sprintf( 'https://cdn.rawgit.com/EmranAhmed/gwp-admin-notice/%s/gwp-admin-notice%s.css', substr( $sha, 0, 8 ), $suffix );
 			}
 			
 			public function feed_close() {

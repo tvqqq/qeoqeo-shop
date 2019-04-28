@@ -169,5 +169,6 @@ add_ux_builder_shortcode( 'text_box', array(
         )
     ), // Frame
     'border_options' => require( __DIR__ . '/commons/border.php' ),
+    'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
   )
 ));

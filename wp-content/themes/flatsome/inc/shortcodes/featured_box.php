@@ -5,6 +5,8 @@ function featured_box( $atts, $content = null ) {
 		'title'       => '',
 		'title_small' => '',
 		'font_size'   => '',
+		'class'				=> '',
+		'visibility'	=> '',
 		'img'         => '',
 		'inline_svg'  => 'true',
 		'img_width'   => '60',
@@ -19,10 +21,16 @@ function featured_box( $atts, $content = null ) {
 		), $atts )
 	);
 
+	if($visibility == 'hidden') return;
+
 	$classes     = array( 'featured-box' );
 	$classes_img = array( 'icon-box-img' );
+	
+	if( $class ) $classes[] = $class;
+	if( $visibility ) $classes[] = $visibility;
 
 	$classes[] = 'icon-box-' . $pos;
+
 	if ( $tooltip ) $classes[] = 'tooltip';
 	if ( $pos == 'center' ) $classes[] = 'text-center';
 	if ( $pos == 'left' || $pos == 'top' ) $classes[] = 'text-left';

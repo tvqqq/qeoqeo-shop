@@ -193,4 +193,5 @@ return array(
             ),
         ),
     ),
+    'advanced_options' => require( __DIR__ . '/../commons/advanced.php')
 );

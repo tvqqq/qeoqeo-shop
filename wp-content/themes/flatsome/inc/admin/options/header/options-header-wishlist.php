@@ -79,7 +79,7 @@
         'container_inclusive' => true,
         'settings' => array('wishlist_title','wishlist_icon','wishlist_title','wishlist_icon_style','header_wishlist_label'),
         'render_callback' => function() {
-             return get_template_part('template-parts/header/partials/element','wishlist');
+             get_template_part('template-parts/header/partials/element','wishlist');
         },
     ) );
 

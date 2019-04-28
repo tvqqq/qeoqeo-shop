@@ -1,0 +1,184 @@
+/*
+Theme Name: Flatsome Child - QeoQeoShop
+Description: This is an official theme for QeoQeo Shop using Flatsome Theme
+Author: UX Themes | TVQ
+Author URI: https://tatviquyen.name.vn
+Template: flatsome
+Version: 1.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+/* Page Checkout */
+
+.discount-shipping-district {
+    font-weight: bold;
+    cursor: help;
+    color: #7f0000!important;
+}
+
+.alert-check-mail {
+    margin-bottom: 20px;
+    background: #ffe2ba;
+    border-left: 10px solid #ffbc5c;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0;
+}
+
+/* Page Huong dan mua hang */
+.page-id-95 #main img {
+    box-shadow: 2px 2px 15px #d4d4d4;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.table-payment-info {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.table-payment-info td {
+    line-height: 28px;
+}
+
+/* Login Social Button */
+.login-social {
+    text-align: center;
+}
+
+.login-social-button {
+    display: inline-flex;
+    align-items: center;
+}
+
+.login-social-text-top {
+    margin-bottom: 0;
+}
+
+.login-social-text-or {
+    margin: 0 20px;
+}
+
+/* Coupon text */
+.woocommerce-form-coupon-toggle {
+    display: inline-block;
+}
+
+/* Huong dan thanh toan */
+.link-payment {
+    text-decoration: underline;
+}
+
+/* Custom dropdown menu */
+.nav-dropdown {
+    padding: 10px 0 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+
+.woocommerce-orders-table__cell-order-actions a {
+    margin-bottom: 0!important;
+}
+
+a.woocommerce-button.button.cancel {
+    font-size: 9px;
+    background-color: #ff2d2d;
+}
+
+/* Order item variation inline */
+.wc-item-meta-label ~ p {
+    display: inline;
+}
+
+/* Homepage */
+.section-services {
+    padding-bottom: 0!important;
+}
+
+.icon-box:hover .has-icon-bg .icon .icon-inner {
+    background-color: #11233a!important;
+}
+
+/* Cart view item variation */
+ul.product_list_widget li dl {
+    line-height: 1.5;
+}
+
+ul.product_list_widget li dl dd {
+    font-weight: bold;
+}
+
+/* Column contact */
+.col-contact a {
+    color: #3d3d3d;
+}
+
+/* Checkout fields */
+#billing_country_field {
+    display: none;
+}
+
+/* Order customer detail */
+.order-address-detail {
+    line-height: 16px;
+}
+
+.order-address-detail span {
+    line-height: 26px;
+}
+
+.address-text {
+    margin-top: -6px
+}
+
+/* Flip book New Products Homepage */
+.new-products-section .attachment-shop_single.size-shop_single {
+    width: 300px;
+}
+.new-products-section .front-image {
+    text-align: center;
+}
+.new-products-section .badge-container {
+    display: none;
+}
+
+/* Header banner */
+h3.uppercase.text-ky-hoi {
+    background: #ff888847;
+    padding: 5px 10px;
+    display: inline;
+    border-radius: 20px;
+    box-shadow: 1px 1px 50px #ff88885e;
+}
+
+.countdown {
+    width: 100%!important;
+}
+
+p.woocommerce-invalid-required-field label,
+p.woocommerce-invalid-required-field a {
+    color: #c90000!important;
+}
+
+.has-hover .bg, .has-hover [class*="image-"] img {
+    transition: filter .6s, opacity .6s, box-shadow .3s!important;
+}
+
+/* === Mobile version === */
+@media only screen and (max-width: 850px) {
+    .login-social-button {
+        flex-direction: column;
+    }
+
+    .a.woocommerce-button.button.cancel {
+        margin-top: 5px;
+        margin-right: 14px;
+    }
+}
+
+@media only screen and (max-width: 547px) {
+    a.button.social-button.large.facebook.circle {
+        margin: 0;
+    }
+}

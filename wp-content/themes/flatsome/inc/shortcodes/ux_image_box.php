@@ -2,6 +2,8 @@
 function ux_image_box( $atts, $content = null ) {
 	extract( shortcode_atts( array(
 		'_id'             => null,
+		'class'						=> '',
+		'visibility'			=> '',
 		'img'             => '',
 		'style'           => '',
 		'depth'           => '',
@@ -33,6 +35,9 @@ function ux_image_box( $atts, $content = null ) {
 	$classes_box = array();
 	$classes_text = array();
 	$classes_image = array();
+
+	$classes_box[] =  $class;
+	$classes_box[] =  $visibility;
 
 	// Set box style.
 	$classes_box[] = 'has-hover';

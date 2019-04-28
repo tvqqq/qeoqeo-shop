@@ -94,6 +94,7 @@ add_ux_builder_shortcode( 'ux_price_table', array(
             'class' => 'box-shadow-{{ value }}-hover'
           ),
       ),
+      'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     )
 ) );
 

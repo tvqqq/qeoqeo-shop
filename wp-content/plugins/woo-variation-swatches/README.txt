@@ -2,7 +2,7 @@
 Contributors: EmranAhmed, wpeshaan, getwooplugins
 Tags: woocommerce variation, woocommerce, variation swatches, woocommerce attributes, product attributes, product color, product size, variable product attributes, variation product swatches, color variation swatch, image variation swatch, printful color swatches
 Requires at least: 4.8
-Tested up to: 5.0
+Tested up to: 5.1
 Requires PHP: 5.6
 Stable tag: trunk
 WC requires at least: 3.2
@@ -157,91 +157,53 @@ In the free WooCommerce attribute variation plugin, besides creating size, brand
 
 <blockquote>
 <ul>
-<li> Built With: Flatsome WooCommerce Theme
-   <ul style="list-style: none;">
-   	<li><a target="_blank" href="http://bit.ly/wvs-flatsome-01">muliomulio.com | Niche: Leather Bag Store </a>  </li>
-   	<li><a target="_blank" href="http://bit.ly/wvs-client-demo-01">designchess.com  | Niche: Chess Design Store </a></li>
-	<li><a target="_blank" href="http://bit.ly/woovs-demo-flatsome-02">makromass.pl| Niche: Supplements for athletes </a></li>
-	<li><a target="_blank" href="http://bit.ly/wvs-demo-client-2">delampjesfabriek.nl  | Niche: Supplements for athletes </a></li>
-	<li><a target="_blank" href="http://bit.ly/flatsome-wvs-demo-04">bell-motorcycle-helmets.co.uk | Niche: Motorcycle Helmets </a></li>
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Flatsome WooCommerce Theme</a>
+</li>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Avada WooCommerce Multi-Purpose Theme</a>
+</li>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Divi by Elegant Themes</a>
 </li>
 
-<li> Built With: Avada WooCommerce Multi-Purpose Theme
-   <ul>
-   	<li><a target="_blank" href="http://bit.ly/woovs-demo-avada-01">luckyonebijoux.com | Niche: Jewelry Shop </a></li>
-	<li><a target="_blank" href="http://bit.ly/woovs-avada-02">polymaker.metricdesign.net | Niche: 3d Parts Shop </a></li>   	
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Enfold - WooCommerce Multi-Purpose Theme</a>
+</li>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Astra WooCommerce Theme</a>
 </li>
 
-<li> Built With: Divi by Elegant Themes
-   <ul>
-   	<li><a target="_blank" href="http://bit.ly/wvs-divi-demo-01">embodywear.com | Niche: Bodywear Shop </a></li>
-   	<li><a target="_blank" href="http://bit.ly/divi-wvs-demo-01">clasp.apsbay.com | Niche: Handbags Shop </a></li>
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Salient WooCommerce Theme</a>
 </li>
 
-<li> Built With: Enfold - WooCommerce Multi-Purpose Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/wvs-enfold-demo">drawnfresh.co.uk | Niche: T-Shirt Store </a> </li>
-   </ul>
+
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Twenty Seventen Theme</a>
 </li>
 
-<li> Built With: Astra WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/astra-wvs-demo">polelegendaerial.at | Niche: Shoe Store </a> </li>
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: TheGem WooCommerce Theme</a>
 </li>
 
-<li> Built With: Salient WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/salient-wvs-demo">chooseoneshop.com | Niche: T-Shirt Store </a> </li>
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Kalium WooCommerce Professionals Theme</a>
 </li>
 
-<li> Built With: Twenty Seventen Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/twentey-seventeen-demo">vollstedt-b2b.com | Niche: Leather Wallets Store </a></li>
-
-   </ul>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Jevelin WooCommerce Theme</a>
+</li>
+<li> 
+   <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Nitro WooCommerce Theme</a>
+</li>
+<li> 
+    <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: KuteShop WooCommerce Theme</a>
+</li>
+<li> 
+    <a target="_blank" href="https://getwooplugins.com/showcase-swatches">Built With: Domino WooCommerce Theme</a>
 </li>
 
-<li> Built With: TheGem WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/thegem-wvs-demo">sarrowork.com.br | Niche: Jacket Clothing Store </a></li>
-
-   </ul>
-</li>
-
-<li> Built With: Kalium WooCommerce Professionals Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/wvg-demo-kelium">qnoop.com | Niche: Clothing Store </a></li>
-   </ul>
-</li>
-
-<li> Built With: Jevelin WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/jevelin-wvs-demo">falkgarn.se | Niche: Cotton & Spinning Store </a></li>
-   </ul>
-</li>
-
-<li> Built With: Nitro WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/woovs-demo-nitro">sethsoldtimes.com | Niche: Dise Golf Store </a></li>
-   </ul>
-</li>
-
-<li> Built With: Domino WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/domino-theme-demo">abso.com.ar | Niche: Clothing Store </a></li>
-   </ul>
-</li>
-
-<li> Built With: KuteShop WooCommerce Theme
-   <ul>
-   		<li><a target="_blank" href="http://bit.ly/kuteshop-vws-demo">torbice.s | Niche: Bag and Baggage Store </a></li>
-   </ul>
-</li>
 </ul>
 </blockquote>
 
@@ -355,6 +317,15 @@ And your are ready to go.
 12. Global Variation Color Swatches Attribute List Preview
 
 == Changelog ==
+
+= 1.0.55 =
+
+* Add: Oxygen Theme Support CSS
+
+= 1.0.54 =
+
+* Fix: Load Assets without CDN.
+* Remove: Product Page popup attribute
 
 = 1.0.53 =
 
@@ -617,3 +588,4 @@ And your are ready to go.
 * Initial release
 
 == Upgrade Notice ==
+© 2019 Git

@@ -5,7 +5,9 @@
   lg-x{{ shortcode.options.positionX }}
   y{{ shortcode.options.positionY }}
   md-y{{ shortcode.options.positionY }}
-  lg-y{{ shortcode.options.positionY }}">
+  lg-y{{ shortcode.options.positionY }}
+  {{ shortcode.options.class }}
+  {{ shortcode.options.visibility }}">
 	<div data-animate="{{ shortcode.options.animate }}">
 
 		<a ng-if="shortcode.options.type == 'text'" class="hotspot tooltip

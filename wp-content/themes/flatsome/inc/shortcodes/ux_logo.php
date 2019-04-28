@@ -2,6 +2,8 @@
 // [logo img=""]
 function ux_logo( $atts, $content = null ){
     extract( shortcode_atts( array(
+      'class' => '',
+      'visibility' => '',
       'img' => '',
       'padding' => '15px',
       'title' => '',
@@ -12,12 +14,16 @@ function ux_logo( $atts, $content = null ){
       'height' => '50',
     ), $atts ) );
 
-	$height    = intval( $height );
-	$width     = 'auto';
-	$link_atts = array(
-		'target' => $target,
-		'rel'    => array( $rel ),
-	);
+    $classes = array('ux-logo', 'has-hover', 'align-middle', 'ux_logo', 'inline-block');
+    if ( $class ) $classes[] = $class;
+    if ( $visibility ) $classes[] = $visibility;
+    
+  	$height    = intval( $height );
+  	$width     = 'auto';
+  	$link_atts = array(
+  		'target' => $target,
+  		'rel'    => array( $rel ),
+  	);
 
     if(!$img){
       $org_img = get_template_directory_uri().'/assets/img/logo.png';
@@ -42,7 +48,7 @@ function ux_logo( $atts, $content = null ){
     // Set inner tag
     $inner_tag = $link ? 'a' : 'div';
 
-    $content = '<div class="ux-logo has-hover align-middle ux_logo inline-block" style="max-width: 100%!important; width: '.$width.'!important"><'.$inner_tag.' class="ux-logo-link block image-'.$hover.'" title="'.$title.'"' . flatsome_parse_target_rel( $link_atts ) . 'href="'.$link.'" style="padding: '.$padding.';"><img src="'.$org_img.'" title="'.$title.'" alt="'.$title.'" class="ux-logo-image block" style="height:'.$height.'px;" /></'.$inner_tag.'></div>';
+    $content = '<div class="'.implode(' ', $classes).'" style="max-width: 100%!important; width: '.$width.'!important"><'.$inner_tag.' class="ux-logo-link block image-'.$hover.'" title="'.$title.'"' . flatsome_parse_target_rel( $link_atts ) . 'href="'.$link.'" style="padding: '.$padding.';"><img src="'.$org_img.'" title="'.$title.'" alt="'.$title.'" class="ux-logo-image block" style="height:'.$height.'px;" /></'.$inner_tag.'></div>';
 
     return $content;
 }

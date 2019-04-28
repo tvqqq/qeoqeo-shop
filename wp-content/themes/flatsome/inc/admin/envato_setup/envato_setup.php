@@ -2087,7 +2087,7 @@ if ( ! class_exists( 'Envato_Theme_Setup_Wizard' ) ) {
 			<?php
 				// Create Child Theme
 				if(isset($_REQUEST['theme_name']) && current_user_can('manage_options')){
-					echo $this->_make_child_theme(esc_html($_REQUEST['theme_name']));
+					$this->_make_child_theme(esc_html($_REQUEST['theme_name']));
 				}
 				$theme = get_option('fl_has_child_theme') ? wp_get_theme(get_option('fl_has_child_theme') )->Name : 'Flatsome Child';
 			 ?>

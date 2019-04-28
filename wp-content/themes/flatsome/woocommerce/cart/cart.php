@@ -126,12 +126,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						// Mobile price.
 						?>
-							<p class="show-for-small mobile-product-price">
+							<div class="show-for-small mobile-product-price">
 								<span class="mobile-product-price__qty"><?php echo $cart_item['quantity']; ?> x </span>
 								<?php
 									echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 								?>
-							</p>
+							</div>
 						</td>
 
 						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">

@@ -3,6 +3,7 @@
 namespace UxBuilder\Ajax;
 
 use UxBuilder\Post\PostArray;
+use UxBuilder\Elements\ElementOptions;
 
 class AjaxManager {
 
@@ -29,6 +30,7 @@ class AjaxManager {
     add_action( 'wp_ajax_ux_builder_search_terms', array( $this->terms, 'search_terms' ) );
     add_action( 'wp_ajax_ux_builder_get_terms', array( $this->terms, 'get_terms' ) );
     add_action( 'wp_ajax_ux_builder_to_array', array( $this, 'to_array' ) );
+    add_action( 'wp_ajax_ux_builder_parse_presets', array( $this, 'parse_presets' ) );
     add_action( 'wp_ajax_ux_builder_import_media', array( $this, 'import_media' ) );
 
     if ( ! array_key_exists( 'ux_builder_action', $_POST ) ) return;
@@ -89,18 +91,49 @@ class AjaxManager {
 
     if ( is_wp_error( $file['tmp_name'] ) ) {
       @unlink( $file['tmp_name'] );
-      return new WP_Error( 'flatsome', 'Could not download image from Flatsome Studio.' );
+      return new \WP_Error( 'flatsome', 'Could not download image from Flatsome Studio.' );
     }
 
     // 3. Add image to media library.
     $attachment_id = media_handle_sideload( $file, 0 );
     $attach_data = wp_generate_attachment_metadata( $attachment_id,  get_attached_file( $attachment_id ) );
-    wp_update_attachment_metadata( $attachmentId,  $attach_data );
+    wp_update_attachment_metadata( $attachment_id,  $attach_data );
     update_post_meta( $attachment_id, '_flatsome_studio_id', $id );
 
     // 4. Return local ID and URL.
     return wp_send_json_success( array(
       'id' => $attachment_id,
+    ) );
+  }
+
+  /**
+   * Parse presets for a shortcode.
+   */
+  public function parse_presets () {
+    $shortcode = ux_builder_shortcodes()->get( $_GET['tag'] );
+
+    if ( ! $shortcode ) {
+      return wp_send_json_success( array(
+        'presets' => array(),
+      ) );
+    }
+
+    $presets = array_map( function ( $preset ) {
+      $array = ux_builder( 'to-array' )->transform( $preset['content'] );
+
+      ux_builder_content_array_walk( $array, function ( &$item ) {
+        $shortcode = ux_builder_shortcodes()->get( $item['tag'] );
+        $options = new ElementOptions( $shortcode['options'] );
+        $item['options'] = $options->set_values( $item['options'] )->camelcase()->get_values();
+      });
+
+      $preset['content'] = array_shift( $array );
+
+      return $preset;
+    }, $shortcode['presets'] );
+
+    return wp_send_json_success( array(
+      'presets' => $presets,
     ) );
   }
 }

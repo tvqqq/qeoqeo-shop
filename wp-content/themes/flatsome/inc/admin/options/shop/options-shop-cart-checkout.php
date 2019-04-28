@@ -43,7 +43,7 @@ Flatsome_Option::add_field( 'option', array(
 Flatsome_Option::add_field( 'option',  array(
   'type'        => 'checkbox',
   'settings'     => 'cart_boxed_shipping_labels',
-  'label'       => __( 'Boxed Shipping labels', 'flatsome' ) . ' (NEW)',
+  'label'       => __( 'Boxed Shipping labels', 'flatsome' ),
   'section'     => 'cart-checkout',
   'default' => 0
 ));
@@ -51,7 +51,7 @@ Flatsome_Option::add_field( 'option',  array(
 Flatsome_Option::add_field( 'option',  array(
   'type'        => 'checkbox',
   'settings'     => 'cart_estimate_text',
-  'label'       => __( 'Show shipping estimate destination', 'flatsome' ) . ' (NEW)',
+  'label'       => __( 'Show shipping estimate destination', 'flatsome' ),
   'section'     => 'cart-checkout',
   'default' => 1
 ));

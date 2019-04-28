@@ -22,7 +22,7 @@ function flatsome_refresh_blog_partials( WP_Customize_Manager $wp_customize ) {
 	    'selector' => '.blog-wrapper.blog-archive',
 	    'settings' => array('blog_posts_depth_hover','blog_posts_depth','blog_layout','blog_layout_divider','blog_show_excerpt'),
 	    'render_callback' => function() {
-	        return get_template_part( 'template-parts/posts/layout', get_theme_mod('blog_layout','right-sidebar') );
+	        get_template_part( 'template-parts/posts/layout', get_theme_mod('blog_layout','right-sidebar') );
 	    },
 	) );
 
@@ -30,7 +30,7 @@ function flatsome_refresh_blog_partials( WP_Customize_Manager $wp_customize ) {
 	    'selector' => '.blog-wrapper.blog-single',
 	    'settings' => array('blog_posts_depth_hover','blog_posts_depth','blog_post_layout','blog_post_style','blog_single_header_meta','blog_single_footer_meta','blog_single_featured_image','blog_share','blog_author_box','blog_single_next_prev_nav'),
 	    'render_callback' => function() {
-	        return get_template_part( 'template-parts/posts/layout', get_theme_mod('blog_post_layout','right-sidebar') );
+	        get_template_part( 'template-parts/posts/layout', get_theme_mod('blog_post_layout','right-sidebar') );
 	    },
 	) );
 
@@ -39,7 +39,7 @@ function flatsome_refresh_blog_partials( WP_Customize_Manager $wp_customize ) {
 	    'container_inclusive' => true,
 	    'settings' => array('blog_featured_height'),
 	    'render_callback' => function() {
-	        return get_template_part('template-parts/posts/featured-posts');
+	        get_template_part('template-parts/posts/featured-posts');
 	    },
 	) );
 

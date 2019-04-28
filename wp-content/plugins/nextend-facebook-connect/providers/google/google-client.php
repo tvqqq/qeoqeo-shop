@@ -10,7 +10,7 @@ class NextendSocialProviderGoogleClient extends NextendSocialOauth2 {
     );
 
     private $accessType = 'offline';
-    private $approvalPrompt = 'force';
+    private $prompt = 'select_account';
 
     protected $scopes = array(
         'email',
@@ -38,15 +38,15 @@ class NextendSocialProviderGoogleClient extends NextendSocialOauth2 {
     public function createAuthUrl() {
         return add_query_arg(array(
             'access_type'     => urlencode($this->accessType),
-            'approval_prompt' => urlencode($this->approvalPrompt)
+            'prompt' => urlencode($this->prompt)
         ), parent::createAuthUrl());
     }
 
     /**
-     * @param string $approvalPrompt
+     * @param string $prompt
      */
-    public function setApprovalPrompt($approvalPrompt) {
-        $this->approvalPrompt = $approvalPrompt;
+    public function setPrompt($prompt) {
+        $this->prompt = $prompt;
     }
 
     /**

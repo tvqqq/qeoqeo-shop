@@ -21,7 +21,7 @@
 		       		if($location_label && $label){
 		       			echo $location_label;
 		       		} else if($label){
-		       			echo _e('Location','flatsome');
+		       			_e('Location','flatsome');
 			    	} ?>
 			     </span>
 			  </a>
@@ -40,7 +40,7 @@
 		       		if($contact_label && $label) {
 		       			echo $contact_label;
 		       		} else if($label){
-		       			echo _e('Contact','flatsome');
+		       			_e('Contact','flatsome');
 			    	} ?>
 			       </span>
 			  </a>

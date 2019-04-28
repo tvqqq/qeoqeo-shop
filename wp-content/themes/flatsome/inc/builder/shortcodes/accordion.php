@@ -5,7 +5,7 @@ add_ux_builder_shortcode( 'accordion', array(
     'name' => __( 'Accordion' ),
     'image' => '',
     'category' => __( 'Content' ),
-    //'template' => flatsome_ux_builder_template( 'accordion.html' ),
+    // 'template' => flatsome_ux_builder_template( 'accordion.html' ),
     'thumbnail' =>  flatsome_ux_builder_thumbnail( 'accordion' ),
     'info' => '{{ title }}',
     'allow' => array( 'accordion-item' ),
@@ -38,6 +38,13 @@ add_ux_builder_shortcode( 'accordion', array(
                 ''  => array( 'title' => 'Off'),
                 'true'  => array( 'title' => 'On'),
             ),
+        ),
+        'class' => array(
+            'type' => 'textfield',
+            'heading' => 'Custom Class',
+            'full_width' => true,
+            'placeholder' => 'class-name',
+            'default' => '',
         ),
     ),
 ) );

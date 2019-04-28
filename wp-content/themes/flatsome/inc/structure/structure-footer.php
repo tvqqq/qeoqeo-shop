@@ -2,7 +2,7 @@
 
 // Get Mobile Sidebar Menu
 function flatsome_mobile_menu(){
-    get_template_part('template-parts/overlays/overlay','menu');
+   get_template_part('template-parts/overlays/overlay','menu');
 }
 add_action('wp_footer', 'flatsome_mobile_menu', 7);
 
@@ -80,20 +80,20 @@ function flatsome_page_footer(){
 	}
 }
 
-add_filter( 'flatsome_footer', 'flatsome_page_footer', 10 );
+add_action( 'flatsome_footer', 'flatsome_page_footer', 10 );
 
 
 // Add Top Link
 function flatsome_go_to_top(){
 	if(!get_theme_mod('back_to_top', 1)) return;
-	echo get_template_part('template-parts/footer/back-to-top');
+	get_template_part('template-parts/footer/back-to-top');
 }
 add_action( 'flatsome_footer', 'flatsome_go_to_top');
 
 
 /* Custom footer scripts */
 function flatsome_footer_scripts(){
-    echo do_shortcode(get_theme_mod('html_scripts_footer'));
+  echo do_shortcode(get_theme_mod('html_scripts_footer'));
 }
 add_action('wp_footer', 'flatsome_footer_scripts');
 

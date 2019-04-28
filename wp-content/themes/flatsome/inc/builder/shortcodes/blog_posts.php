@@ -162,10 +162,13 @@ $options =  array(
         )
     ),
     ),
-));
+),
+);
+
 
 $box_styles = require( __DIR__ . '/commons/box-styles.php' );
 $options = array_merge($options, $box_styles);
+
 
 add_ux_builder_shortcode( 'blog_posts', array(
     'name' => __( 'Blog posts' ),

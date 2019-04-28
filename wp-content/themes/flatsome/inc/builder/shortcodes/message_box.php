@@ -41,5 +41,6 @@ add_ux_builder_shortcode( 'message_box', array(
           'min' => 0,
           'default' => 15
         ),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

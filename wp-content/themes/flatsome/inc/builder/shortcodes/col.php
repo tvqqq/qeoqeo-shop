@@ -33,8 +33,6 @@ add_ux_builder_shortcode( 'col', array(
             'min' => 1,
         ),
 
-        'visibility'  => require( __DIR__ . '/commons/visibility.php' ),
-
         'force_first' => array(
             'type' => 'select',
             'heading' => 'Force First Position',
@@ -135,12 +133,6 @@ add_ux_builder_shortcode( 'col', array(
             'heading' => 'Tooltip',
         ),
 
-        'class' => array(
-            'type' => 'textfield',
-            'heading' => 'Class',
-            'default' => '',
-        ),
-
         'parallax' => array(
             'type' => 'slider',
             'vertical' => true,
@@ -167,5 +159,6 @@ add_ux_builder_shortcode( 'col', array(
             'max' => 5,
             'min' => 0,
         ),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

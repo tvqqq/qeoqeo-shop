@@ -5,7 +5,7 @@
             <div ng-if="shortcode.options.videoMp4" class="video-overlay fill"></div>
 
             <video ng-if="shortcode.options.videoMp4"
-                class="video-bg no-click hide-for-small"
+                class="video-bg no-click {{shortcode.options.videoVisibility}}"
                 preload="auto" autoplay="true" loop="loop" muted="muted">
                 <source ng-if="shortcode.options.videoMp4" ng-src="{{shortcode.options.videoMp4}}" type="video/mp4">
                 <source ng-if="shortcode.options.videoOgg" ng-src="{{shortcode.options.videoOgg}}" type="video/ogg">

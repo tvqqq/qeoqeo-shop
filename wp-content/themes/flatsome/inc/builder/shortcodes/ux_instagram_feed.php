@@ -54,6 +54,7 @@ $options = array(
 ),
 'layout_options' => require( __DIR__ . '/commons/repeater-options.php' ),
 'layout_options_slider' => require( __DIR__ . '/commons/repeater-slider.php' ),
+'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
 );
 
 // Set defaults.

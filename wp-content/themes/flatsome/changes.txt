@@ -1,3 +1,42 @@
+--- 3.8.1 ---
+FIXED: Media modal in UX Builder did not work when Polylang was installed.
+FIXED: Masonry & grid layout getting stuck in builder preview.
+
+--- 3.8.0 ---
+NEW: Builder undo and redo changes.
+NEW: Builder improved loading time & stability.
+NEW: Builder class option on all elements.
+NEW: Builder visibility option on all elements.
+NEW: Builder scroll when dragging elements.
+NEW: Custom product page next/prev element.
+NEW: Multiple category selection in product elements.
+NEW: Afterpay Int. and Vipps payment icon.
+
+FIXED: Outdated WooCommerce 3.5.5 files.
+FIXED: Portfolio element overlapping images in some cases.
+FIXED: Duplicated social login buttons when Nextend Pro is activated.
+FIXED: Incorrect account menu item when no wishlist page is selected.
+FIXED: WooCommerce Subscriptions: Duplicated selection on cart table.
+FIXED: Recommended plugin notice with YITH Wishlist Premium.
+FIXED: Slider display issue in first auto open accordion.
+FIXED: Slider display issue in lightbox.
+FIXED: Favicon not rendering in some cases.
+FIXED: Alt tags on product gallery thumbnails.
+FIXED: Indentation on vertical tabs inside a column.
+FIXED: PHP error on import.
+
+TWEAK: Improved plugin scripts disrupting the builder.
+TWEAK: Enabled page background image for full-width layout.
+TWEAK: Maps not working when API key is pasted with extra space.
+TWEAK: Improved live refresh on multiple settings.
+TWEAK: Improved WP 5.1 compatibility.
+TWEAK: Improved builder styling.
+
+DEV: Product gallery thumbnails now use woocommerce_gallery_{size} hooks.
+
+Note: Third-party plugins which add custom code in the builder must have
+ux-builder-core as a dependency.
+
 --- 3.7.2 ---
 TWEAK: Improved WP 5.0 compatibility!
 

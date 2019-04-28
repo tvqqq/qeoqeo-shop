@@ -86,13 +86,6 @@ add_ux_builder_shortcode( 'button', array(
             ),
         ),
 
-      'class' => array(
-          'type' => 'textfield',
-          'heading' => 'Class',
-          'param_name' => 'class',
-          'default' => '',
-      ),
-
       'layout_options' => array(
         'type' => 'group',
         'heading' => 'Layout',
@@ -197,6 +190,7 @@ add_ux_builder_shortcode( 'button', array(
                 ),
             ),
         ),
-        'link_options' => require( __DIR__ . '/commons/links.php' )
+        'link_options' => require( __DIR__ . '/commons/links.php' ),
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php')
     ),
 ) );

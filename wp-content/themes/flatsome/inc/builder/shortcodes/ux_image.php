@@ -170,5 +170,6 @@ add_ux_builder_shortcode( 'ux_image', array(
         ),
         'link_options' => require( __DIR__ . '/commons/links.php' ),
         'position_options' => $position_options,
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

@@ -439,7 +439,7 @@ Flatsome_Option::add_field( 'option', array(
 	'type'        => 'checkbox',
 	'settings'    => 'equalize_product_box',
 	'transport'   => $transport,
-	'label'       => esc_attr__( 'Equalize item heights', 'flatsome' ) . ' (BETA)',
+	'label'       => esc_attr__( 'Equalize item heights', 'flatsome' ),
 	'description' => esc_attr__( 'Equalize box items to the same height', 'flatsome' ),
 	'section'     => 'woocommerce_product_catalog',
 	'default'     => '0',

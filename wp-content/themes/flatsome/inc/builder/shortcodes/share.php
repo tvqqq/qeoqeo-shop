@@ -39,6 +39,6 @@ add_ux_builder_shortcode( 'share', array(
             'max' => '300',
             'min' => '50',
         ),
-
+        'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     ),
 ) );

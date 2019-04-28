@@ -32,5 +32,6 @@ add_ux_builder_shortcode( 'search', array(
                   'class' => 'is-{{ value }}'
               )
         ),
+      'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
     )
 ) );

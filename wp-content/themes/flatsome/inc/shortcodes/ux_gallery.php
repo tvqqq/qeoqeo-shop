@@ -4,6 +4,8 @@ function ux_gallery($atts) {
     extract(shortcode_atts(array(
       // meta
       '_id' => 'gallery-'.rand(),
+      'class' => '',
+      'visibility' => '',
       'ids' => '', // Gallery IDS
       'lightbox' => true,
       'thumbnails' => true,
@@ -49,6 +51,8 @@ function ux_gallery($atts) {
       'image_overlay' => '',
 
       ), $atts));
+
+	ob_start();
 
       $classes_box = array('box','has-hover','gallery-box');
       $classes_image = array('box-image');
@@ -109,6 +113,8 @@ function ux_gallery($atts) {
       $repater['id'] = $_id;
       $repater['type'] = $type;
       $repater['style'] = $style;
+      $repater['class'] = $class;
+      $repater['visibility'] = $visibility;
       $repater['slider_style'] = $slider_nav_style;
       $repater['slider_style'] = $slider_nav_style;
       $repater['slider_nav_position'] = $slider_nav_position;
@@ -130,10 +136,10 @@ function ux_gallery($atts) {
       }
 
       if ( empty( $attachments ) ) {
-        return '';
+	      ob_end_clean();
+	      return '';
       }
 
-      ob_start();
 
       get_flatsome_repeater_start($repater);
 

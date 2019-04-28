@@ -44,7 +44,7 @@ add_filter('woocommerce_account_menu_item_classes', 'flatsome_my_account_menu_cl
 
 /* My Account Dashboard overview */
 function flatsome_my_account_dashboard(){
-  return wc_get_template( 'myaccount/dashboard-links.php' );
+  wc_get_template( 'myaccount/dashboard-links.php' );
 }
 add_action('woocommerce_account_dashboard','flatsome_my_account_dashboard');
 
@@ -351,9 +351,9 @@ function flatsome_account_login_lightbox(){
 
     ?>
     <div id="login-form-popup" class="lightbox-content mfp-hide">
-      <?php if(get_theme_mod('social_login_pos','top') == 'top' && ($is_facebook_login || $is_google_login)) echo wc_get_template('myaccount/header.php'); ?>
-      <?php echo wc_get_template_part('myaccount/form-login'); ?>
-      <?php if(get_theme_mod('social_login_pos','top') == 'bottom' && ($is_facebook_login || $is_google_login)) echo wc_get_template('myaccount/header.php'); ?>
+      <?php if(get_theme_mod('social_login_pos','top') == 'top' && ($is_facebook_login || $is_google_login)) wc_get_template('myaccount/header.php'); ?>
+      <?php wc_get_template_part('myaccount/form-login'); ?>
+      <?php if(get_theme_mod('social_login_pos','top') == 'bottom' && ($is_facebook_login || $is_google_login)) wc_get_template('myaccount/header.php'); ?>
     </div>
   <?php }
 }
@@ -408,7 +408,7 @@ if( !function_exists('flatsome_wc_get_gallery_image_html') ) {
 function flatsome_move_store_notice() {
     if ( get_theme_mod( 'woocommerce_store_notice_top' ) ) {
         remove_action( 'wp_footer', 'woocommerce_demo_store' );
-        add_action ( 'wp_head', 'woocommerce_demo_store' );
+        add_action ( 'flatsome_after_body_open', 'woocommerce_demo_store', 0 );
     }
 }
 add_action( 'wp_loaded', 'flatsome_move_store_notice' );

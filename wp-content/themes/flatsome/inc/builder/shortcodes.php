@@ -2,8 +2,8 @@
 
 $presets = __DIR__ . '/shortcodes/presets/';
 
-$post = isset( $_GET['post_id'] )
-  ? get_post( $_GET['post_id'] )
+$post = isset( $_GET['post'] )
+  ? get_post( $_GET['post'] )
   : null;
 
 require_once __DIR__ . '/shortcodes/accordion.php';

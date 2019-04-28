@@ -138,8 +138,10 @@ if(get_theme_mod('product_zoom', 0)){
           <a>
             <?php
               $image_id = get_post_thumbnail_id($post->ID);
-              $image =  wp_get_attachment_image_src( $image_id, 'woocommerce_'.$image_size );
-              $image = '<img src="'.$image[0].'" width="'.$gallery_thumbnail['width'].'" height="'.$gallery_thumbnail['height'].'" class="attachment-woocommerce_thumbnail" />';
+              $image =  wp_get_attachment_image_src( $image_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_'.$image_size ) );
+              $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+              $image = '<img src="'.$image[0].'" alt="'.$image_alt.'" width="'.$gallery_thumbnail['width'].'" height="'.$gallery_thumbnail['height'].'" class="attachment-woocommerce_thumbnail" />';
+
               echo $image;
             ?>
           </a>
@@ -150,8 +152,9 @@ if(get_theme_mod('product_zoom', 0)){
 
         $classes = array( '' );
         $image_class = esc_attr( implode( ' ', $classes ) );
-        $image =  wp_get_attachment_image_src( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'woocommerce_'.$image_size ));
-        $image = '<img src="'.$image[0].'" width="'.$gallery_thumbnail['width'].'" height="'.$gallery_thumbnail['height'].'"  class="attachment-woocommerce_thumbnail" />';
+        $image =  wp_get_attachment_image_src( $attachment_id, apply_filters( 'woocommerce_gallery_thumbnail_size', 'woocommerce_'.$image_size ));
+        $image_alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+        $image = '<img src="'.$image[0].'" alt="'.$image_alt.'" width="'.$gallery_thumbnail['width'].'" height="'.$gallery_thumbnail['height'].'"  class="attachment-woocommerce_thumbnail" />';
 
         echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<div class="col"><a>%s</a></div>', $image ), $attachment_id, $post->ID, $image_class );
 

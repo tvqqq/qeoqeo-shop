@@ -22,6 +22,7 @@ function button_shortcode( $atts, $content = null ){
     'depth' => '',
     'depth_hover' =>'',
     'class' => '',
+    'visibility' => '',
     'id' => '',
     'block' => '',
   ), $atts ) );
@@ -64,7 +65,7 @@ function button_shortcode( $atts, $content = null ){
   if ( $icon_reveal ) $classes[] = 'reveal-icon';
   if ( $expand ) $classes[] = 'expand';
   if ( $class ) $classes[] = $class;
-
+  if ( $visibility ) $classes[] = $visibility;
 
   if( $animate ) {
     $attributes['data-animate'] = $animate;

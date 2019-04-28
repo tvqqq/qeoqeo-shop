@@ -3,6 +3,8 @@
 function flatsome_team_member($atts, $content = null){
   extract( shortcode_atts( array(
       '_id' => null,
+      'class' => '',
+      'visibility' => '',
       'img' => '',
       'name' => '',
       'title' => '',
@@ -50,10 +52,13 @@ function flatsome_team_member($atts, $content = null){
     $classes_image = array();
     $classes_image_inner = array();
 
-	$link_atts = array(
-		'target' => $target,
-		'rel'    => array( $rel ),
-	);
+    if ( $class ) $classes_box[] = $class;
+    if ( $visibility ) $classes_box[] = $visibility;
+
+  	$link_atts = array(
+  		'target' => $target,
+  		'rel'    => array( $rel ),
+  	);
 
     // Fix old
     if($style == 'text-overlay'){

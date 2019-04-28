@@ -5,10 +5,6 @@
  * @package flatsome
  */
 
-update_option( 'flatsome_wup_purchase_code', 'codexinh.com' );
-update_option( 'flatsome_wup_supported_until', '01.01.2050' );
-update_option( 'flatsome_wup_buyer', 'CODEXINH.COM' );
-
 require get_template_directory() . '/inc/init.php';
 
 /**

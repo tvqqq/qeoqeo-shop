@@ -68,7 +68,7 @@ if ( $products->have_posts() ) : ?>
   			<?php _e( 'You may also like&hellip;', 'woocommerce' ) ?>
   		</h3>
 
-			<?php echo get_flatsome_repeater_start($repater); ?>
+			<?php get_flatsome_repeater_start($repater); ?>
 
 				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
@@ -76,7 +76,7 @@ if ( $products->have_posts() ) : ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-			<?php echo get_flatsome_repeater_end($repater); ?>
+			<?php get_flatsome_repeater_end($repater); ?>
 
 	</div>
 

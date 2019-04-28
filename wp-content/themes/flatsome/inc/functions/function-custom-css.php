@@ -18,17 +18,12 @@ if(is_admin_bar_showing()){
   $admin_bar = 32;
 }
 
-
 // Layout backgrounds
-$layout = get_theme_mod('body_layout');
-if ( $layout == 'boxed' || $layout == 'framed' ) {
-	if ( get_theme_mod( 'body_bg_image' ) ) echo 'html{background-image: url(\'' . get_theme_mod( 'body_bg_image' ) . '\');}';
-	if ( get_theme_mod( 'body_bg' ) ) echo 'html{background-color:' . get_theme_mod( 'body_bg' ) . '!important;}';
-}
-?>
+if ( get_theme_mod( 'body_bg_image' ) ) echo 'html{background-image: url(\'' . get_theme_mod( 'body_bg_image' ) . '\');}';
+if ( get_theme_mod( 'body_bg' ) ) echo 'html{background-color:' . get_theme_mod( 'body_bg' ) . '!important;}';
 
 /* Site Width */
-<?php
+
 if(get_theme_mod('site_width')) {
 $site_width = intval(get_theme_mod('site_width')); ?>
 .full-width .ubermenu-nav, .container, .row{max-width: <?php echo $site_width - 30; ?>px}
@@ -37,7 +32,7 @@ $site_width = intval(get_theme_mod('site_width')); ?>
 .row.row-large{max-width: <?php echo $site_width; ?>px}
 <?php } ?>
 
-<?php if($layout !== 'full-width' && get_theme_mod('site_width_boxed')){ ?>
+<?php if(get_theme_mod('body_layout') !== 'full-width' && get_theme_mod('site_width_boxed')){ ?>
 body.framed, body.framed header, body.framed .header-wrapper, body.boxed, body.boxed header, body.boxed .header-wrapper, body.boxed .is-sticky-section{ max-width: <?php echo get_theme_mod('site_width_boxed'); ?>px
 }
 <?php } ?>
@@ -435,7 +430,7 @@ background-color: <?php echo get_theme_mod('header_shop_bg_color') ?>;}
 	.star-rating span:before,.star-rating:before, .woocommerce-page .star-rating:before{color: <?php echo get_theme_mod('color_review'); ?>}
 <?php } ?>
 
-<?php if(is_woocommerce_activated() && flatsome_option('header_shop_bg_image')){ ?>
+<?php if(is_woocommerce_activated() && get_theme_mod('header_shop_bg_image')){ ?>
 .shop-page-title.featured-title .title-bg{background-image: url(<?php echo get_theme_mod('header_shop_bg_image'); ?>);}
 <?php } ?>
 
@@ -447,7 +442,7 @@ input[type='submit'], input[type="button"], button:not(.icon), .button:not(.icon
   .pswp__bg,.mfp-bg.mfp-ready{background-color: <?php echo get_theme_mod('flatsome_lightbox_bg'); ?>}
 <?php } ?>
 
-<?php if(is_woocommerce_activated() && flatsome_option('header_shop_bg_featured')) {  ?>
+<?php if(is_woocommerce_activated() && get_theme_mod('header_shop_bg_featured', 1)) {  ?>
 <?php if(is_product_category() || is_product_tag()) { ?>
 <?php
 global $wp_query;

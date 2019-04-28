@@ -13,8 +13,11 @@ define( 'UX_BUILDER_PATH', get_template_directory() . '/inc/builder/core' );
 define( 'UX_BUILDER_URL',  get_template_directory_uri() );
 
 // Required files.
+require_once UX_BUILDER_PATH . '/server/helpers/helpers.php';
 require_once UX_BUILDER_PATH . '/server/helpers/states.php';
 require_once UX_BUILDER_PATH . '/server/helpers/breakpoints.php';
+require_once UX_BUILDER_PATH . '/server/helpers/paths.php';
+require_once UX_BUILDER_PATH . '/server/helpers/templating.php';
 require_once UX_BUILDER_PATH . '/server/helpers/posts.php';
 require_once UX_BUILDER_PATH . '/server/helpers/elements.php';
 require_once UX_BUILDER_PATH . '/server/helpers/urls.php';

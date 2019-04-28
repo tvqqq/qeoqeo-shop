@@ -8,7 +8,7 @@ add_ux_builder_shortcode( 'map', array(
   'template' => flatsome_ux_builder_template( 'map.html' ),
   'wrap' => false,
   'scripts' => array(
-    'google-maps' => '//maps.google.com/maps/api/js?key='.flatsome_option('google_map_api'),
+    'google-maps' => '//maps.google.com/maps/api/js?key='. trim( get_theme_mod( 'google_map_api', 'AIzaSyCnQHEUD4Yvg4m1ul3PWUwsjctR1Cl2NFc' ) ),
   ),
 
   'presets' => array(
@@ -156,5 +156,6 @@ add_ux_builder_shortcode( 'map', array(
         ),
       ),
     ),
+    'advanced_options' => require( __DIR__ . '/commons/advanced.php'),
   ),
 ) );

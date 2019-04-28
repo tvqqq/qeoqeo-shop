@@ -12,7 +12,7 @@
 
   // Header Backgrounds
   echo '<div class="header-bg-container fill">';
-    echo do_action('flatsome_header_background');
+  do_action('flatsome_header_background');
   echo '</div><!-- .header-bg-container -->';
   
   do_action('flatsome_header_wrapper');

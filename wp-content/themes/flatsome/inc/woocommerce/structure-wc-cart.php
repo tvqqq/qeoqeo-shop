@@ -31,7 +31,7 @@ if(!function_exists('flatsome_html_cart_sidebar')) {
 // Continue Shopping button
 if(!function_exists('flatsome_continue_shopping')) {
   function flatsome_continue_shopping(){
-    echo wc_get_template_part('cart/continue-shopping');
+    wc_get_template_part('cart/continue-shopping');
   }
 }
 add_action('woocommerce_cart_actions', 'flatsome_continue_shopping', 10);

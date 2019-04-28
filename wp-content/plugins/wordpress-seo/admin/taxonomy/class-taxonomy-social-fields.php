@@ -9,13 +9,18 @@
  * This class parses all the values for the social tab in the Yoast SEO settings metabox
  */
 class WPSEO_Taxonomy_Social_Fields extends WPSEO_Taxonomy_Fields {
-	/** @var array List of social networks */
+
+	/**
+	 * List of social networks.
+	 *
+	 * @var array
+	 */
 	protected $networks;
 
 	/**
 	 * Setting the class properties
 	 *
-	 * @param stdClass|WP_Term $term    The current taxonomy.
+	 * @param stdClass|WP_Term $term The current taxonomy.
 	 */
 	public function __construct( $term ) {
 		parent::__construct( $term );

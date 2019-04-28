@@ -1,0 +1,123 @@
+0000.008 () Opened log file at time: Sun, 07 Apr 2019 09:45:09 +0000 on http://qeoqeo.local
+0000.009 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.5 WP: 5.0.3 PHP: 7.3.2 (apache2handler, Windows NT TVQ-PC 10.0 build 17763 (Windows 10) AMD64) MySQL: 5.7.25-log WPLANG: vi Server: Apache/2.4.38 (Win64) PHP/7.3.2 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 65.9M | 6M) multisite: N openssl: OpenSSL 1.1.1a  20 Nov 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.009 () Free space on disk containing Updraft's temporary directory: 46987.5 MB
+0000.054 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.061 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.076 () Entity: db
+0000.076 () restore_backup(backup_file=backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-db.gz, type=db, info=a:0:{}, last_one=)
+0000.076 () Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-db.gz, 0.3 Mb)
+0000.083 () Database successfully unpacked
+0000.083 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.084 () Using direct MySQL access; value of use_mysqli is: 1
+0000.164 () Max packet size: 32 MB
+0000.164 () Entering maintenance mode
+0000.165 () Enabling Maintenance mode&#8230;
+0000.169 () Backup of: https://qeoqeo.com
+0000.189 () Content URL: https://qeoqeo.com/wp-content
+0000.189 () Uploads URL: https://qeoqeo.com/wp-content/uploads
+0000.189 () Old table prefix: qqs19_
+0000.190 () Site information: multisite=0
+0000.191 () New table prefix: qqs19_
+0000.212 () Processing table (InnoDB): qqs19_options
+0000.491 () Restoring prior UD configuration (table: qqs19_options; keys: 94)
+0001.119 () Processing table (InnoDB): qqs19_users
+0001.194 () Processing table (InnoDB): qqs19_usermeta
+0001.278 () Processing table (InnoDB): qqs19_commentmeta
+0001.340 () Processing table (InnoDB): qqs19_comments
+0001.420 () Processing table (InnoDB): qqs19_links
+0001.487 () Processing table (InnoDB): qqs19_postmeta
+0002.056 () Processing table (InnoDB): qqs19_posts
+0002.207 () Processing table (InnoDB): qqs19_term_relationships
+0002.296 () Database queries processed: 50 in 2.21 seconds
+0002.297 () Processing table (InnoDB): qqs19_term_taxonomy
+0002.361 () Processing table (InnoDB): qqs19_termmeta
+0002.431 () Processing table (InnoDB): qqs19_terms
+0002.506 () Processing table (InnoDB): qqs19_woocommerce_order_itemmeta
+0002.578 () Processing table (InnoDB): qqs19_woocommerce_payment_tokenmeta
+0002.676 () Processing table (InnoDB): qqs19_yoast_seo_links
+0002.789 () Processing table (InnoDB): qqs19_yoast_seo_meta
+0002.845 () Processing table (MyISAM): qqs19_ac_abandoned_cart_history_lite
+0002.861 () Processing table (MyISAM): qqs19_ac_email_templates_lite
+0002.878 () Processing table (MyISAM): qqs19_ac_guest_abandoned_cart_history_lite
+0002.898 () Processing table (MyISAM): qqs19_ac_sent_history_lite
+0002.917 () Processing table (MyISAM): qqs19_failed_jobs
+0002.935 () Processing table (MyISAM): qqs19_itsec_distributed_storage
+0002.954 () Processing table (MyISAM): qqs19_itsec_fingerprints
+0002.972 () Processing table (MyISAM): qqs19_itsec_geolocation_cache
+0002.987 () Processing table (MyISAM): qqs19_itsec_lockouts
+0003.013 () Processing table (MyISAM): qqs19_itsec_logs
+0003.039 () Processing table (MyISAM): qqs19_itsec_temp
+0003.060 () Processing table (MyISAM): qqs19_litespeed_img_optm
+0003.080 () Processing table (MyISAM): qqs19_litespeed_optimizer
+0003.102 () Database queries processed: 100 in 3.02 seconds
+0003.102 () Processing table (MyISAM): qqs19_mailchimp_carts
+0003.121 () Processing table (MyISAM): qqs19_queue
+0003.154 () Processing table (InnoDB): qqs19_social_users
+0003.247 () Processing table (InnoDB): qqs19_wc_download_log
+0003.320 () Processing table (InnoDB): qqs19_wc_webhooks
+0003.390 () Processing table (InnoDB): qqs19_woocommerce_api_keys
+0003.456 () Processing table (InnoDB): qqs19_woocommerce_attribute_taxonomies
+0003.530 () Processing table (InnoDB): qqs19_woocommerce_downloadable_product_permissions
+0003.591 () Processing table (InnoDB): qqs19_woocommerce_log
+0003.704 () Processing table (InnoDB): qqs19_woocommerce_order_items
+0003.788 () Processing table (InnoDB): qqs19_woocommerce_payment_tokens
+0003.850 () Processing table (InnoDB): qqs19_woocommerce_sessions
+0003.915 () Processing table (InnoDB): qqs19_woocommerce_shipping_zone_locations
+0003.969 () Processing table (InnoDB): qqs19_woocommerce_shipping_zone_methods
+0004.028 () Processing table (InnoDB): qqs19_woocommerce_shipping_zones
+0004.097 () Processing table (InnoDB): qqs19_woocommerce_tax_rate_locations
+0004.165 () Processing table (InnoDB): qqs19_woocommerce_tax_rates
+0004.222 () Unlocking database and leaving maintenance mode
+0004.222 () Disabling Maintenance mode&#8230;
+0004.223 () Finished: lines processed: 143 in 4.14 seconds
+0004.223 () Cleaning up rubbish...
+0004.265 () Entity: plugins
+0004.265 () restore_backup(backup_file=backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:49:"C:\Apache24\htdocs\qeoqeo-shop/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0004.266 () Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-plugins.zip, 24.4 MB)
+0004.276 () Unzipping backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-plugins.zip to C:/Apache24/htdocs/qeoqeo-shop/wp-content/upgrade/fee512ce/ using UpdraftPlus_ZipArchive, starting index 0
+0006.861 () Unzip progress: 1002 out of 6392 files (441.8 KB, plugins/loco-translate/tpl/admin/errors/file-isdir.php)
+0018.355 () Unzip progress: 2003 out of 6392 files (8.4 MB, plugins/updraftplus/vendor/rackspace/php-opencloud/lib/OpenCloud/Common/Exceptions/InvalidIpTypeError.php)
+0030.036 () Unzip progress: 3004 out of 6392 files (29.1 MB, plugins/better-wp-security/core/modules/file-change/js/filetree/images/script.png)
+0042.156 () Unzip progress: 4005 out of 6392 files (42.4 MB, plugins/woocommerce/includes/class-wc-product-attribute.php)
+0058.179 () Unzip progress: 4922 out of 6392 files (56 MB, plugins/litespeed-cache/admin/tpl/manage/manage_purge.php)
+0073.660 () Unzip progress: 5923 out of 6392 files (73.9 MB, plugins/wordpress-seo/admin/roles/class-role-manager-vip.php)
+0078.992 () Unzip progress: 6392 out of 6392 files (75.9 MB, plugins/wordpress-seo/admin/notifiers/interface-notification-handler.php)
+0078.996 () Moving old data: filesystem method / updraft_dir is potentially possible
+0078.996 () Moving old data: can potentially use wp_filesystem method / -old
+0078.997 () Moving old data out of the way...
+0080.664 () Top-level entities being moved: better-wp-security, contact-form-7, index.php, litespeed-cache, loco-translate, nextend-facebook-connect, svg-support, tiny-compress-images, updraftplus, woo-variation-swatches, woo-vietnam-checkout, woocommerce, woocommerce-abandoned-cart, woocommerce-advanced-free-shipping, wordpress-seo
+0080.686 () Moving unpacked backup into place...
+0081.854 () Top-level entities being moved: better-wp-security, contact-form-7, index.php, litespeed-cache, loco-translate, mailchimp-for-wp, nextend-facebook-connect, shortcodes-ultimate, svg-support, tiny-compress-images, updraftplus, woo-variation-swatches, woo-vietnam-checkout, woocommerce, woocommerce-abandoned-cart, woocommerce-advanced-free-shipping, wordpress-seo
+0081.881 () Cleaning up rubbish...
+0081.891 () Entity: themes
+0081.891 () restore_backup(backup_file=backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-themes.zip, type=themes, info=a:2:{s:4:"path";s:48:"C:\Apache24\htdocs\qeoqeo-shop/wp-content/themes";s:11:"description";s:6:"Themes";}, last_one=)
+0081.892 () Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-themes.zip, 7.2 MB)
+0081.893 () Unzipping backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-themes.zip to C:/Apache24/htdocs/qeoqeo-shop/wp-content/upgrade/ed740e3e/ using UpdraftPlus_ZipArchive, starting index 0
+0090.224 () Unzip progress: 1002 out of 1858 files (7.2 MB, themes/flatsome/inc/shortcodes/elements.php)
+0099.555 () Unzip progress: 1858 out of 1858 files (14.1 MB, themes/flatsome/woocommerce/layouts/headers/category-title-featured.php)
+0099.557 () Moving old data: filesystem method / updraft_dir is potentially possible
+0099.558 () Moving old data: can potentially use wp_filesystem method / -old
+0099.558 () Moving old data out of the way...
+0100.054 () Top-level entities being moved: flatsome, flatsome-child, index.php
+0100.059 () Moving unpacked backup into place...
+0100.394 () Top-level entities being moved: flatsome, flatsome-child, index.php
+0100.399 () Cleaning up rubbish...
+0100.411 () Entity: uploads
+0100.411 () restore_backup(backup_file=backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:49:"C:\Apache24\htdocs\qeoqeo-shop/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0100.412 () Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-uploads.zip, 51.7 MB)
+0100.414 () Unzipping backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-uploads.zip to C:/Apache24/htdocs/qeoqeo-shop/wp-content/upgrade/c61f7b45/ using UpdraftPlus_ZipArchive, starting index 0
+0105.157 () Unzip progress: 1002 out of 1073 files (51.7 MB, uploads/2019/03/a0241-510x612.jpg)
+0105.433 () Unzip progress: 1073 out of 1073 files (53.3 MB, uploads/2019/01/cropped-icon-qeoqeoshop-100x100.png)
+0105.435 () Moving old data: filesystem method / updraft_dir is potentially possible
+0105.436 () Moving old data: can potentially use wp_filesystem method / -old
+0105.436 () Moving old data out of the way...
+0105.509 () Moving unpacked backup into place...
+0105.737 () Cleaning up rubbish...
+0105.746 () Entity: others
+0105.746 () restore_backup(backup_file=backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-others.zip, type=others, info=a:2:{s:4:"path";s:41:"C:\Apache24\htdocs\qeoqeo-shop/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0105.746 () Unpacking backup... (backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-others.zip, 1.3 MB)
+0105.747 () Unzipping backup_2019-04-07-1636_QeoQeo_Shop_02d28b5cfe65-others.zip to C:/Apache24/htdocs/qeoqeo-shop/wp-content/upgrade/cf9eef9b/ using UpdraftPlus_ZipArchive, starting index 0
+0106.043 () Unzip progress: 45 out of 45 files (5.3 MB, advanced-cache.php)
+0106.050 () Cleaning up rubbish...
+0106.094 () Restore successful!
+0106.094 () Restore successful

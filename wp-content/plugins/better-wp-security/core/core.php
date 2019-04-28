@@ -24,7 +24,7 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 		 *
 		 * @access private
 		 */
-		private $plugin_build = 4108;
+		private $plugin_build = 4113;
 
 		/**
 		 * Used to distinguish between a user modifying settings and the API modifying settings (such as from Sync
@@ -50,7 +50,8 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			$current_time_gmt,
 			$is_iwp_call,
 			$request_type,
-			$wp_upload_dir;
+			$wp_upload_dir,
+			$login_interstitial;
 
 
 		/**
@@ -121,6 +122,7 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			require( $this->plugin_dir . 'core/lib/class-itsec-lib-password-requirements.php' );
 			require( $this->plugin_dir . 'core/lib/class-itsec-lib-login-interstitial.php' );
 			require( $this->plugin_dir . 'core/lib/class-itsec-lib-distributed-storage.php' );
+			require( $this->plugin_dir . 'core/lib/class-itsec-lib-remote-messages.php' );
 
 			require( $this->plugin_dir . 'core/lib/class-itsec-scheduler.php' );
 			require( $this->plugin_dir . 'core/lib/class-itsec-job.php' );
@@ -162,14 +164,16 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 				add_action( 'admin_bar_menu', array( $this, 'modify_admin_bar' ), 99 );
 			}
 
-			$login_interstitial = new ITSEC_Lib_Login_Interstitial();
-			$login_interstitial->run();
+			$this->login_interstitial = new ITSEC_Lib_Login_Interstitial();
+			$this->login_interstitial->run();
 
 			if ( defined( 'ITSEC_USE_CRON' ) && ITSEC_USE_CRON !== ITSEC_Lib::use_cron() ) {
 				ITSEC_Modules::set_setting( 'global', 'use_cron', ITSEC_USE_CRON );
 			}
 
 			do_action( 'itsec_initialized' );
+
+			ITSEC_Lib_Remote_Messages::init();
 		}
 
 		private function setup_scheduler() {
@@ -256,6 +260,15 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			}
 
 			return $self->scheduler;
+		}
+
+		/**
+		 * Get the login interstitial library instance.
+		 *
+		 * @return ITSEC_Lib_Login_Interstitial
+		 */
+		public static function get_login_interstitial() {
+			return self::get_instance()->login_interstitial;
 		}
 
 		/**

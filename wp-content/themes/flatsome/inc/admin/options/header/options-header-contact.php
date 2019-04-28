@@ -106,7 +106,7 @@ function flatsome_refresh_header_contact_partials( WP_Customize_Manager $wp_cust
 	    'container_inclusive' => true,
 	    'settings' => array('contact_location_label','contact_email_label','contact_icon_size','contact_style','contact_location','contact_phone','contact_email','contact_hours_details','contact_hours','contact_hours'),
 	    'render_callback' => function() {
-	         return get_template_part('template-parts/header/partials/element','contact');
+	         get_template_part('template-parts/header/partials/element','contact');
 	    },
 	) );
 	

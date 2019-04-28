@@ -18,7 +18,7 @@
 * Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 class Tiny_Plugin extends Tiny_WP_Base {
-	const VERSION = '3.1.0';
+	const VERSION = '3.2.0';
 	const MEDIA_COLUMN = self::NAME;
 	const DATETIME_FORMAT = 'Y-m-d G:i:s';
 
@@ -39,7 +39,6 @@ class Tiny_Plugin extends Tiny_WP_Base {
 
 	public function __construct() {
 		parent::__construct();
-
 		$this->settings = new Tiny_Settings();
 	}
 
@@ -61,15 +60,54 @@ class Tiny_Plugin extends Tiny_WP_Base {
 			10, 2
 		);
 
+		load_plugin_textdomain( self::NAME, false,
+			dirname( plugin_basename( __FILE__ ) ) . '/languages'
+		);
+	}
+
+	public function ajax_init() {
+		add_filter( 'wp_ajax_tiny_async_optimize_upload_new_media',
+			$this->get_method( 'compress_on_upload' )
+		);
+
+		add_action( 'wp_ajax_tiny_compress_image_from_library',
+			$this->get_method( 'compress_image_from_library' )
+		);
+
+		add_action( 'wp_ajax_tiny_compress_image_for_bulk',
+			$this->get_method( 'compress_image_for_bulk' )
+		);
+
+		add_action( 'wp_ajax_tiny_get_optimization_statistics',
+			$this->get_method( 'ajax_optimization_statistics' )
+		);
+
+		add_action( 'wp_ajax_tiny_get_compression_status',
+			$this->get_method( 'ajax_compression_status' )
+		);
+
 		/* When touching any functionality linked to image compressions when
-			 uploading images make sure it also works with XML-RPC. See NOTES. */
+			 uploading images make sure it also works with XML-RPC. See README. */
 		add_filter( 'wp_ajax_nopriv_tiny_rpc',
 			$this->get_method( 'process_rpc_request' )
 		);
 
-		load_plugin_textdomain( self::NAME, false,
-			dirname( plugin_basename( __FILE__ ) ) . '/languages'
-		);
+		if ( $this->settings->compress_wr2x_images() ) {
+			add_action( 'wr2x_upload_retina',
+				$this->get_method( 'compress_original_retina_image' ),
+				10, 2
+			);
+
+			add_action( 'wr2x_retina_file_added',
+				$this->get_method( 'compress_retina_image' ),
+				10, 3
+			);
+
+			add_action( 'wr2x_retina_file_removed',
+				$this->get_method( 'remove_retina_image' ),
+				10, 2
+			);
+		}
 	}
 
 	public function admin_init() {
@@ -102,42 +140,12 @@ class Tiny_Plugin extends Tiny_WP_Base {
 			$this->get_method( 'show_media_info' )
 		);
 
-		add_filter( 'wp_ajax_tiny_async_optimize_upload_new_media',
-			$this->get_method( 'compress_on_upload' )
-		);
-
-		add_action( 'wp_ajax_tiny_compress_image_from_library',
-			$this->get_method( 'compress_image_from_library' )
-		);
-
-		add_action( 'wp_ajax_tiny_compress_image_for_bulk',
-			$this->get_method( 'compress_image_for_bulk' )
-		);
-
-		add_action( 'wp_ajax_tiny_get_optimization_statistics',
-			$this->get_method( 'ajax_optimization_statistics' )
-		);
-
-		add_action( 'wp_ajax_tiny_get_compression_status',
-			$this->get_method( 'ajax_compression_status' )
-		);
-
 		$plugin = plugin_basename(
 			dirname( dirname( __FILE__ ) ) . '/tiny-compress-images.php'
 		);
 
 		add_filter( "plugin_action_links_$plugin",
 			$this->get_method( 'add_plugin_links' )
-		);
-
-		add_action( 'wr2x_retina_file_added',
-			$this->get_method( 'compress_retina_image' ),
-			10, 3
-		);
-
-		add_action( 'wr2x_retina_file_removed',
-			$this->get_method( 'remove_retina_image' ),
-			10, 2
 		);
 
 		$this->tiny_compatibility();
@@ -175,11 +183,14 @@ class Tiny_Plugin extends Tiny_WP_Base {
 		}
 	}
 
+	public function compress_original_retina_image( $attachment_id, $path ) {
+		$tiny_image = new Tiny_Image( $this->settings, $attachment_id );
+		$tiny_image->compress_retina( 'original_wr2x', $path );
+	}
+
 	public function compress_retina_image( $attachment_id, $path, $size_name ) {
-		if ( $this->settings->compress_wr2x_images() ) {
-			$tiny_image = new Tiny_Image( $this->settings, $attachment_id );
-			$tiny_image->compress_retina( $size_name . '_wr2x', $path );
-		}
+		$tiny_image = new Tiny_Image( $this->settings, $attachment_id );
+		$tiny_image->compress_retina( $size_name . '_wr2x', $path );
 	}
 
 	public function remove_retina_image( $attachment_id, $path ) {
@@ -194,7 +205,7 @@ class Tiny_Plugin extends Tiny_WP_Base {
 		);
 
 		wp_enqueue_style( self::NAME . '_chart',
-			plugins_url( '/css/chart.css', __FILE__ ),
+			plugins_url( '/css/optimization-chart.css', __FILE__ ),
 			array(), self::version()
 		);
 
@@ -238,7 +249,7 @@ class Tiny_Plugin extends Tiny_WP_Base {
 			);
 
 			wp_enqueue_style( self::NAME . '_chart',
-				plugins_url( '/css/chart.css', __FILE__ ),
+				plugins_url( '/css/optimization-chart.css', __FILE__ ),
 				array(), self::version()
 			);
 
@@ -354,16 +365,18 @@ class Tiny_Plugin extends Tiny_WP_Base {
 	}
 
 	public function compress_on_upload() {
-		$attachment_id = intval( $_POST['attachment_id'] );
-		$metadata = $_POST['metadata'];
-		if ( is_array( $metadata ) ) {
-			$tiny_image = new Tiny_Image( $this->settings, $attachment_id, $metadata );
-			$result = $tiny_image->compress( $this->settings );
-			// The wp_update_attachment_metadata call is thrown because the
-			// dimensions of the original image can change. This will then
-			// trigger other plugins and can result in unexpected behaviour and
-			// further changes to the image. This may require another approach.
-			wp_update_attachment_metadata( $attachment_id, $tiny_image->get_wp_metadata() );
+		if ( current_user_can( 'upload_files' ) ) {
+			$attachment_id = intval( $_POST['attachment_id'] );
+			$metadata = $_POST['metadata'];
+			if ( is_array( $metadata ) ) {
+				$tiny_image = new Tiny_Image( $this->settings, $attachment_id, $metadata );
+				$result = $tiny_image->compress( $this->settings );
+				// The wp_update_attachment_metadata call is thrown because the
+				// dimensions of the original image can change. This will then
+				// trigger other plugins and can result in unexpected behaviour and
+				// further changes to the image. This may require another approach.
+				wp_update_attachment_metadata( $attachment_id, $tiny_image->get_wp_metadata() );
+			}
 		}
 		exit();
 	}
@@ -497,11 +510,10 @@ class Tiny_Plugin extends Tiny_WP_Base {
 	}
 
 	public function ajax_optimization_statistics() {
-		if ( ! $this->check_ajax_referer() ) {
-			exit();
+		if ( $this->check_ajax_referer() && current_user_can( 'upload_files' ) ) {
+			$stats = Tiny_Bulk_Optimization::get_optimization_statistics( $this->settings );
+			echo json_encode( $stats );
 		}
-		$stats = Tiny_Bulk_Optimization::get_optimization_statistics( $this->settings );
-		echo json_encode( $stats );
 		exit();
 	}
 
@@ -509,7 +521,9 @@ class Tiny_Plugin extends Tiny_WP_Base {
 		if ( ! $this->check_ajax_referer() ) {
 			exit();
 		}
-
+		if ( ! current_user_can( 'upload_files' ) ) {
+			exit();
+		}
 		if ( empty( $_POST['id'] ) ) {
 			$message = esc_html__(
 				'Not a valid media file.',
@@ -625,7 +639,7 @@ class Tiny_Plugin extends Tiny_WP_Base {
 
 	public function add_dashboard_widget() {
 		wp_enqueue_style( self::NAME . '_chart',
-			plugins_url( '/css/chart.css', __FILE__ ),
+			plugins_url( '/css/optimization-chart.css', __FILE__ ),
 			array(), self::version()
 		);
 

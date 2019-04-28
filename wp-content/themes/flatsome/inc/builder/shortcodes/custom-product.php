@@ -234,3 +234,16 @@ add_ux_builder_shortcode( 'ux_product_breadcrumbs', array(
 		),
 	),
 ) );
+
+add_ux_builder_shortcode( 'ux_product_next_prev_nav', array(
+	'name'      => __( 'Product Next/Prev' ),
+	'thumbnail' => flatsome_ux_builder_thumbnail( 'woo_products' ),
+	'category'  => __( 'Product Page' ),
+	'options'   => array(
+		'class' => array(
+			'type'    => 'textfield',
+			'heading' => 'Class',
+			'default' => '',
+		),
+	),
+) );

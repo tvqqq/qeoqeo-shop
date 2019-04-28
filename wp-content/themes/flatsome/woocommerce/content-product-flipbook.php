@@ -23,7 +23,7 @@ add_action( 'woocommerce_single_product_flipbook_summary', 'woocommerce_template
           <a href="<?php the_permalink(); ?>">
                 <div class="product-image relative">
                    <div class="front-image">
-                    <?php echo get_the_post_thumbnail( $post->ID,  apply_filters( 'single_product_small_thumbnail_size', 'shop_single' )) ?>
+                    <?php echo get_the_post_thumbnail( $post->ID,  apply_filters( 'woocommerce_gallery_image_size', 'woocommerce_single' )) ?>
                   </div>
                   <?php wc_get_template( 'loop/sale-flash.php' ); ?>
                 </div><!-- end product-image -->

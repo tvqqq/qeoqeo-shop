@@ -3,9 +3,9 @@
 function flatsome_ux_banner( $atts, $content = null ){
 
 	extract( shortcode_atts( array(
-		'_id'        => 'banner-' . rand(),
-		'visibility' => '',
-
+		'_id'                => 'banner-' . rand(),
+		'visibility'         => '',
+		// Layout.
 		'hover'              => '',
 		'hover_alt'          => '',
 		'alt'                => '',
@@ -15,7 +15,6 @@ function flatsome_ux_banner( $atts, $content = null ){
 		'container_width'    => '',
 		'mob_height'         => '', // Deprecated.
 		'tablet_height'      => '', // Deprecated.
-
 		// Background.
 		'bg'                 => '',
 		'parallax'           => '',
@@ -27,7 +26,6 @@ function flatsome_ux_banner( $atts, $content = null ){
 		'bg_pos'             => '',
 		'bg_pos_ie'          => '',
 		'effect'             => '',
-
 		// Video.
 		'video_mp4'          => '',
 		'video_ogg'          => '',
@@ -35,7 +33,7 @@ function flatsome_ux_banner( $atts, $content = null ){
 		'video_sound'        => 'false',
 		'video_loop'         => 'true',
 		'youtube'            => '',
-
+		'video_visibility'   => 'hide-for-medium',
 		// Border Control.
 		'border'             => '',
 		'border_color'       => '',
@@ -43,7 +41,6 @@ function flatsome_ux_banner( $atts, $content = null ){
 		'border_radius'      => '',
 		'border_style'       => '',
 		'border_hover'       => '',
-
 		// Deprecated (This is added to Text Box shortcode).
 		'animation'          => 'fadeIn',
 		'animate'            => '',
@@ -57,7 +54,6 @@ function flatsome_ux_banner( $atts, $content = null ){
 		'parallax_text'      => '',
 		'text_bg'            => '',
 		'padding'            => '',
-
 		// Link.
 		'link'               => '',
 		'target'             => '',

@@ -45,6 +45,13 @@ class NextendSocialUpgrader {
                 if (is_array($body) && isset($body['message'])) {
                     $message = 'Nextend Social Login Pro Addon: ' . $body['message'];
 
+                    if (isset($body['code']) && $body['code'] == 'license_invalid' && NextendSocialLogin::hasLicense()) {
+                        NextendSocialLogin::$settings->update(array(
+                            'license_key' => ''
+                        ));
+                        $message.=' - the stored license key has been removed!';
+                    }
+
                     \NSL\Notices::addError($message);
 
                     return new WP_Error('error', $message);

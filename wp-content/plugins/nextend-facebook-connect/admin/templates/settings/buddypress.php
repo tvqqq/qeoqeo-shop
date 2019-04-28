@@ -61,6 +61,92 @@ NextendSocialLoginAdmin::showProBox();
     </tr>
 
     <tr>
+        <th scope="row"><?php _e('Sidebar Login form', 'nextend-facebook-connect'); ?></th>
+        <td>
+            <fieldset>
+                <label><input type="radio" name="buddypress_sidebar_login"
+                              value="" <?php if ($settings->get('buddypress_sidebar_login') == '') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Hide login buttons', 'nextend-facebook-connect'); ?></span></label><br>
+                <label><input type="radio" name="buddypress_sidebar_login"
+                              value="show" <?php if ($settings->get('buddypress_sidebar_login') == 'show') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Show login buttons', 'nextend-facebook-connect'); ?></span></label><br>
+                <p class="description" id="tagline-buddypress_sidebar_login"><?php _e('Some themes that use BuddyPress, display the social buttons twice in the same login form. This option can disable the one for: <b>bp_sidebar_login_form action</b>.  ', 'nextend-facebook-connect'); ?></p>
+            </fieldset>
+        </td>
+
+    </tr>
+
+    <tr>
+        <th scope="row"><?php _e('Login form', 'nextend-facebook-connect'); ?></th>
+        <td>
+            <fieldset>
+                <label><input type="radio" name="buddypress_login"
+                              value="" <?php if ($settings->get('buddypress_login') == '') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Hide login buttons', 'nextend-facebook-connect'); ?></span></label><br>
+                <label><input type="radio" name="buddypress_login"
+                              value="show" <?php if ($settings->get('buddypress_login') == 'show') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Show login buttons', 'nextend-facebook-connect'); ?></span></label><br>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?php _e('Login button style', 'nextend-facebook-connect'); ?></th>
+        <td>
+            <fieldset>
+                <label>
+                    <input type="radio" name="buddypress_login_button_style"
+                           value="default" <?php if ($settings->get('buddypress_login_button_style') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/buttons/default.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_button_style"
+                           value="icon" <?php if ($settings->get('buddypress_login_button_style') == 'icon') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Icon', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/buttons/icon.png', NSL_ADMIN_PATH) ?>"/>
+                </label><br>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row"><?php _e('Login layout', 'nextend-facebook-connect'); ?></th>
+        <td>
+            <fieldset>
+                <label>
+                    <input type="radio" name="buddypress_login_form_layout"
+                           value="default" <?php if ($settings->get('buddypress_login_form_layout') == 'default') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Default', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/default.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_form_layout"
+                           value="below" <?php if ($settings->get('buddypress_login_form_layout') == 'below') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Below', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/below.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_form_layout"
+                           value="below-separator" <?php if ($settings->get('buddypress_login_form_layout') == 'below-separator') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Below with separator', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/below-separator.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_form_layout"
+                           value="above" <?php if ($settings->get('buddypress_login_form_layout') == 'above') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Above', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/above.png', NSL_ADMIN_PATH) ?>"/>
+                </label>
+                <label>
+                    <input type="radio" name="buddypress_login_form_layout"
+                           value="above-separator" <?php if ($settings->get('buddypress_login_form_layout') == 'above-separator') : ?> checked="checked" <?php endif; ?><?php echo $attr; ?>>
+                    <span><?php _e('Above with separator', 'nextend-facebook-connect'); ?></span><br/>
+                    <img src="<?php echo plugins_url('images/layouts/above-separator.png', NSL_ADMIN_PATH) ?>"/>
+                </label><br>
+            </fieldset>
+        </td>
+    </tr>
+
+    <tr>
         <th scope="row"><?php _e('Button alignment', 'nextend-facebook-connect'); ?></th>
         <td>
             <fieldset>

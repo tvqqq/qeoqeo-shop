@@ -10,22 +10,46 @@
  */
 class WPSEO_Admin_Bar_Menu implements WPSEO_WordPress_Integration {
 
-	/** The identifier used for the menu. */
+	/**
+	 * The identifier used for the menu.
+	 *
+	 * @var string
+	 */
 	const MENU_IDENTIFIER = 'wpseo-menu';
 
-	/** The identifier used for the Keyword Research submenu. */
+	/**
+	 * The identifier used for the Keyword Research submenu.
+	 *
+	 * @var string
+	 */
 	const KEYWORD_RESEARCH_SUBMENU_IDENTIFIER = 'wpseo-kwresearch';
 
-	/** The identifier used for the Analysis submenu. */
+	/**
+	 * The identifier used for the Analysis submenu.
+	 *
+	 * @var string
+	 */
 	const ANALYSIS_SUBMENU_IDENTIFIER = 'wpseo-analysis';
 
-	/** The identifier used for the Settings submenu. */
+	/**
+	 * The identifier used for the Settings submenu.
+	 *
+	 * @var string
+	 */
 	const SETTINGS_SUBMENU_IDENTIFIER = 'wpseo-settings';
 
-	/** The identifier used for the Network Settings submenu. */
+	/**
+	 * The identifier used for the Network Settings submenu.
+	 *
+	 * @var string
+	 */
 	const NETWORK_SETTINGS_SUBMENU_IDENTIFIER = 'wpseo-network-settings';
 
-	/** @var WPSEO_Admin_Asset_Manager Asset manager instance. */
+	/**
+	 * Asset manager instance.
+	 *
+	 * @var WPSEO_Admin_Asset_Manager
+	 */
 	protected $asset_manager;
 
 	/**
@@ -576,9 +600,12 @@ class WPSEO_Admin_Bar_Menu implements WPSEO_WordPress_Integration {
 	 * @return string Score markup.
 	 */
 	protected function get_score( $score ) {
-		$score = WPSEO_Utils::translate_score( $score );
+		$score_class      = WPSEO_Utils::translate_score( $score );
+		$translated_score = WPSEO_Utils::translate_score( $score, false );
+		/* translators: %s expands to the SEO score. */
+		$screen_reader_text = sprintf( __( 'SEO score: %s', 'wordpress-seo' ), $translated_score );
 
-		$score_adminbar_element = '<div class="wpseo-score-icon adminbar-seo-score ' . $score . '"><span class="adminbar-seo-score-text screen-reader-text"></span></div>';
+		$score_adminbar_element = '<div class="wpseo-score-icon adminbar-seo-score ' . $score_class . '"><span class="adminbar-seo-score-text screen-reader-text">' . $screen_reader_text . '</span></div>';
 
 		return $score_adminbar_element;
 	}

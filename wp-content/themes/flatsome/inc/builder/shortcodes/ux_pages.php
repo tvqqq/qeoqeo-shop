@@ -50,6 +50,9 @@ $options = array(
 $box_styles = require( __DIR__ . '/commons/box-styles.php' );
 $options    = array_merge( $options, $box_styles );
 
+$advanced = array('advanced_options' => require( __DIR__ . '/commons/advanced.php'));
+$options = array_merge($options, $advanced);
+
 add_ux_builder_shortcode( 'ux_pages',
 	array(
 		'name'      => __( 'Pages', 'ux-builder' ),
